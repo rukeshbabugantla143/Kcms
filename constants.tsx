@@ -16,6 +16,7 @@ export const NAVIGATION: any[] = [
           { label: 'Principal Message', href: '#/p/principal' },
           { label: 'Chairman\'s Desk', href: '#/p/chairman' },
           { label: 'History & Milestones', href: '#/p/history' },
+          { label: 'Leadership', href: '#/p/leadership' },
         ]
       },
       {
@@ -25,13 +26,14 @@ export const NAVIGATION: any[] = [
           { label: 'Student Support', href: '#/p/student-support' },
           { label: 'Clubs & Societies', href: '#/p/clubs' },
           { label: 'Sports & Cultural', href: '#/p/sports' },
+          { label: 'Social Initiatives', href: '#/p/social-initiatives' },
         ]
       },
       {
         title: 'Compliance',
         links: [
-          { label: 'IQAC', href: '#/p/iqac' },
-          { label: 'NAAC', href: '#/p/naac' },
+          { label: 'IQAC Hub', href: '#/p/iqac' },
+          { label: 'NAAC Portal', href: '#/p/naac' },
           { label: 'Anti Ragging', href: '#/p/anti-ragging' },
           { label: 'Women\'s Cell', href: '#/p/womens-cell' },
           { label: 'Grievance Redressal', href: '#/p/grievance' },
@@ -47,19 +49,20 @@ export const NAVIGATION: any[] = [
       {
         title: 'Programs Hub',
         links: [
-          { label: 'UG Courses Overview', href: '#/p/ug-courses' },
-          { label: 'PG Courses Overview', href: '#/p/pg-courses' },
+          { label: 'UG Courses', href: '#/p/ug-courses' },
+          { label: 'PG Courses', href: '#/p/pg-courses' },
           { label: 'Integrated Courses', href: '#/p/integrated' },
           { label: 'Certificate Courses', href: '#/p/certificates' },
         ]
       },
       {
-        title: 'Excellence',
+        title: 'Academic Support',
         links: [
-          { label: 'Teaching Methodology', href: '#/p/teaching' },
+          { label: 'Teaching Methods', href: '#/p/teaching' },
           { label: 'Skill Development', href: '#/p/skills' },
           { label: 'Academic Calendar', href: '#/p/calendar' },
           { label: 'Faculty Profile', href: '#/p/faculty' },
+          { label: 'Alumni Network', href: '#/p/alumni' },
         ]
       },
       {
@@ -95,7 +98,7 @@ export const NAVIGATION: any[] = [
           { label: 'Transport System', href: '#/p/transport' },
           { label: 'Auditorium', href: '#/p/auditorium' },
           { label: 'Medical Facility', href: '#/p/medical' },
-          { label: 'Gym & Sports Complex', href: '#/p/sports' },
+          { label: 'Sports Complex & Gym', href: '#/p/gym' },
         ]
       }
     ]
@@ -107,69 +110,207 @@ export const NAVIGATION: any[] = [
 export const PAGE_DATA: Record<string, any> = {
   'vision-mission': {
     title: 'Vision & Mission',
-    subtitle: 'Our commitment to excellence and social responsibility.',
-    content: 'KCMS envisions being a world-class center for learning, focusing on innovation and ethics. Our mission is to provide transformative education that bridges the gap between traditional wisdom and modern technology.',
-    highlights: ['UGC Recognition', 'Social Responsibility', 'Holistic Development', 'Global Excellence']
+    subtitle: 'Our Guiding Principles for a Brighter Future',
+    content: 'At KCMS, we envision being a premier hub for learning, where innovation meets tradition. Our mission is to empower students through an industry-relevant curriculum, fostering ethical leadership and social consciousness.',
+    highlights: ['UGC Recognition', 'Socially Committed', 'Inclusive Learning', 'Global Innovation']
   },
   'principal': {
     title: 'Principal\'s Message',
-    subtitle: 'A warm welcome from our academic leader.',
-    content: 'Welcome to KCMS. Our institution is built on the pillars of discipline, knowledge, and service. We strive to provide an environment where every student can achieve their maximum potential.',
-    highlights: ['Leadership Excellence', 'Student Focus', 'Innovation in Education', '20+ Years Experience']
+    subtitle: 'Leading the Charge for Excellence',
+    content: 'Welcome to KCMS. We believe in nurturing not just professionals, but well-rounded individuals. Our focus is on holistic development, combining academic rigor with sports, culture, and ethical grounding.',
+    highlights: ['Academic Leadership', 'Student-Centric Approach', 'Innovative Pedagogy', '20+ Years Legacy']
   },
   'chairman': {
     title: 'Chairman\'s Desk',
-    subtitle: 'The visionary spirit behind KCMS.',
-    content: 'Our goal has always been "Higher Education for All". We believe that quality education is the most powerful tool for individual and social transformation.',
-    highlights: ['Philanthropy', 'Educational Vision', 'Infrastructure Growth', 'Community Building']
+    subtitle: 'A Visionary Pursuit of Knowledge',
+    content: 'Our motto, "Higher Education to All", drives every decision at KCMS. We strive to make top-tier management and science education accessible to every aspiring mind in our society.',
+    highlights: ['Strategic Growth', 'Institutional Integrity', 'Student Welfare', 'Infrastructural Brilliance']
   },
   'history': {
     title: 'History & Milestones',
-    subtitle: 'Tracing a decade of growth and success.',
-    content: 'Established in 2010, KCMS has grown from a local initiative to a leading regional educational institution, consistently ranking among top colleges for management and science.',
-    highlights: ['Founded in 2010', 'NAAC Accredited', 'Expansion in 2015', 'Global Ties in 2020']
+    subtitle: 'The Journey of a Thousand Miles',
+    content: 'Starting in 2010 under the Karnataka Education Trust, KCMS has crossed several milestones including NAAC accreditation and expanding into diverse post-graduate and research programs.',
+    highlights: ['Founded 2010', 'NAAC Accredited', 'UGC Recognized', '10,000+ Alumni']
+  },
+  'leadership': {
+    title: 'Administrative Leadership',
+    subtitle: 'The Minds Behind the Excellence',
+    content: 'KCMS is governed by a board of experienced academicians and industry veterans who ensure the institution maintains its path toward global educational standards.',
+    highlights: ['Expert Governance', 'Industry Integration', 'Policy Excellence', 'Continuous Growth']
+  },
+  'campus-life': {
+    title: 'Campus Life',
+    subtitle: 'More than Just Classrooms',
+    content: 'Life at KCMS is a vibrant mix of academic challenges and cultural celebrations. Our campus offers a range of spaces for students to collaborate, innovate, and relax.',
+    highlights: ['Vibrant Culture', 'Student Lounges', 'Tech-Enabled Campus', 'Green Environment']
+  },
+  'student-support': {
+    title: 'Student Support Services',
+    subtitle: 'We are here for you',
+    content: 'From career counseling to mental health support, KCMS provides a comprehensive support network to ensure every student navigates their college life successfully.',
+    highlights: ['Career Counseling', 'Mentor System', 'Financial Aid', 'Grievance Cell']
+  },
+  'clubs': {
+    title: 'Clubs & Societies',
+    subtitle: 'Unleash Your Potential',
+    content: 'Whether you are into coding, debating, or photography, our student-run clubs provide the perfect platform to explore your passions outside the curriculum.',
+    highlights: ['Tech Club', 'Drama & Arts', 'Entrepreneurship Cell', 'Photography Society']
+  },
+  'sports': {
+    title: 'Sports & Cultural',
+    subtitle: 'Fostering Healthy Competition',
+    content: 'Physical fitness and cultural appreciation are integral to KCMS. We host annual sports meets and cultural festivals that attract talent from across the state.',
+    highlights: ['Indoor Sports', 'Outdoor Fields', 'Cultural Fests', 'State-Level Competitions']
+  },
+  'social-initiatives': {
+    title: 'Social Initiatives',
+    subtitle: 'Giving Back to the Community',
+    content: 'KCMS students actively participate in social outreach, blood donation camps, and environmental awareness drives through our dedicated social cell.',
+    highlights: ['NSS Activities', 'Community Service', 'Environmental Drives', 'CSR Projects']
   },
   'iqac': {
     title: 'Internal Quality Assurance Cell (IQAC)',
-    subtitle: 'Ensuring consistent academic and administrative standards.',
-    content: 'The IQAC at KCMS is the backbone of our quality control, conducting regular audits, feedback sessions, and faculty development programs to maintain excellence.',
-    highlights: ['Continuous Improvement', 'Feedback Management', 'Best Practices', 'Administrative Audits']
+    subtitle: 'Maintaining High Institutional Standards',
+    content: 'IQAC acts as a catalyst for quality improvement by developing a system for conscious, consistent, and catalytic action to improve academic and administrative performance.',
+    highlights: ['Quality Audits', 'Feedback Analysis', 'Best Practices', 'Administrative Efficiency']
   },
   'naac': {
-    title: 'NAAC Accreditation',
-    subtitle: 'Recognizing institutional quality.',
-    content: 'KCMS is committed to the quality standards set by NAAC, reflecting our dedication to providing a superior learning experience through research and infrastructure.',
-    highlights: ['SSR Cycle I', 'Quality Assessment', 'Institutional Profile', 'Academic Standards']
-  },
-  'library': {
-    title: 'Central Library',
-    subtitle: 'A knowledge sanctuary for students and faculty.',
-    content: 'Our library is fully automated and houses over 50,000 volumes, international journals, and an extensive digital repository accessible 24/7.',
-    highlights: ['E-Resource Center', 'Quiet Study Zones', 'Reference Section', 'Periodic Journals']
-  },
-  'computer-labs': {
-    title: 'Advanced Computer Labs',
-    subtitle: 'Powering innovation through technology.',
-    content: 'Equipped with the latest hardware and high-speed fiber connectivity, our labs support advanced research in AI, Cloud Computing, and Software Engineering.',
-    highlights: ['High-Speed Wi-Fi', 'Latest Software', 'Individual Terminals', '24/7 Access']
-  },
-  'hostel': {
-    title: 'Hostel Facilities',
-    subtitle: 'Safe and comfortable residential spaces.',
-    content: 'Our separate hostels for boys and girls provide a home-like atmosphere with nutritious food, security, and recreational facilities.',
-    highlights: ['Safe Environment', 'Nutritious Meals', 'Gym & Recreation', 'Internet Access']
+    title: 'NAAC Portal',
+    subtitle: 'National Assessment and Accreditation Council',
+    content: 'KCMS is committed to institutional quality assessment. We maintain transparent records of our self-study reports and major contributions to education.',
+    highlights: ['Cycle I SSR', 'Cycle II SSR', 'Institutional Profile', 'Annual Reports']
   },
   'anti-ragging': {
-    title: 'Anti-Ragging Cell',
-    subtitle: 'Zero tolerance for any form of harassment.',
-    content: 'KCMS maintains a strictly ragging-free campus. Our dedicated committee ensures a safe and welcoming environment for freshers.',
-    highlights: ['UGC Guidelines', 'Strict Monitoring', 'Student Safety', 'Immediate Redressal']
+    title: 'Anti-Ragging Committee',
+    subtitle: 'A Safe & Welcoming Campus',
+    content: 'KCMS follows a zero-tolerance policy toward ragging. Our committee ensures strict adherence to UGC guidelines to protect every student.',
+    highlights: ['Zero Tolerance', 'Immediate Action', 'Student Safety', 'UGC Compliance']
+  },
+  'womens-cell': {
+    title: 'Women\'s Empowerment Cell',
+    subtitle: 'Promoting Equality and Dignity',
+    content: 'The cell works to sensitize students and faculty toward gender issues and provides a platform for women to discuss their challenges and achievements.',
+    highlights: ['Awareness Camps', 'Safety Measures', 'Mentorship', 'Grievance Redressal']
+  },
+  'grievance': {
+    title: 'Grievance Redressal',
+    subtitle: 'Transparent Feedback System',
+    content: 'We believe in a fair and transparent system for addressing any issues faced by students or staff, ensuring a healthy work and study environment.',
+    highlights: ['Online Portal', 'Quick Resolution', 'Confidential Handling', 'Fair Process']
   },
   'ug-courses': {
     title: 'Undergraduate Programs',
-    subtitle: 'Starting your professional journey with KCMS.',
-    content: 'Our UG programs (BCA, BBA, B.Com, BTTM) are designed with a balance of theoretical foundations and practical skills to ensure job readiness.',
-    highlights: ['Industry-Aligned', 'Career Guidance', 'Internship Support', 'Expert Faculty']
+    subtitle: 'Building Foundations for Success',
+    content: 'Our UG programs in Management, Science, and Commerce are designed to provide students with a competitive edge in the global job market.',
+    highlights: ['BCA', 'BBA', 'B.Com', 'BTTM']
+  },
+  'pg-courses': {
+    title: 'Postgraduate Programs',
+    subtitle: 'Advanced Learning for Future Leaders',
+    content: 'Master complex business and technical concepts through our specialized PG programs that focus on research and high-level industrial skills.',
+    highlights: ['MBA', 'MTTM', 'Research-Oriented', 'Industry Dual-Spec']
+  },
+  'integrated': {
+    title: 'Integrated Courses',
+    subtitle: 'Streamlined Career Paths',
+    content: 'KCMS offers integrated programs that allow students to pursue bachelor\'s and master\'s degrees in a continuous, focused academic journey.',
+    highlights: ['Time Efficient', 'Focused Learning', 'Dual Credentials', 'Industry Ready']
+  },
+  'certificates': {
+    title: 'Certificate Courses',
+    subtitle: 'Upskill for the Digital Era',
+    content: 'From Digital Marketing to Data Science, our short-term certificate courses are designed to provide immediate value in the job market.',
+    highlights: ['Skill Focus', 'Short Duration', 'Hands-on Training', 'Certification']
+  },
+  'teaching': {
+    title: 'Teaching Methodology',
+    subtitle: 'Beyond Traditional Lectures',
+    content: 'We use case-study based learning, experiential projects, and smart classroom technology to ensure students are actively engaged in their education.',
+    highlights: ['Case Studies', 'Interactive Labs', 'Guest Lectures', 'Field Projects']
+  },
+  'skills': {
+    title: 'Skill Development',
+    subtitle: 'Enhancing Employability',
+    content: 'Our specialized skill development cell conducts workshops on communication, leadership, and technical proficiency throughout the academic year.',
+    highlights: ['Soft Skills', 'Technical Workshops', 'Mock Interviews', 'Aptitude Training']
+  },
+  'calendar': {
+    title: 'Academic Calendar',
+    subtitle: 'Planning Your Success',
+    content: 'Stay updated with all important dates including exams, festivals, holidays, and guest seminars through our official academic calendar.',
+    highlights: ['Exam Dates', 'Event Schedule', 'Holidays', 'Deadlines']
+  },
+  'faculty': {
+    title: 'Faculty Profile',
+    subtitle: 'Mentors with Industry Experience',
+    content: 'Our faculty members are not just teachers but experts with years of industrial and research experience, dedicated to student success.',
+    highlights: ['PhD Scholars', 'Industry Veterans', 'Personal Mentors', 'Research Focused']
+  },
+  'alumni': {
+    title: 'Alumni Network',
+    subtitle: 'Connected for Life',
+    content: 'The KCMS Alumni Association bridges the gap between current students and successful professionals who graduated from our institution.',
+    highlights: ['Networking', 'Mentorship', 'Global Reach', 'Success Stories']
+  },
+  'infrastructure': {
+    title: 'Infrastructure',
+    subtitle: 'Modern Facilities for Global Learning',
+    content: 'Spanning several acres, our campus is a hub of technological and academic infrastructure designed to facilitate high-end learning.',
+    highlights: ['Tech-Enabled', 'Green Campus', 'Advanced Security', 'Smart Design']
+  },
+  'library': {
+    title: 'Central Library',
+    subtitle: 'The Intellectual Heart of KCMS',
+    content: 'Our fully automated library houses over 50,000 volumes, international journals, and an extensive digital repository available to all students.',
+    highlights: ['E-Journals', 'Reference Section', 'Digital Kiosks', 'Quiet Study']
+  },
+  'computer-labs': {
+    title: 'Computer Labs',
+    subtitle: 'Coding the Future',
+    content: 'Equipped with the latest high-performance workstations and high-speed fiber internet, our labs support advanced software development.',
+    highlights: ['Latest Hardware', 'Gigabit Internet', '24/7 Access', 'Specialized Software']
+  },
+  'science-labs': {
+    title: 'Science & Research Labs',
+    subtitle: 'Fostering Scientific Temper',
+    content: 'Our science labs are equipped with modern apparatus to support practical learning and research in physics, electronics, and management science.',
+    highlights: ['Modern Equipment', 'Safety First', 'Research Support', 'Expert Guidance']
+  },
+  'smart-classrooms': {
+    title: 'Smart Classrooms',
+    subtitle: 'Digital-First Pedagogy',
+    content: 'Every classroom at KCMS is equipped with interactive projectors, high-quality audio systems, and high-speed Wi-Fi connectivity.',
+    highlights: ['Interactive Tech', 'Comfortable Seating', 'Wi-Fi Enabled', 'Audio-Visual Ready']
+  },
+  'hostel': {
+    title: 'Hostel Facility',
+    subtitle: 'Home Away From Home',
+    content: 'Safe, secure, and comfortable separate hostels for boys and girls with nutritious food, Wi-Fi, and 24/7 warden support.',
+    highlights: ['Safe Environment', 'Nutritious Food', 'High-Speed Wi-Fi', '24/7 Security']
+  },
+  'transport': {
+    title: 'Transport System',
+    subtitle: 'Safe Commute for All',
+    content: 'KCMS operates a fleet of modern buses that cover all major parts of the city, ensuring safe and timely transport for students.',
+    highlights: ['City-Wide Coverage', 'GPS Tracked', 'Safe Drivers', 'Scheduled Routes']
+  },
+  'auditorium': {
+    title: 'State-of-the-art Auditorium',
+    subtitle: 'Where Talent Takes Center Stage',
+    content: 'Our fully air-conditioned auditorium with 500+ seating capacity is the venue for all major seminars, festivals, and guest talks.',
+    highlights: ['A/C Environment', 'Pro Audio-Visual', 'Large Seating', 'Modern Stage']
+  },
+  'medical': {
+    title: 'Medical Facility',
+    subtitle: 'Your Health is Our Priority',
+    content: 'A dedicated medical room with a full-time nurse and visiting doctor is available on campus to handle any health emergencies.',
+    highlights: ['24/7 First Aid', 'Doctor on Call', 'Health Checks', 'Emergency Van']
+  },
+  'gym': {
+    title: 'Sports Complex & Gym',
+    subtitle: 'Building Stronger Bodies',
+    content: 'Our multi-facility sports complex includes a fully equipped gym, basketball courts, and indoor gaming zones for overall fitness.',
+    highlights: ['Modern Equipment', 'Indoor Courts', 'Fitness Trainers', 'Open Play Areas']
   }
 };
 
