@@ -1,347 +1,561 @@
 
+import React from 'react';
 import { Course, Testimonial } from './types';
+import { 
+  Target, Shield, BookOpen, Users, Award, Landmark, Zap, History, Globe, Heart, 
+  ShieldCheck, FileText, Calendar, GraduationCap, Laptop, Monitor, Library, 
+  Building2, Bus, Coffee, Activity, Scale, CheckCircle, PhoneCall, Microscope, 
+  MapPin, Handshake, Briefcase, TrendingUp, BarChart, Rocket, Globe2, Trophy, 
+  Cpu, Code, PieChart, PlaneTakeoff, Music, Stethoscope, Dumbbell, Clock, Info,
+  Search, ClipboardCheck, Layout, Lightbulb, MousePointer2, CpuIcon, Eye, Radio,
+  Smartphone, Thermometer, UserCheck
+} from 'lucide-react';
 
 export const NAVIGATION: any[] = [
-  { label: 'Home', href: '#/' },
+  { label: 'Home', href: '/' },
   { 
     label: 'About', 
-    href: '#/about',
+    href: '/about',
     mega: true,
     columns: [
       {
         title: 'Institutional',
         links: [
-          { label: 'About Us', href: '#/about' },
-          { label: 'Vision & Mission', href: '#/p/vision-mission' },
-          { label: 'Principal Message', href: '#/p/principal' },
-          { label: 'Chairman\'s Desk', href: '#/p/chairman' },
-          { label: 'History & Milestones', href: '#/p/history' },
-          { label: 'Leadership', href: '#/p/leadership' },
+          { label: 'About Us', href: '/about' },
+          { label: 'Vision & Mission', href: '/p/vision-mission' },
+          { label: 'Principal Message', href: '/p/principal' },
+          { label: 'Chairman\'s Desk', href: '/p/chairman' },
+          { label: 'History & Milestones', href: '/p/history' },
+          { label: 'Leadership Hub', href: '/p/leadership' },
         ]
       },
       {
         title: 'Campus Life',
         links: [
-          { label: 'Campus Life', href: '#/p/campus-life' },
-          { label: 'Student Support', href: '#/p/student-support' },
-          { label: 'Clubs & Societies', href: '#/p/clubs' },
-          { label: 'Sports & Cultural', href: '#/p/sports' },
-          { label: 'Social Initiatives', href: '#/p/social-initiatives' },
+          { label: 'Campus Life Overview', href: '/p/campus-life' },
+          { label: 'Student Support Hub', href: '/p/student-support' },
+          { label: 'Clubs & Societies', href: '/p/clubs' },
+          { label: 'Sports & Cultural', href: '/p/sports' },
+          { label: 'Social Initiatives', href: '/p/social-initiatives' },
         ]
       },
       {
         title: 'Compliance',
         links: [
-          { label: 'IQAC Hub', href: '#/p/iqac' },
-          { label: 'NAAC Portal', href: '#/p/naac' },
-          { label: 'Anti Ragging', href: '#/p/anti-ragging' },
-          { label: 'Women\'s Cell', href: '#/p/womens-cell' },
-          { label: 'Grievance Redressal', href: '#/p/grievance' },
+          { label: 'IQAC Hub', href: '/p/iqac' },
+          { label: 'NAAC Portal', href: '/p/naac' },
+          { label: 'Anti Ragging Cell', href: '/p/anti-ragging' },
+          { label: 'Women\'s Cell', href: '/p/womens-cell' },
+          { label: 'Grievance Redressal', href: '/p/grievance' },
         ]
       }
     ]
   },
   { 
     label: 'Academics', 
-    href: '#/courses',
+    href: '/courses',
     mega: true,
     columns: [
       {
         title: 'Programs Hub',
         links: [
-          { label: 'UG Courses', href: '#/p/ug-courses' },
-          { label: 'PG Courses', href: '#/p/pg-courses' },
-          { label: 'Integrated Courses', href: '#/p/integrated' },
-          { label: 'Certificate Courses', href: '#/p/certificates' },
+          { label: 'BCA Department', href: '/course/bca' },
+          { label: 'BBA Department', href: '/course/bba' },
+          { label: 'B.Com Department', href: '/course/bcom' },
+          { label: 'MBA Department', href: '/course/mba' },
+          { label: 'Tourism Dept (BTTM/MTTM)', href: '/course/mttm' },
+          { label: 'Integrated Programs', href: '/p/integrated' },
         ]
       },
       {
         title: 'Academic Support',
         links: [
-          { label: 'Teaching Methods', href: '#/p/teaching' },
-          { label: 'Skill Development', href: '#/p/skills' },
-          { label: 'Academic Calendar', href: '#/p/calendar' },
-          { label: 'Faculty Profile', href: '#/p/faculty' },
-          { label: 'Alumni Network', href: '#/p/alumni' },
+          { label: 'Teaching Methods', href: '/p/teaching' },
+          { label: 'Skill Development', href: '/p/skills' },
+          { label: 'Academic Calendar', href: '/p/calendar' },
+          { label: 'Faculty Profile', href: '/p/faculty' },
+          { label: 'Alumni Network', href: '/p/alumni' },
         ]
       },
       {
         highlight: {
           title: 'Admissions 2025',
-          text: 'Apply now for various Undergraduate and Postgraduate programs.',
+          text: 'Secure your future in the upcoming academic session.',
           cta: 'Apply Now',
-          href: '#/admissions'
+          href: '/admissions'
         }
       }
     ]
   },
-  { label: 'Admissions', href: '#/admissions' },
-  { label: 'Placements', href: '#/placements' },
-  { 
-    label: 'Facilities', 
-    href: '#/p/infrastructure',
-    mega: true,
-    columns: [
-      {
-        title: 'Academic Labs',
-        links: [
-          { label: 'Central Library', href: '#/p/library' },
-          { label: 'Computer Labs', href: '#/p/computer-labs' },
-          { label: 'Science Labs', href: '#/p/science-labs' },
-          { label: 'Smart Classrooms', href: '#/p/smart-classrooms' },
+  { label: 'Admissions', href: '/admissions' },
+  { label: 'Placements', href: '/placements' },
+  { label: 'Facilities', href: '/p/infrastructure' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Contact', href: '/contact' },
+];
+
+export const PAGE_DATA: Record<string, any> = {
+  // --- 1. CENTRAL LIBRARY ---
+  'library': {
+    title: 'Central Library',
+    subtitle: 'A Knowledge Hub for Academic Excellence',
+    heroImage: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'text', 
+        title: 'Library Overview', 
+        content: 'The Central Library of Karnataka College of Management & Science serves as the academic heart of the institution, providing access to a wide range of learning resources that support teaching, learning, and research activities. It is a professional environment dedicated to students, faculty, and researchers, fostering a culture of academic rigor and empirical discovery.' 
+      },
+      { 
+        type: 'grid', 
+        title: 'Vision & Objectives', 
+        items: [
+          { title: 'Research Culture', desc: 'Promote deep reading and intensive research culture among scholars.', icon: <Search /> },
+          { title: 'Curriculum Support', desc: 'Maintain an updated repository aligned with University programs.', icon: <Target /> },
+          { title: 'Digital Accessibility', desc: 'Ensure global resource availability through digital gateways.', icon: <Globe /> },
+          { title: 'Independent Learning', desc: 'Encourage students to become self-reliant lifelong learners.', icon: <Lightbulb /> }
         ]
       },
-      {
-        title: 'Amenities',
-        links: [
-          { label: 'Hostel Facility', href: '#/p/hostel' },
-          { label: 'Transport System', href: '#/p/transport' },
-          { label: 'Auditorium', href: '#/p/auditorium' },
-          { label: 'Medical Facility', href: '#/p/medical' },
-          { label: 'Sports Complex & Gym', href: '#/p/gym' },
+      { 
+        type: 'grid', 
+        title: 'Library Resources', 
+        items: [
+          { title: 'Core Collection', desc: '50,000+ volumes of Textbooks and Reference materials.', icon: <BookOpen /> },
+          { title: 'Periodicals', desc: 'Subscription to 100+ National and International Journals.', icon: <FileText /> },
+          { title: 'Digital Media', desc: 'Access to CD/DVD repositories and online databases.', icon: <Layout /> },
+          { title: 'Project Archives', desc: 'Preserved collection of student dissertations and reports.', icon: <History /> }
+        ]
+      },
+      { 
+        type: 'text', 
+        title: 'Digital Library & E-Resources', 
+        content: 'Equipped with the latest high-speed computer terminals, our digital section provides seamless access to IEEE, J-Gate, DELNET, and other major academic databases. Students can browse thousands of E-books and E-journals through our campus-wide fiber-optic network.' 
+      },
+      { 
+        type: 'list', 
+        title: 'Infrastructure & Amenities', 
+        items: [
+          'Spacious Reading Hall with ergonomic seating for 200+ students.',
+          'Dedicated OPAC (Online Public Access Catalog) terminals.',
+          'High-speed Wi-Fi enabled environment for personal laptops.',
+          'Separate zones for serious study and collaborative research.',
+          'Eco-friendly lighting and climate-controlled interiors.'
+        ]
+      },
+      { 
+        type: 'grid', 
+        title: 'Library Services', 
+        items: [
+          { title: 'Circulation', desc: 'Automated book lending and return via LibSoft.', icon: <Zap /> },
+          { title: 'Reference', desc: 'Specialized assistance for complex research queries.', icon: <Info /> },
+          { title: 'Reprography', desc: 'On-site photocopying and digital scanning facilities.', icon: <FileText /> },
+          { title: 'Reservations', desc: 'Advance book booking through the digital portal.', icon: <ClipboardCheck /> }
+        ]
+      },
+      { 
+        type: 'list', 
+        title: 'Rules & Regulations', 
+        items: [
+          'Possession of a valid Institutional ID card is mandatory for entry.',
+          'Strict silence and professional conduct must be maintained at all times.',
+          'Standard overdue fine policy applies for books not returned on time.',
+          'Digital terminals are reserved for academic and research purposes only.',
+          'Careful handling of library property is a shared responsibility.'
+        ]
+      },
+      { 
+        type: 'table', 
+        title: 'Operating Timings', 
+        headers: ['Working Days', 'Opening Hours'],
+        rows: [
+          ['Monday to Friday', '9:00 AM – 6:00 PM'],
+          ['Saturday', '9:00 AM – 2:00 PM'],
+          ['Sundays & Public Holidays', 'Closed']
         ]
       }
     ]
   },
-  { label: 'Gallery', href: '#/gallery' },
-  { label: 'Contact', href: '#/contact' },
-];
 
-export const PAGE_DATA: Record<string, any> = {
-  'vision-mission': {
-    title: 'Vision & Mission',
-    subtitle: 'Our Guiding Principles for a Brighter Future',
-    content: 'At KCMS, we envision being a premier hub for learning, where innovation meets tradition. Our mission is to empower students through an industry-relevant curriculum, fostering ethical leadership and social consciousness.',
-    highlights: ['UGC Recognition', 'Socially Committed', 'Inclusive Learning', 'Global Innovation']
-  },
-  'principal': {
-    title: 'Principal\'s Message',
-    subtitle: 'Leading the Charge for Excellence',
-    content: 'Welcome to KCMS. We believe in nurturing not just professionals, but well-rounded individuals. Our focus is on holistic development, combining academic rigor with sports, culture, and ethical grounding.',
-    highlights: ['Academic Leadership', 'Student-Centric Approach', 'Innovative Pedagogy', '20+ Years Legacy']
-  },
-  'chairman': {
-    title: 'Chairman\'s Desk',
-    subtitle: 'A Visionary Pursuit of Knowledge',
-    content: 'Our motto, "Higher Education to All", drives every decision at KCMS. We strive to make top-tier management and science education accessible to every aspiring mind in our society.',
-    highlights: ['Strategic Growth', 'Institutional Integrity', 'Student Welfare', 'Infrastructural Brilliance']
-  },
-  'history': {
-    title: 'History & Milestones',
-    subtitle: 'The Journey of a Thousand Miles',
-    content: 'Starting in 2010 under the Karnataka Education Trust, KCMS has crossed several milestones including NAAC accreditation and expanding into diverse post-graduate and research programs.',
-    highlights: ['Founded 2010', 'NAAC Accredited', 'UGC Recognized', '10,000+ Alumni']
-  },
-  'leadership': {
-    title: 'Administrative Leadership',
-    subtitle: 'The Minds Behind the Excellence',
-    content: 'KCMS is governed by a board of experienced academicians and industry veterans who ensure the institution maintains its path toward global educational standards.',
-    highlights: ['Expert Governance', 'Industry Integration', 'Policy Excellence', 'Continuous Growth']
-  },
-  'campus-life': {
-    title: 'Campus Life',
-    subtitle: 'More than Just Classrooms',
-    content: 'Life at KCMS is a vibrant mix of academic challenges and cultural celebrations. Our campus offers a range of spaces for students to collaborate, innovate, and relax.',
-    highlights: ['Vibrant Culture', 'Student Lounges', 'Tech-Enabled Campus', 'Green Environment']
-  },
-  'student-support': {
-    title: 'Student Support Services',
-    subtitle: 'We are here for you',
-    content: 'From career counseling to mental health support, KCMS provides a comprehensive support network to ensure every student navigates their college life successfully.',
-    highlights: ['Career Counseling', 'Mentor System', 'Financial Aid', 'Grievance Cell']
-  },
-  'clubs': {
-    title: 'Clubs & Societies',
-    subtitle: 'Unleash Your Potential',
-    content: 'Whether you are into coding, debating, or photography, our student-run clubs provide the perfect platform to explore your passions outside the curriculum.',
-    highlights: ['Tech Club', 'Drama & Arts', 'Entrepreneurship Cell', 'Photography Society']
-  },
-  'sports': {
-    title: 'Sports & Cultural',
-    subtitle: 'Fostering Healthy Competition',
-    content: 'Physical fitness and cultural appreciation are integral to KCMS. We host annual sports meets and cultural festivals that attract talent from across the state.',
-    highlights: ['Indoor Sports', 'Outdoor Fields', 'Cultural Fests', 'State-Level Competitions']
-  },
-  'social-initiatives': {
-    title: 'Social Initiatives',
-    subtitle: 'Giving Back to the Community',
-    content: 'KCMS students actively participate in social outreach, blood donation camps, and environmental awareness drives through our dedicated social cell.',
-    highlights: ['NSS Activities', 'Community Service', 'Environmental Drives', 'CSR Projects']
-  },
-  'iqac': {
-    title: 'Internal Quality Assurance Cell (IQAC)',
-    subtitle: 'Maintaining High Institutional Standards',
-    content: 'IQAC acts as a catalyst for quality improvement by developing a system for conscious, consistent, and catalytic action to improve academic and administrative performance.',
-    highlights: ['Quality Audits', 'Feedback Analysis', 'Best Practices', 'Administrative Efficiency']
-  },
-  'naac': {
-    title: 'NAAC Portal',
-    subtitle: 'National Assessment and Accreditation Council',
-    content: 'KCMS is committed to institutional quality assessment. We maintain transparent records of our self-study reports and major contributions to education.',
-    highlights: ['Cycle I SSR', 'Cycle II SSR', 'Institutional Profile', 'Annual Reports']
-  },
-  'anti-ragging': {
-    title: 'Anti-Ragging Committee',
-    subtitle: 'A Safe & Welcoming Campus',
-    content: 'KCMS follows a zero-tolerance policy toward ragging. Our committee ensures strict adherence to UGC guidelines to protect every student.',
-    highlights: ['Zero Tolerance', 'Immediate Action', 'Student Safety', 'UGC Compliance']
-  },
-  'womens-cell': {
-    title: 'Women\'s Empowerment Cell',
-    subtitle: 'Promoting Equality and Dignity',
-    content: 'The cell works to sensitize students and faculty toward gender issues and provides a platform for women to discuss their challenges and achievements.',
-    highlights: ['Awareness Camps', 'Safety Measures', 'Mentorship', 'Grievance Redressal']
-  },
-  'grievance': {
-    title: 'Grievance Redressal',
-    subtitle: 'Transparent Feedback System',
-    content: 'We believe in a fair and transparent system for addressing any issues faced by students or staff, ensuring a healthy work and study environment.',
-    highlights: ['Online Portal', 'Quick Resolution', 'Confidential Handling', 'Fair Process']
-  },
-  'ug-courses': {
-    title: 'Undergraduate Programs',
-    subtitle: 'Building Foundations for Success',
-    content: 'Our UG programs in Management, Science, and Commerce are designed to provide students with a competitive edge in the global job market.',
-    highlights: ['BCA', 'BBA', 'B.Com', 'BTTM']
-  },
-  'pg-courses': {
-    title: 'Postgraduate Programs',
-    subtitle: 'Advanced Learning for Future Leaders',
-    content: 'Master complex business and technical concepts through our specialized PG programs that focus on research and high-level industrial skills.',
-    highlights: ['MBA', 'MTTM', 'Research-Oriented', 'Industry Dual-Spec']
-  },
-  'integrated': {
-    title: 'Integrated Courses',
-    subtitle: 'Streamlined Career Paths',
-    content: 'KCMS offers integrated programs that allow students to pursue bachelor\'s and master\'s degrees in a continuous, focused academic journey.',
-    highlights: ['Time Efficient', 'Focused Learning', 'Dual Credentials', 'Industry Ready']
-  },
-  'certificates': {
-    title: 'Certificate Courses',
-    subtitle: 'Upskill for the Digital Era',
-    content: 'From Digital Marketing to Data Science, our short-term certificate courses are designed to provide immediate value in the job market.',
-    highlights: ['Skill Focus', 'Short Duration', 'Hands-on Training', 'Certification']
-  },
-  'teaching': {
-    title: 'Teaching Methodology',
-    subtitle: 'Beyond Traditional Lectures',
-    content: 'We use case-study based learning, experiential projects, and smart classroom technology to ensure students are actively engaged in their education.',
-    highlights: ['Case Studies', 'Interactive Labs', 'Guest Lectures', 'Field Projects']
-  },
-  'skills': {
-    title: 'Skill Development',
-    subtitle: 'Enhancing Employability',
-    content: 'Our specialized skill development cell conducts workshops on communication, leadership, and technical proficiency throughout the academic year.',
-    highlights: ['Soft Skills', 'Technical Workshops', 'Mock Interviews', 'Aptitude Training']
-  },
-  'calendar': {
-    title: 'Academic Calendar',
-    subtitle: 'Planning Your Success',
-    content: 'Stay updated with all important dates including exams, festivals, holidays, and guest seminars through our official academic calendar.',
-    highlights: ['Exam Dates', 'Event Schedule', 'Holidays', 'Deadlines']
-  },
-  'faculty': {
-    title: 'Faculty Profile',
-    subtitle: 'Mentors with Industry Experience',
-    content: 'Our faculty members are not just teachers but experts with years of industrial and research experience, dedicated to student success.',
-    highlights: ['PhD Scholars', 'Industry Veterans', 'Personal Mentors', 'Research Focused']
-  },
-  'alumni': {
-    title: 'Alumni Network',
-    subtitle: 'Connected for Life',
-    content: 'The KCMS Alumni Association bridges the gap between current students and successful professionals who graduated from our institution.',
-    highlights: ['Networking', 'Mentorship', 'Global Reach', 'Success Stories']
-  },
-  'infrastructure': {
-    title: 'Infrastructure',
-    subtitle: 'Modern Facilities for Global Learning',
-    content: 'Spanning several acres, our campus is a hub of technological and academic infrastructure designed to facilitate high-end learning.',
-    highlights: ['Tech-Enabled', 'Green Campus', 'Advanced Security', 'Smart Design']
-  },
-  'library': {
-    title: 'Central Library',
-    subtitle: 'The Intellectual Heart of KCMS',
-    content: 'Our fully automated library houses over 50,000 volumes, international journals, and an extensive digital repository available to all students.',
-    highlights: ['E-Journals', 'Reference Section', 'Digital Kiosks', 'Quiet Study']
-  },
+  // --- 2. COMPUTER LABS ---
   'computer-labs': {
-    title: 'Computer Labs',
-    subtitle: 'Coding the Future',
-    content: 'Equipped with the latest high-performance workstations and high-speed fiber internet, our labs support advanced software development.',
-    highlights: ['Latest Hardware', 'Gigabit Internet', '24/7 Access', 'Specialized Software']
+    title: 'High-Tech Computer Labs',
+    subtitle: 'Computing Power for the Next Gen Innovators',
+    heroImage: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'text', 
+        title: 'Computational Excellence', 
+        content: 'The Computer Labs at KCMS provide a professional IT environment equivalent to corporate tech hubs. We focus on hands-on proficiency in software engineering, data science, and cloud architecture.' 
+      },
+      { 
+        type: 'grid', 
+        title: 'Hardware & Connectivity', 
+        items: [
+          { title: 'Intel Core i9', desc: 'Latest generation processing power for heavy computation.', icon: <CpuIcon /> },
+          { title: '1 Gbps Speed', desc: 'Uninterrupted, high-speed fiber internet for every node.', icon: <Zap /> },
+          { title: 'Dual Display', desc: 'Optimized workstations for UI/UX and complex coding.', icon: <Monitor /> },
+          { title: 'Enterprise Servers', desc: 'Local rack servers for database and hosting projects.', icon: <Layout /> }
+        ]
+      },
+      { 
+        type: 'list', 
+        title: 'Specialized Labs', 
+        items: [
+          'Artificial Intelligence & Machine Learning Research Cell.',
+          'Full-Stack Web Development Bootcamp Studio.',
+          'Cyber Security & Ethical Hacking Lab.',
+          'Business Analytics & Data Visualization Center.',
+          'Creative Multimedia & VR/AR Development Wing.'
+        ]
+      }
+    ]
   },
+
+  // --- 3. SCIENCE LABS ---
   'science-labs': {
-    title: 'Science & Research Labs',
-    subtitle: 'Fostering Scientific Temper',
-    content: 'Our science labs are equipped with modern apparatus to support practical learning and research in physics, electronics, and management science.',
-    highlights: ['Modern Equipment', 'Safety First', 'Research Support', 'Expert Guidance']
+    title: 'Science Labs',
+    subtitle: 'Where Theory Meets Tangible Discovery',
+    heroImage: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'text', 
+        title: 'The Scientific Approach', 
+        content: 'Our Science Labs are centers of empirical inquiry. We ensure students bridge the gap between classroom theory and practical experimentation through industrial-grade instrumentation.' 
+      },
+      { 
+        type: 'grid', 
+        title: 'Laboratories', 
+        items: [
+          { title: 'Physics Hub', desc: 'Focused on Mechanics, Optics, and Modern Physics.', icon: <Zap /> },
+          { title: 'Chemistry Cell', desc: 'Equipped for organic and inorganic synthesis.', icon: <Shield /> },
+          { title: 'Electronics Lab', desc: 'Microprocessor and VLSI testing stations.', icon: <Microscope /> },
+          { title: 'Innovation Cell', desc: 'Rapid prototyping and student invention space.', icon: <Rocket /> }
+        ]
+      },
+      { 
+        type: 'list', 
+        title: 'Safety Standards', 
+        items: [
+          'Certified Fire and Chemical safety protocols.',
+          'Individual protective gear (PPE) for every student.',
+          'Professional lab assistants available during working hours.',
+          'Automated emergency shut-off systems in all zones.'
+        ]
+      }
+    ]
   },
+
+  // --- 4. SMART CLASSROOMS ---
   'smart-classrooms': {
     title: 'Smart Classrooms',
-    subtitle: 'Digital-First Pedagogy',
-    content: 'Every classroom at KCMS is equipped with interactive projectors, high-quality audio systems, and high-speed Wi-Fi connectivity.',
-    highlights: ['Interactive Tech', 'Comfortable Seating', 'Wi-Fi Enabled', 'Audio-Visual Ready']
+    subtitle: 'Interactive Learning in the Digital Age',
+    heroImage: 'https://images.unsplash.com/photo-1544640808-32ca72ac7f67?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'text', 
+        title: 'Interactive Pedagogy', 
+        content: 'We have transformed the traditional classroom into a collaborative workshop. Digital tools and modular seating encourage active participation and better retention of complex concepts.' 
+      },
+      { 
+        type: 'grid', 
+        title: 'Smart Features', 
+        items: [
+          { title: '4K Smart Boards', desc: 'Touch-enabled interactive displays for visualization.', icon: <Layout /> },
+          { title: 'Lecture Capture', desc: 'High-def recording of all sessions for review.', icon: <Monitor /> },
+          { title: 'Dolby Audio', desc: 'Crystal clear verbal delivery in every corner.', icon: <Music /> },
+          { title: 'Climate Control', desc: 'Fully air-conditioned zones for student comfort.', icon: <Thermometer /> }
+        ]
+      }
+    ]
   },
+
+  // --- 5. HOSTEL FACILITY ---
   'hostel': {
     title: 'Hostel Facility',
-    subtitle: 'Home Away From Home',
-    content: 'Safe, secure, and comfortable separate hostels for boys and girls with nutritious food, Wi-Fi, and 24/7 warden support.',
-    highlights: ['Safe Environment', 'Nutritious Food', 'High-Speed Wi-Fi', '24/7 Security']
+    subtitle: 'A Secure Home Away From Home',
+    heroImage: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'grid', 
+        title: 'Living Standards', 
+        items: [
+          { title: 'Separate Wings', desc: 'Dedicated, safe blocks for Boys and Girls.', icon: <Users /> },
+          { title: 'Nutritional Mess', desc: 'Hygienic veg and non-veg dining facilities.', icon: <Coffee /> },
+          { title: '24/7 Security', desc: 'Round-the-clock CCTV and professional guards.', icon: <ShieldCheck /> },
+          { title: 'High-Speed Wi-Fi', desc: 'Continuous connectivity for academic research.', icon: <Globe2 /> }
+        ]
+      },
+      { 
+        type: 'list', 
+        title: 'Hostel Amenities', 
+        items: [
+          'Spacious, ventilated rooms with modular furniture.',
+          'Solar water heating systems for sustainable living.',
+          'Indoor recreation zone with Table Tennis and Pool.',
+          'On-call medical assistance for residents.',
+          'Laundry and professional cleaning services.'
+        ]
+      }
+    ]
   },
+
+  // --- 6. TRANSPORT SYSTEM ---
   'transport': {
     title: 'Transport System',
-    subtitle: 'Safe Commute for All',
-    content: 'KCMS operates a fleet of modern buses that cover all major parts of the city, ensuring safe and timely transport for students.',
-    highlights: ['City-Wide Coverage', 'GPS Tracked', 'Safe Drivers', 'Scheduled Routes']
+    subtitle: 'Connectivity with Punctuality',
+    heroImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'grid', 
+        title: 'Service Highlights', 
+        items: [
+          { title: 'City-Wide Coverage', desc: 'Routes covering all major Bangalore nodes.', icon: <MapPin /> },
+          { title: 'GPS Tracking', desc: 'Real-time monitoring for student safety.', icon: <ShieldCheck /> },
+          { title: 'Modern Fleet', desc: 'Luxury academic buses with ergonomic seating.', icon: <Bus /> },
+          { title: 'Verified Drivers', desc: 'Experienced crew with clean background checks.', icon: <UserCheck /> }
+        ]
+      }
+    ]
   },
+
+  // --- 7. AUDITORIUM ---
   'auditorium': {
-    title: 'State-of-the-art Auditorium',
-    subtitle: 'Where Talent Takes Center Stage',
-    content: 'Our fully air-conditioned auditorium with 500+ seating capacity is the venue for all major seminars, festivals, and guest talks.',
-    highlights: ['A/C Environment', 'Pro Audio-Visual', 'Large Seating', 'Modern Stage']
+    title: 'KCMS Auditorium',
+    subtitle: 'The Stage for Grandeur and Innovation',
+    heroImage: 'https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'grid', 
+        title: 'Venue Specs', 
+        items: [
+          { title: '500+ Capacity', desc: 'Spacious seating for large academic events.', icon: <Users /> },
+          { title: 'Acoustic Control', desc: 'Sound-proof walls and professional reverb gear.', icon: <Radio /> },
+          { title: 'LED Wall', desc: 'Massive digital backdrop for presentations.', icon: <Monitor /> },
+          { title: 'Green Rooms', desc: 'Professional backstage for cultural fests.', icon: <Layout /> }
+        ]
+      }
+    ]
   },
+
+  // --- 8. MEDICAL FACILITY ---
   'medical': {
     title: 'Medical Facility',
-    subtitle: 'Your Health is Our Priority',
-    content: 'A dedicated medical room with a full-time nurse and visiting doctor is available on campus to handle any health emergencies.',
-    highlights: ['24/7 First Aid', 'Doctor on Call', 'Health Checks', 'Emergency Van']
+    subtitle: 'Health and Safety First',
+    heroImage: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'grid', 
+        title: 'Health Hub', 
+        items: [
+          { title: 'Infirmary', desc: 'On-campus primary care and first-aid hub.', icon: <Stethoscope /> },
+          { title: 'Ambulance', desc: '24/7 emergency vehicle on standby.', icon: <Activity /> },
+          { title: 'Health Camps', desc: 'Regular wellness and eye checkup drives.', icon: <Eye /> },
+          { title: 'Counseling', desc: 'Confidential mental health support wing.', icon: <Heart /> }
+        ]
+      }
+    ]
   },
+
+  // --- 9. SPORTS COMPLEX & GYM ---
   'gym': {
-    title: 'Sports Complex & Gym',
-    subtitle: 'Building Stronger Bodies',
-    content: 'Our multi-facility sports complex includes a fully equipped gym, basketball courts, and indoor gaming zones for overall fitness.',
-    highlights: ['Modern Equipment', 'Indoor Courts', 'Fitness Trainers', 'Open Play Areas']
+    title: 'Sports & Fitness',
+    subtitle: 'Empowering Physical and Mental Vitality',
+    heroImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80',
+    sections: [
+      { 
+        type: 'grid', 
+        title: 'Athletic Centers', 
+        items: [
+          { title: 'Pro-Gym', desc: 'Full range of cardio and strength equipment.', icon: <Dumbbell /> },
+          { title: 'Indoor Arena', desc: 'Badminton, Table Tennis, and Chess zones.', icon: <Target /> },
+          { title: 'Outdoor Turf', desc: 'Professional grounds for Cricket and Football.', icon: <Trophy /> },
+          { title: 'Yoga Deck', desc: 'Dedicated space for morning mindfulness.', icon: <Heart /> }
+        ]
+      }
+    ]
   }
 };
 
-export const COURSES_DATA: Record<string, Course> = {
+export const COURSES_DATA: Record<string, any> = {
   bca: {
     id: 'bca',
-    name: 'Bachelor of Computer Applications (BCA)',
-    shortDesc: 'Master coding, AI, and cloud computing.',
-    fullDesc: 'The BCA program at KCMS provides a solid foundation in computer science and its industrial applications. We focus on Python, Java, Full Stack, and Cloud technologies.',
+    name: 'Department of Computer Applications (BCA)',
+    category: 'Undergraduate',
     duration: '3 Years',
-    category: 'UG',
-    eligibility: '10+2 with 50% aggregate.',
-    opportunities: ['Software Engineer', 'App Developer', 'Data Analyst', 'UI/UX Designer']
+    shortDesc: 'Crafting the next generation of software architects and tech innovators.',
+    fullDesc: 'The BCA department at KCMS is a center of excellence for technical education. We focus on the intersection of theoretical computer science and modern industry applications like DevOps, AI, and Cybersecurity.',
+    objectives: [
+      'Master core programming paradigms (Java, Python, C++).',
+      'Understand advanced cloud infrastructure and database management.',
+      'Develop agile software development mindsets.',
+      'Foster a research-oriented approach to problem-solving.'
+    ],
+    curriculum: [
+      { sem: 'Sem 1-2', focus: 'Programming Fundamentals, Math, Digital Logic.' },
+      { sem: 'Sem 3-4', focus: 'Data Structures, OS, DBMS, Web Technologies.' },
+      { sem: 'Sem 5-6', focus: 'AI & ML, Cloud Computing, Mobile Apps, Final Project.' }
+    ],
+    facultyStats: { phd: '45%', experience: '12+ Years Avg.', publications: '150+' },
+    labInfo: [
+      { icon: <Code />, title: 'Full Stack Lab', desc: 'Equipped with MERN stack tools and cloud servers.' },
+      { icon: <Cpu />, title: 'Hardware & IoT Lab', desc: 'Raspberry Pi and Arduino kits for experimental learning.' }
+    ],
+    opportunities: ['Software Engineer', 'Full Stack Developer', 'Cyber Security Analyst', 'System Administrator'],
+    achievements: [
+      '1st Place in Regional Inter-College Hackathon 2023.',
+      'Student patent filed for Smart Traffic Management System.',
+      '100% placement record in tier-1 tech companies.'
+    ]
   },
   mba: {
     id: 'mba',
-    name: 'Master of Business Administration (MBA)',
-    shortDesc: 'Develop global leadership and strategic mindset.',
-    fullDesc: 'Ranked among top B-schools, our MBA program focuses on dual specializations and corporate immersions. We offer tracks in Finance, HR, Marketing, and Business Analytics.',
+    name: 'Department of Management Studies (MBA)',
+    category: 'Postgraduate',
     duration: '2 Years',
-    category: 'PG',
-    eligibility: 'Graduation + Valid PGCET/KMAT/MAT score.',
-    opportunities: ['Brand Manager', 'Investment Banker', 'HR Manager', 'Management Consultant']
+    shortDesc: 'Global leadership through strategic dual specialization.',
+    fullDesc: 'Our MBA program is ranked among the top B-schools in the region. We offer a dual-specialization model that allows students to combine core management with high-growth sectors like Analytics and Fintech.',
+    objectives: [
+      'Develop cross-functional strategic leadership skills.',
+      'Enhance data-driven decision making capabilities.',
+      'Foster global business perspective through international immersions.',
+      'Build entrepreneurial mindset for new-age venture creation.'
+    ],
+    curriculum: [
+      { sem: 'Sem 1', focus: 'Org Behavior, Econ, Accounting, Marketing Management.' },
+      { sem: 'Sem 2-3', focus: 'Financial Management, HR, Operations, Analytics Electives.' },
+      { sem: 'Sem 4', focus: 'Strategic Management, Ethics, Capstone Project.' }
+    ],
+    facultyStats: { phd: '60%', experience: '15+ Years Avg.', industry: 'Ex-CXO Mentors' },
+    labInfo: [
+      { icon: <PieChart />, title: 'Financial Terminal', desc: 'Real-time stock market tracking and trading simulation.' },
+      { icon: <TrendingUp />, title: 'Business Analytics Lab', desc: 'Advanced licenses for SPSS, Tableau, and PowerBI.' }
+    ],
+    opportunities: ['Brand Manager', 'Investment Banker', 'Management Consultant', 'Supply Chain Head'],
+    achievements: [
+      'Best B-School Award 2024 for Industry Engagement.',
+      'Top 10 Global Immersion Tour to Dubai Hub.',
+      'Successful incubation of 5 student startups.'
+    ]
   },
-  bba: { id: 'bba', name: 'Bachelor of Business Administration (BBA)', shortDesc: 'Future business leaders start here.', fullDesc: 'Industry aligned BBA program focused on management.', duration: '3 Years', category: 'UG', eligibility: '10+2', opportunities: ['Sales Manager', 'Operations Executive'] },
-  bcom: { id: 'bcom', name: 'Bachelor of Commerce (B.Com)', shortDesc: 'Excellence in accounting and finance.', fullDesc: 'Professional B.Com program.', duration: '3 Years', category: 'UG', eligibility: '10+2', opportunities: ['Chartered Accountant', 'Financial Auditor'] },
-  mttm: { id: 'mttm', name: 'Master of Tourism (MTTM)', shortDesc: 'Explore the global travel industry.', fullDesc: 'Advanced travel management.', duration: '2 Years', category: 'PG', eligibility: 'Graduation', opportunities: ['Tourism Consultant', 'Airline Manager'] },
-  bttm: { id: 'bttm', name: 'Bachelor of Tourism (BTTM)', shortDesc: 'Careers in global travel.', fullDesc: 'Foundational tourism study.', duration: '3 Years', category: 'UG', eligibility: '10+2', opportunities: ['Tour Guide', 'Travel Agent'] }
+  bba: {
+    id: 'bba',
+    name: 'Department of Business Administration (BBA)',
+    category: 'Undergraduate',
+    duration: '3 Years',
+    shortDesc: 'Foundation of modern management and organizational leadership.',
+    fullDesc: 'The BBA department focuses on creating professional managers who are ready for the global economy. We combine classroom rigor with frequent industry interactions.',
+    objectives: [
+      'Understand core principles of management and administration.',
+      'Develop professional communication and soft skills.',
+      'Master the basics of marketing, finance, and human resources.',
+      'Engage in practical business simulations and case studies.'
+    ],
+    curriculum: [
+      { sem: 'Sem 1-2', focus: 'Management Basics, Business Law, Communication.' },
+      { sem: 'Sem 3-4', focus: 'Finance, HR, Marketing, Entrepreneurship.' },
+      { sem: 'Sem 5-6', focus: 'Strategic Management, Internships, Specializations.' }
+    ],
+    facultyStats: { phd: '30%', experience: '10+ Years Avg.', industry: '80% Industry Linkage' },
+    labInfo: [
+      { icon: <Users />, title: 'Soft Skills Lab', desc: 'State-of-the-art language and presentation recording facility.' },
+      { icon: <Monitor />, title: 'IT for Managers', desc: 'Advanced Excel and ERP training center.' }
+    ],
+    opportunities: ['HR Associate', 'Sales Executive', 'Retail Manager', 'Administrative Officer'],
+    achievements: [
+      'Winner of National Level Management Fest "Srujana".',
+      'Consistent 90% placement in MNC retail and banking sectors.'
+    ]
+  },
+  bcom: {
+    id: 'bcom',
+    name: 'Department of Commerce (B.Com)',
+    category: 'Undergraduate',
+    duration: '3 Years',
+    shortDesc: 'Professional excellence in accounting and financial regulation.',
+    fullDesc: 'The B.Com program at KCMS is designed for students aiming for careers in CA, ACCA, and corporate finance. We offer integrated professional training modules.',
+    objectives: [
+      'Gain mastery over financial and cost accounting standards.',
+      'Learn the complexities of taxation and corporate law.',
+      'Understand global banking and investment operations.',
+      'Utilize Tally and SAP for digital bookkeeping.'
+    ],
+    curriculum: [
+      { sem: 'Sem 1-2', focus: 'Financial Accounting, Law, Business Stats.' },
+      { sem: 'Sem 3-4', focus: 'Corporate Accounting, Income Tax, Audit.' },
+      { sem: 'Sem 5-6', focus: 'GST, Financial Management, Costing.' }
+    ],
+    facultyStats: { phd: '35%', professional: 'CA/CMA Mentors', experience: '14+ Years' },
+    labInfo: [
+      { icon: <CheckCircle />, title: 'Accounting Lab', desc: 'Dedicated training for Tally Prime and GST filing.' },
+      { icon: <Landmark />, title: 'Fin-Hub', desc: 'Resource center for banking exam preparations.' }
+    ],
+    opportunities: ['Accountant', 'Tax Consultant', 'Auditor', 'Financial Analyst'],
+    achievements: [
+      'Highest number of students clearing CA Foundation in the first attempt.',
+      'Institutional partner for ACCA global certifications.'
+    ]
+  },
+  mttm: {
+    id: 'mttm',
+    name: 'Dept. of Tourism & Hospitality (BTTM/MTTM)',
+    category: 'UG / PG',
+    duration: '3Y / 2Y',
+    shortDesc: 'Global career in the world\'s fastest-growing industry.',
+    fullDesc: 'The Tourism department at KCMS is a pioneer in travel education. We provide a 360-degree view of the industry, from sustainable tourism to airline management.',
+    objectives: [
+      'Master airline operations and GDS ticketing systems.',
+      'Understand sustainable tourism and heritage management.',
+      'Develop cross-cultural communication and hospitality skills.',
+      'Explore global destination marketing strategies.'
+    ],
+    curriculum: [
+      { sem: 'Core', focus: 'Travel Geography, IATA Regulations, Ticketing.' },
+      { sem: 'Advanced', focus: 'Cruise Management, Event Planning, Hotel Ops.' },
+      { sem: 'Applied', focus: 'Tour Guiding, Global Distribution Systems.' }
+    ],
+    facultyStats: { phd: '25%', industry: 'IATA Certified', experience: '18+ Years' },
+    labInfo: [
+      { icon: <PlaneTakeoff />, title: 'GDS Terminal', desc: 'Hands-on training on Amadeus and Galileo systems.' },
+      { icon: <Globe />, title: 'Cultural Studio', desc: 'Simulations for global itinerary planning.' }
+    ],
+    opportunities: ['Airline Manager', 'Cruise Consultant', 'Tour Operator', 'Hotel Manager'],
+    achievements: [
+      'Placement partnerships with Emirates and Qatar Airways.',
+      'Winner of the Regional Heritage Tourism Award.'
+    ]
+  },
+  integrated: {
+    id: 'integrated',
+    name: 'Integrated Programs Cell',
+    category: 'Integrated',
+    duration: '5 Years',
+    shortDesc: 'A unified 5-year journey from PUC to Master\'s degree.',
+    fullDesc: 'Our Integrated programs allow students to save one academic year and focus deeply on their specialization without the hurdles of multiple entrance exams.',
+    objectives: [
+      'Provide a continuous 5-year academic roadmap.',
+      'Integrate UG basics with PG advanced strategic modules.',
+      'Save time through streamlined transition processes.',
+      'Early industry exposure through long-term internships.'
+    ],
+    curriculum: [
+      { sem: 'Y1-Y3', focus: 'Foundational Undergraduate Core Subjects.' },
+      { sem: 'Y4-Y5', focus: 'Advanced Specialization & Strategic Management.' }
+    ],
+    facultyStats: { phd: '50%', experience: '20+ Years', mentorship: 'Integrated Focus' },
+    labInfo: [
+      { icon: <Zap />, title: 'Innovation Lab', desc: 'Cross-functional space for long-term project development.' },
+      { icon: <Handshake />, title: 'Industry Cell', desc: 'Dedicated corporate liaison for 5-year track students.' }
+    ],
+    opportunities: ['Senior Management Roles', 'Research Scholars', 'Corporate Strategy', 'Entreprenuer'],
+    achievements: [
+      '90% of students secure PPOs by the end of Year 4.',
+      'Cohesive curriculum praised by the Academic Council.'
+    ]
+  }
 };
 
 export const TESTIMONIALS: Testimonial[] = [
-  { name: "Rahul Sharma", role: "MBA 2022 Graduate", text: "KCMS provided me with the perfect blend of academic rigor and practical exposure. The placements here are outstanding!", image: "https://i.pravatar.cc/150?u=1" },
-  { name: "Sneha Patil", role: "BCA 2021 Graduate", text: "The faculty in the computer department is extremely supportive. I got placed in a top MNC right after graduation.", image: "https://i.pravatar.cc/150?u=2" }
+  { name: "Rahul Sharma", role: "MBA 2022 Graduate", text: "KCMS provided me with the perfect blend of academic rigor and practical exposure. The placements here are outstanding and the faculty mentorship is life-changing!", image: "https://i.pravatar.cc/150?u=1" },
+  { name: "Sneha Patil", role: "BCA 2021 Graduate", text: "The faculty in the computer department is extremely supportive. I got placed in a top MNC right after graduation thanks to the skill development cell.", image: "https://i.pravatar.cc/150?u=2" },
+  { name: "John Doe", role: "BBA 2023 Student", text: "The vibrant campus life and the focus on character building make KCMS a unique place to grow as a professional and a human.", image: "https://i.pravatar.cc/150?u=3" }
 ];

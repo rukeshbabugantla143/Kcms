@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -8,11 +9,13 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* About */}
         <div>
-          <img 
-            src="https://res.cloudinary.com/dejcpd56d/image/upload/v1765439468/Logo-New-1024x222_etmqyk.webp" 
-            alt="KCMS Official Logo" 
-            className="h-14 w-auto mb-8 brightness-0 invert" 
-          />
+          <Link to="/">
+            <img 
+              src="https://res.cloudinary.com/dejcpd56d/image/upload/v1765439468/Logo-New-1024x222_etmqyk.webp" 
+              alt="KCMS Official Logo" 
+              className="h-14 w-auto mb-8 brightness-0 invert" 
+            />
+          </Link>
           <p className="text-white/80 leading-relaxed mb-6">
             Karnataka College of Management & Science is a premier institution dedicated to excellence in education, research, and holistic development.
           </p>
@@ -28,11 +31,11 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="text-lg font-bold mb-6 border-b border-white/20 pb-2">Quick Links</h4>
           <ul className="space-y-3 text-white/80">
-            <li><a href="#/about" className="hover:text-secondary transition-colors">About KCMS</a></li>
-            <li><a href="#/admissions" className="hover:text-secondary transition-colors">Admissions</a></li>
-            <li><a href="#/courses" className="hover:text-secondary transition-colors">Programs Offered</a></li>
-            <li><a href="#/placements" className="hover:text-secondary transition-colors">Placement Cell</a></li>
-            <li><a href="#/gallery" className="hover:text-secondary transition-colors">Campus Gallery</a></li>
+            <li><Link to="/about" className="hover:text-secondary transition-colors">About KCMS</Link></li>
+            <li><Link to="/admissions" className="hover:text-secondary transition-colors">Admissions</Link></li>
+            <li><Link to="/courses" className="hover:text-secondary transition-colors">Programs Offered</Link></li>
+            <li><Link to="/placements" className="hover:text-secondary transition-colors">Placement Cell</Link></li>
+            <li><Link to="/gallery" className="hover:text-secondary transition-colors">Campus Gallery</Link></li>
           </ul>
         </div>
 
@@ -40,11 +43,11 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="text-lg font-bold mb-6 border-b border-white/20 pb-2">Programs</h4>
           <ul className="space-y-3 text-white/80">
-            <li><a href="#/course/bca" className="hover:text-secondary transition-colors">BCA (IT)</a></li>
-            <li><a href="#/course/mba" className="hover:text-secondary transition-colors">MBA (Management)</a></li>
-            <li><a href="#/course/bba" className="hover:text-secondary transition-colors">BBA (Admin)</a></li>
-            <li><a href="#/course/bcom" className="hover:text-secondary transition-colors">B.Com (Commerce)</a></li>
-            <li><a href="#/course/mttm" className="hover:text-secondary transition-colors">MTTM (Tourism)</a></li>
+            <li><Link to="/course/bca" className="hover:text-secondary transition-colors">BCA (IT)</Link></li>
+            <li><Link to="/course/mba" className="hover:text-secondary transition-colors">MBA (Management)</Link></li>
+            <li><Link to="/course/bba" className="hover:text-secondary transition-colors">BBA (Admin)</Link></li>
+            <li><Link to="/course/bcom" className="hover:text-secondary transition-colors">B.Com (Commerce)</Link></li>
+            <li><Link to="/course/mttm" className="hover:text-secondary transition-colors">MTTM (Tourism)</Link></li>
           </ul>
         </div>
 

@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { NAVIGATION } from '../constants';
 import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, ChevronRight } from 'lucide-react';
 
@@ -32,8 +33,8 @@ const Header: React.FC = () => {
             <span className="flex items-center gap-2"><Mail size={14} className={scrolled ? 'text-secondary' : 'text-white'} /> admissions@kcms.edu.in</span>
           </div>
           <div className="flex gap-6">
-            <a href="#/admissions" className="hover:text-secondary transition-colors font-medium">Apply Now</a>
-            <a href="#/contact" className="hover:text-secondary transition-colors font-medium">Contact Us</a>
+            <Link to="/admissions" className="hover:text-secondary transition-colors font-medium">Apply Now</Link>
+            <Link to="/contact" className="hover:text-secondary transition-colors font-medium">Contact Us</Link>
           </div>
         </div>
       </div>
@@ -42,24 +43,24 @@ const Header: React.FC = () => {
       <nav className={`transition-all duration-500 ${headerBg}`}>
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           {/* Official Logo */}
-          <a href="#/" className="flex items-center group shrink-0">
+          <Link to="/" className="flex items-center group shrink-0">
             <img 
               src="https://res.cloudinary.com/dejcpd56d/image/upload/v1765439468/Logo-New-1024x222_etmqyk.webp" 
               alt="KCMS Logo" 
               className={`h-8 md:h-12 lg:h-14 w-auto object-contain transition-all duration-500 group-hover:scale-105 ${!scrolled ? 'brightness-110' : ''}`}
             />
-          </a>
+          </Link>
 
           {/* Desktop Mega Menu */}
           <div className="hidden lg:flex items-center gap-1 xl:gap-2">
             {NAVIGATION.map((item: any) => (
               <div key={item.label} className="relative mega-menu-trigger group">
-                <a 
-                  href={item.href}
+                <Link 
+                  to={item.href}
                   className={`flex items-center gap-1 font-bold text-[14px] xl:text-[15px] px-3 xl:px-4 py-5 transition-colors duration-300 ${navTextColor}`}
                 >
                   {item.label} {item.mega && <ChevronDown size={14} className="opacity-50" />}
-                </a>
+                </Link>
                 
                 {item.mega && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 mega-menu-content animate-fade-in pointer-events-none group-hover:pointer-events-auto">
@@ -76,13 +77,13 @@ const Header: React.FC = () => {
                             <ul className="space-y-3">
                               {col.links.map((link: any) => (
                                 <li key={link.label}>
-                                  <a 
-                                    href={link.href} 
+                                  <Link 
+                                    to={link.href} 
                                     className="text-[14px] text-neutralText/70 hover:text-primary hover:translate-x-1 transition-all flex items-center gap-2 font-medium"
                                   >
                                     <ChevronRight size={12} className="text-secondary opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                                     {link.label}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -94,12 +95,12 @@ const Header: React.FC = () => {
                                 <h6 className="font-bold text-lg mb-2 text-secondary">{col.highlight.title}</h6>
                                 <p className="text-xs text-white/80 leading-relaxed mb-4">{col.highlight.text}</p>
                               </div>
-                              <a 
-                                href={col.highlight.href}
+                              <Link 
+                                to={col.highlight.href}
                                 className="bg-secondary text-white py-2 px-4 rounded-lg text-xs font-bold flex items-center justify-center gap-2 hover:bg-white hover:text-primary transition-all"
                               >
                                 {col.highlight.cta} <ArrowRight size={14} />
-                              </a>
+                              </Link>
                             </div>
                           )}
                         </div>
@@ -128,11 +129,13 @@ const Header: React.FC = () => {
       <div className={`lg:hidden fixed inset-0 z-50 bg-white transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="h-full flex flex-col">
           <div className="p-4 md:p-6 border-b border-gray-100 flex justify-between items-center">
-            <img 
-              src="https://res.cloudinary.com/dejcpd56d/image/upload/v1765439468/Logo-New-1024x222_etmqyk.webp" 
-              alt="KCMS Logo" 
-              className="h-8 md:h-10 w-auto"
-            />
+            <Link to="/" onClick={() => setIsOpen(false)}>
+              <img 
+                src="https://res.cloudinary.com/dejcpd56d/image/upload/v1765439468/Logo-New-1024x222_etmqyk.webp" 
+                alt="KCMS Logo" 
+                className="h-8 md:h-10 w-auto"
+              />
+            </Link>
             <button onClick={() => setIsOpen(false)} className="text-primary"><X size={32} /></button>
           </div>
           
@@ -140,13 +143,13 @@ const Header: React.FC = () => {
             {NAVIGATION.map((item: any) => (
               <div key={item.label} className="border-b border-gray-50 pb-2">
                 <div className="flex justify-between items-center py-3">
-                  <a 
-                    href={item.href} 
+                  <Link 
+                    to={item.href} 
                     className="text-lg font-bold text-primary"
                     onClick={() => !item.mega && setIsOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                   {item.mega && (
                     <button 
                       onClick={() => toggleMobileSub(item.label)}
@@ -166,13 +169,13 @@ const Header: React.FC = () => {
                           <ul className="space-y-3">
                             {col.links.map((link: any) => (
                               <li key={link.label}>
-                                <a 
-                                  href={link.href} 
+                                <Link 
+                                  to={link.href} 
                                   className="text-[15px] font-medium text-neutralText/80 block"
                                   onClick={() => setIsOpen(false)}
                                 >
                                   {link.label}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>

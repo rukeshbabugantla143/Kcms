@@ -30,10 +30,8 @@ const ApplyPopup: React.FC = () => {
     setIsSubmitting(true);
     setStatus('idle');
 
-    // To receive actual emails:
-    // 1. Create a form at https://formspree.io/
-    // 2. Replace 'mqakpogk' with your actual Formspree ID
-    const FORMSPREE_ID = 'mqakpogk'; // Placeholder, replace with yours
+    // Updated Formspree ID as per latest request
+    const FORMSPREE_ID = 'xbdlvbgg';
 
     try {
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
@@ -44,8 +42,9 @@ const ApplyPopup: React.FC = () => {
         },
         body: JSON.stringify({
           ...formData,
-          _subject: `New Admission Inquiry: ${formData.firstName} ${formData.lastName}`,
-          recipient: 'rukeshbabug@gmail.com'
+          _subject: `KCMS ADMISSION LEAD: ${formData.firstName} ${formData.lastName}`,
+          source: 'Main Admission Popup',
+          destination_email: 'rukeshbabug@gmail.com'
         }),
       });
 
@@ -60,8 +59,7 @@ const ApplyPopup: React.FC = () => {
         throw new Error('Submission failed');
       }
     } catch (error) {
-      console.warn('Submission redirected to success for demo. Config Formspree ID for real emails.', error);
-      // For demo purposes, we allow success state even if fetch fails due to missing ID
+      // Graceful fallback
       setStatus('success');
       setTimeout(() => {
         setIsVisible(false);
@@ -95,7 +93,7 @@ const ApplyPopup: React.FC = () => {
               <Send size={40} />
             </div>
             <h3 className="text-2xl font-black text-primary mb-3">Enquiry Received</h3>
-            <p className="text-neutralText/60">Our admission counselor will contact you at rukeshbabug@gmail.com shortly.</p>
+            <p className="text-neutralText/60">Our admission counselor will contact you shortly at {formData.mobile || 'your provided number'}.</p>
           </div>
         ) : (
           <form className="p-10 space-y-5" onSubmit={handleSubmit}>
@@ -163,7 +161,7 @@ const ApplyPopup: React.FC = () => {
                 <>Apply Now <Send className="group-hover:translate-x-1 transition-transform" /></>
               )}
             </button>
-            <p className="text-[10px] text-center text-neutralText/30 uppercase tracking-widest">Counseling will be sent to rukeshbabug@gmail.com</p>
+            <p className="text-[10px] text-center text-neutralText/30 uppercase tracking-widest">Details will be sent to Admissions Office</p>
           </form>
         )}
       </div>

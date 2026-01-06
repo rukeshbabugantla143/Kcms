@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Users, Award, ShieldCheck, GraduationCap, Laptop, Landmark, Plane, Library, Monitor, Users2, Trophy, Image as ImageIcon, CheckCircle, ChevronRight, MessageSquare } from 'lucide-react';
 import { TESTIMONIALS } from '../constants';
 
@@ -64,12 +65,12 @@ const Home: React.FC = () => {
               <p className="text-neutralText leading-relaxed text-base md:text-lg mb-6 md:mb-10">
                 The Karnataka College of Management & Science was established in the year 2010 under the aegis of Karnataka Education Trust which was founded by an educationist Prof. Basavaraj Ramanal in the year 2003. It is one of the colleges run by Karnataka Education Trust for promoting education to all sections of society with the motto <span className="text-secondary font-bold">“Higher Education to All”</span>.
               </p>
-              <a 
-                href="#/about" 
+              <Link 
+                to="/about" 
                 className="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-primary text-white px-8 md:px-10 py-4 rounded-full font-bold hover:bg-secondary transition-all shadow-xl"
               >
                 Read More About KCMS <ArrowRight size={20} />
-              </a>
+              </Link>
             </div>
             <div className="lg:w-1/2 w-full animate-zoom-in">
               <div className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-gray-100 aspect-video group">
@@ -100,10 +101,10 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
-              { name: 'MTTM', label: 'Department of MTTM', icon: <Plane className="text-secondary" />, link: '#/course/mttm', color: 'bg-blue-50' },
-              { name: 'BBA', label: 'Department of BBA', icon: <Users className="text-secondary" />, link: '#/course/bba', color: 'bg-green-50' },
-              { name: 'B.COM', label: 'Department of B.COM', icon: <Landmark className="text-secondary" />, link: '#/course/bcom', color: 'bg-amber-50' },
-              { name: 'BCA', label: 'Department of BCA', icon: <Laptop className="text-secondary" />, link: '#/course/bca', color: 'bg-purple-50' },
+              { name: 'MTTM', label: 'Department of MTTM', icon: <Plane className="text-secondary" />, link: '/course/mttm', color: 'bg-blue-50' },
+              { name: 'BBA', label: 'Department of BBA', icon: <Users className="text-secondary" />, link: '/course/bba', color: 'bg-green-50' },
+              { name: 'B.COM', label: 'Department of B.COM', icon: <Landmark className="text-secondary" />, link: '/course/bcom', color: 'bg-amber-50' },
+              { name: 'BCA', label: 'Department of BCA', icon: <Laptop className="text-secondary" />, link: '/course/bca', color: 'bg-purple-50' },
             ].map((dept, i) => (
               <div key={i} className="bg-white rounded-2xl md:rounded-[2.5rem] p-6 md:p-10 border border-gray-100 hover:border-primary/20 hover:shadow-2xl transition-all group flex flex-col items-center text-center">
                 <div className={`w-14 h-14 md:w-20 md:h-20 ${dept.color} rounded-2xl md:rounded-3xl flex items-center justify-center mb-4 md:mb-8 group-hover:scale-110 transition-transform`}>
@@ -111,12 +112,12 @@ const Home: React.FC = () => {
                 </div>
                 <h3 className="text-xl md:text-2xl font-black text-primary mb-1">{dept.name}</h3>
                 <p className="text-neutralText/50 font-bold text-[10px] md:text-sm mb-6 md:mb-8 uppercase tracking-widest">{dept.label}</p>
-                <a 
-                  href={dept.link} 
+                <Link 
+                  to={dept.link} 
                   className="mt-auto w-full py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-primary/10 text-primary font-bold hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group/btn"
                 >
                   Know More <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -151,9 +152,9 @@ const Home: React.FC = () => {
               <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">World Class Facilities</h2>
               <p className="text-neutralText/60 text-base md:text-lg">Infrastructure designed to facilitate an immersive learning environment.</p>
             </div>
-            <a href="#/infrastructure" className="text-primary font-bold flex items-center gap-2 border-b-2 border-secondary pb-1 hover:gap-4 transition-all">
+            <Link to="/p/infrastructure" className="text-primary font-bold flex items-center gap-2 border-b-2 border-secondary pb-1 hover:gap-4 transition-all">
               View All Facilities <ArrowRight size={20} />
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
@@ -193,9 +194,9 @@ const Home: React.FC = () => {
                   <div className="text-[10px] md:text-xs font-bold text-neutralText/40 uppercase tracking-widest">Highest Package</div>
                 </div>
               </div>
-              <a href="#/placements" className="w-full md:w-auto inline-flex justify-center bg-primary text-white px-8 md:px-10 py-4 rounded-full font-bold hover:bg-secondary transition-all shadow-xl">
+              <Link to="/placements" className="w-full md:w-auto inline-flex justify-center bg-primary text-white px-8 md:px-10 py-4 rounded-full font-bold hover:bg-secondary transition-all shadow-xl">
                 Explore Placement Stats
-              </a>
+              </Link>
             </div>
 
             <div className="lg:w-1/2 w-full">
