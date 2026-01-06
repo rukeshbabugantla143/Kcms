@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Target, History, Award, CheckCircle, ChevronRight, Users, Landmark, Zap, BookOpen, Plus, Minus, HelpCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const AboutUs: React.FC = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -51,6 +52,11 @@ const AboutUs: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-white">
+      <SEO 
+        title="About KCMS Bangalore | Top Educational Institution since 2010"
+        description="Discover the legacy of Karnataka College of Management & Science. Learn about our mission, vision, and the leadership of Prof. Basavaraj Ramanal."
+        keywords="about KCMS Bangalore, Karnataka Education Trust, Prof. Basavaraj Ramanal, history of KCMS"
+      />
       {/* 1. Hero Banner */}
       <section className="relative h-[400px] flex items-center bg-primary overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png')] bg-cover bg-center"></div>

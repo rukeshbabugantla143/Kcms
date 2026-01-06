@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { COURSES_DATA } from '../constants';
 import { Book, CheckCircle, Briefcase, GraduationCap, Loader2, Check, Target, Trophy, Building2, Users, ArrowRight, ShieldCheck, Star } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const CourseDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -50,6 +51,11 @@ const CourseDetail: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-white">
+      <SEO 
+        title={`${dept.name} in Bangalore | Admissions 2026 | KCMS`}
+        description={`Enroll in ${dept.name} at KCMS Bangalore. Industry-integrated curriculum, high-tech labs, and expert faculty. ${dept.shortDesc}`}
+        keywords={`${dept.id} admission Bangalore, best ${dept.id} college, KCMS Bangalore courses`}
+      />
       {/* 1. Hero / Banner */}
       <section className="bg-primary text-white py-24 relative overflow-hidden">
         <div className="absolute right-0 bottom-0 opacity-10 font-black text-9xl -mb-10 pointer-events-none uppercase">

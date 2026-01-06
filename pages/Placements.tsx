@@ -7,6 +7,7 @@ import {
   Target, Rocket, Building2, PhoneCall, ChevronRight,
   Handshake, Laptop, Star
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Placements: React.FC = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -88,6 +89,11 @@ const Placements: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-white">
+      <SEO 
+        title="Placements at KCMS Bangalore | Top Recruiters & Career Success"
+        description="KCMS is one of the best colleges in Bangalore for placements with a 95% success rate. Highest package 12 LPA. Top hiring partners include Google, Amazon, and Deloitte."
+        keywords="college placements Bangalore, best placements for MBA, BCA placements Bangalore, KCMS recruiters, highest package colleges Bangalore"
+      />
       {/* 1. Hero Section */}
       <section className="bg-primary text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
@@ -256,7 +262,6 @@ const Placements: React.FC = () => {
            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {successStories.map((story, i) => (
                 <div key={i} className="bg-gray-50 p-10 md:p-12 rounded-[3rem] border border-gray-100 relative shadow-xl group hover:bg-white hover:border-secondary/20 transition-all">
-                   <Quote size={60} className="text-primary/5 absolute top-8 left-8" />
                    <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
                       <img src={story.image} className="w-24 h-24 rounded-full border-4 border-white shadow-lg shrink-0 object-cover" alt={story.name} />
                       <div className="text-center md:text-left">
@@ -341,12 +346,5 @@ const Placements: React.FC = () => {
     </div>
   );
 };
-
-// Internal utility for icon rendering
-const Quote = ({ size, className }: { size: number, className: string }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12L13.017 12V9C13.017 7.34315 14.3601 6 16.017 6H19.017C20.6739 6 22.017 7.34315 22.017 9V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM3.017 21L3.017 18C3.017 16.8954 3.91244 16 5.017 16H8.017C8.56928 16 9.017 15.5523 9.017 15V9C9.017 8.44772 8.56928 8 8.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V12L2.017 12V9C2.017 7.34315 3.36015 6 5.017 6H8.017C9.67386 6 11.017 7.34315 11.017 9V15C11.017 18.3137 8.33065 21 5.017 21H3.017Z" />
-  </svg>
-);
 
 export default Placements;

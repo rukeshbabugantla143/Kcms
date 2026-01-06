@@ -6,6 +6,7 @@ import {
   ArrowRight, Download, ShieldCheck, HelpCircle, Calendar, 
   Award, BookOpen, Clock, Users, ChevronDown, CheckCircle, Mail, Plus, Minus
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Admissions: React.FC = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -58,6 +59,11 @@ const Admissions: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-white">
+      <SEO 
+        title="Admissions 2026 | Apply to Best College in Bangalore | KCMS"
+        description="Start your professional journey at KCMS. Online applications open for BCA, BBA, B.Com, and MBA 2026 batch. Check eligibility and scholarship details."
+        keywords="MBA admission Bangalore 2026, BCA college Bangalore admission, BBA courses Bangalore, apply to KCMS Bangalore"
+      />
       {/* 1. Hero Section */}
       <section className="bg-primary text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>

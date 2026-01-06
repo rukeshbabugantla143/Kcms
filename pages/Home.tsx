@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Users, Award, ShieldCheck, GraduationCap, Laptop, Landmark, Plane, Library, Monitor, Users2, Trophy, Image as ImageIcon, CheckCircle, ChevronRight, MessageSquare } from 'lucide-react';
 import { TESTIMONIALS } from '../constants';
+import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
   const [counters, setCounters] = useState({ years: 0, placement: 0, courses: 0, students: 0 });
@@ -51,6 +52,11 @@ const Home: React.FC = () => {
 
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="KCMS Bangalore | Best College for BCA, BBA, B.Com & MBA Admissions 2026"
+        description="Join KCMS, the top-rated college in Bangalore offering UG and PG programs with 95% placement record. Apply now for BCA, BBA, B.Com, and MBA admissions 2026."
+        keywords="best college in Bangalore, top MBA college Bangalore, BCA admissions Bangalore 2026, BBA colleges with placement Bangalore, KCMS Bangalore"
+      />
       {/* 1️⃣ Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
