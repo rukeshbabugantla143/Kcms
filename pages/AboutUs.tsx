@@ -60,7 +60,7 @@ const AboutUs: React.FC = () => {
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary rounded-[3rem] rotate-3 group-hover:rotate-6 transition-transform"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" 
+                  src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767687458/download_1_hopo91.png" 
                   alt="Prof. Basavaraj Ramanal" 
                   className="relative z-10 rounded-[3rem] w-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
                 />

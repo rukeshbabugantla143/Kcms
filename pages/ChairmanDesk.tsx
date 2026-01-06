@@ -26,7 +26,7 @@ const ChairmanDesk: React.FC = () => {
                <div className="relative inline-block group">
                   <div className="absolute inset-0 bg-secondary rounded-[3rem] rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
                   <img 
-                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80" 
+                    src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767687458/download_1_hopo91.png" 
                     className="relative z-10 rounded-[3rem] w-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700" 
                     alt="Chairman Prof. Basavaraj Ramanal" 
                   />

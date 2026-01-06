@@ -13,7 +13,7 @@ const PrincipalMessage: React.FC = () => {
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-6 relative z-10 animate-fade-up">
           <nav className="flex items-center gap-2 text-white/50 text-xs mb-8 uppercase font-black tracking-widest">
-            <Link to="/" className="hover:text-secondary">Home</Link> 
+            <Link to="/" className="hover:text-secondary transition-colors">Home</Link> 
             <ChevronRight size={14} /> 
             <Link to="/p/leadership" className="hover:text-secondary">Leadership</Link>
             <ChevronRight size={14} />
@@ -22,15 +22,15 @@ const PrincipalMessage: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-2/3">
               <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">Leadership Through <br/><span className="text-secondary">Academic Excellence</span></h1>
-              <p className="text-xl text-white/70 max-w-2xl leading-relaxed">A message from Dr. S. K. Narayanan, the guiding force behind KCMS's academic success and institutional growth.</p>
+              <p className="text-xl text-white/70 max-w-2xl leading-relaxed">A message from Mohammed Noor Ahmed, the guiding force behind KCMS's academic success and institutional growth.</p>
             </div>
             <div className="md:w-1/3 text-center">
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80" 
-                  alt="Principal Dr. S. K. Narayanan" 
-                  className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-8 border-white/10 shadow-2xl relative z-10"
+                  src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767688052/IMG_4453-1152x1536_v0b6my.webp" 
+                  alt="Principal Mohammed Noor Ahmed" 
+                  className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-[3rem] border-8 border-white/10 shadow-2xl relative z-10"
                 />
               </div>
             </div>
@@ -142,7 +142,7 @@ const PrincipalMessage: React.FC = () => {
             <h4 className="text-2xl font-black mb-6">Principal's Advice to Aspirants</h4>
             <div className="space-y-6 italic text-neutralText leading-relaxed">
               <p>"Stay curious. The world rewards those who never stop asking 'Why?'. Your time at KCMS will be what you make of it. Seize every opportunity, use every lab, and talk to every professor."</p>
-              <div className="font-black text-secondary not-italic mt-10">— Dr. S. K. Narayanan</div>
+              <div className="font-black text-secondary not-italic mt-10">— Mohammed Noor Ahmed</div>
             </div>
           </div>
         </div>
@@ -199,7 +199,7 @@ const PrincipalMessage: React.FC = () => {
 
       {/* 8. Signature Closing */}
       <section className="py-20 border-t border-gray-100 container mx-auto px-6 text-center opacity-50">
-        <div className="text-primary font-black text-xl mb-2 italic">Dr. S. K. Narayanan</div>
+        <div className="text-primary font-black text-xl mb-2 italic">Mohammed Noor Ahmed</div>
         <div className="text-xs font-bold uppercase tracking-widest">Principal, Karnataka College of Management & Science</div>
       </section>
     </div>

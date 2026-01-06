@@ -9,7 +9,7 @@ const FacultyProfile: React.FC = () => {
 
   const faculty = [
     { name: 'Dr. Ramesh Kumar', role: 'Director - Academics', dept: 'Management', exp: '25+ Yrs', img: 'https://i.pravatar.cc/300?u=a', research: 'Behavioral Finance & Fintech' },
-    { name: 'Dr. S. K. Narayanan', role: 'Principal', dept: 'Science', exp: '22+ Yrs', img: 'https://i.pravatar.cc/300?u=b', research: 'Cloud Architecture & AI' },
+    { name: 'Mohammed Noor Ahmed', role: 'Principal', dept: 'Science', exp: '20+ Yrs', img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767688052/IMG_4453-1152x1536_v0b6my.webp', research: 'Advanced Computing & Management' },
     { name: 'Mrs. Geetha Ramanal', role: 'Managing Trustee', dept: 'Administration', exp: '15+ Yrs', img: 'https://i.pravatar.cc/300?u=c', research: 'Institutional Governance' },
     { name: 'Dr. Anil Vishwas', role: 'Dean - Students', dept: 'Management', exp: '20+ Yrs', img: 'https://i.pravatar.cc/300?u=d', research: 'Operations Management' },
     { name: 'Prof. Sarah John', role: 'HOD - BCA', dept: 'Science', exp: '12+ Yrs', img: 'https://i.pravatar.cc/300?u=e', research: 'Full Stack Development' },
@@ -86,7 +86,7 @@ const FacultyProfile: React.FC = () => {
                     <div className="text-secondary font-black uppercase text-[10px] tracking-widest mb-2">{f.dept} Department</div>
                     <h3 className="text-2xl font-black text-primary mb-1">{f.name}</h3>
                     <p className="text-neutralText/60 font-bold text-sm mb-6">{f.role}</p>
-                    <div className="pt-6 border-t border-gray-50 italic text-neutralText text-sm leading-relaxed">
+                    <div className="pt-6 border-t border-gray-100 italic text-neutralText text-sm leading-relaxed">
                        <span className="font-black text-primary not-italic uppercase text-[10px] block mb-2 opacity-40">Research Focus</span>
                        "{f.research}"
                     </div>
