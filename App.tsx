@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -35,9 +35,31 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import GenericPage from './pages/GenericPage';
 import ApplyPopup from './components/ApplyPopup';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, ChevronUp } from 'lucide-react';
 
 const App: React.FC = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col overflow-x-hidden">
@@ -121,13 +143,28 @@ const App: React.FC = () => {
         <Footer />
         <ApplyPopup />
 
-        {/* Floating WhatsApp Action Button */}
+        {/* Floating Action Buttons */}
+        
+        {/* Left Side: Go To Top Button */}
+        {showScrollTop && (
+          <div className="fixed bottom-6 left-6 z-50 animate-fade-in">
+            <button 
+              onClick={scrollToTop}
+              className="w-14 h-14 md:w-16 md:h-16 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl hover:bg-secondary hover:scale-110 transition-all duration-300"
+              aria-label="Scroll to top"
+            >
+              <ChevronUp size={32} />
+            </button>
+          </div>
+        )}
+
+        {/* Right Side: WhatsApp Button */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
           <a 
             href="https://wa.me/919606994048" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+            className="w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
           >
             <MessageSquare size={32} />
           </a>
