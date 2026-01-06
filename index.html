@@ -3,9 +3,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>KCMS | Best College in Bangalore | Admissions 2026</title>
   
+  <!-- PWA & Mobile Optimization -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#6A0030">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KCMS">
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dejcpd56d/image/upload/v1767685713/images_cjan0c.jpg">
+
   <!-- SEO Meta Tags -->
   <meta name="description" content="Karnataka College (KCMS) is a premier educational institution in Bangalore offering top-rated courses in BCA, BBA, B.Com, and MBA with excellent placement support.">
   <meta name="keywords" content="best college in Bangalore, top colleges in Bangalore, KCMS Bangalore, colleges with placements, admission 2026 Bangalore, MBA admission Bangalore, Karnataka Education Trust">
@@ -18,13 +26,6 @@
   <meta property="og:title" content="KCMS | Best College in Bangalore">
   <meta property="og:description" content="KCMS Bangalore is a top-ranked college offering UG/PG programs with excellent campus placements.">
   <meta property="og:image" content="https://res.cloudinary.com/dejcpd56d/image/upload/v1767685713/images_cjan0c.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://kcms.edu.in/">
-  <meta property="twitter:title" content="KCMS | Best College in Bangalore">
-  <meta property="twitter:description" content="Empowering minds with world-class education and industry-integrated learning in Bangalore.">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dejcpd56d/image/upload/v1767685713/images_cjan0c.jpg">
 
   <link rel="icon" href="https://res.cloudinary.com/dejcpd56d/image/upload/v1767685713/images_cjan0c.jpg" type="image/jpeg">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -84,17 +85,15 @@
     }
   </script>
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
     .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
     .mega-menu-content { display: none; }
     .mega-menu-trigger:hover .mega-menu-content { display: block; }
     
-    /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #f1f1f1; }
     ::-webkit-scrollbar-thumb { background: #6A0030; border-radius: 10px; }
     
-    /* Marquee Animation Support */
     @keyframes marquee {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }

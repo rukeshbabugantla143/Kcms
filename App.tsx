@@ -35,6 +35,7 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import GenericPage from './pages/GenericPage';
 import ApplyPopup from './components/ApplyPopup';
+import InstallPrompt from './components/InstallPrompt';
 import { MessageSquare, ChevronUp } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -142,6 +143,7 @@ const App: React.FC = () => {
 
         <Footer />
         <ApplyPopup />
+        <InstallPrompt />
 
         {/* Floating Action Buttons */}
         
