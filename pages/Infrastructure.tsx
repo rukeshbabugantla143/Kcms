@@ -10,15 +10,69 @@ const Infrastructure: React.FC = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const facilities = [
-    { title: 'Central Library', slug: 'library', icon: <Library />, desc: 'Fully automated with 50,000+ volumes and digital journals.', img: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80' },
-    { title: 'Computer Labs', slug: 'computer-labs', icon: <Monitor />, desc: 'High-performance workstations with gigabit internet connectivity.', img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80' },
-    { title: 'Science Labs', slug: 'science-labs', icon: <Microscope />, desc: 'Advanced research labs for Physics, Chemistry, and Electronics.', img: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80' },
-    { title: 'Smart Classrooms', slug: 'smart-classrooms', icon: <GraduationCap />, desc: 'Interactive 4K smart boards and high-quality audio systems.', img: 'https://images.unsplash.com/photo-1541339907198-e08756defe73?auto=format&fit=crop&q=80' },
-    { title: 'Hostel Facility', slug: 'hostel', icon: <Building2 />, desc: 'Safe, secure, and comfortable living for boys and girls.', img: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80' },
-    { title: 'Transport System', slug: 'transport', icon: <Bus />, desc: 'Fleet of GPS-tracked buses covering all major Bangalore routes.', img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80' },
-    { title: 'Auditorium', slug: 'auditorium', icon: <Music />, desc: 'Modern 500-seater hall for cultural and academic events.', img: 'https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&q=80' },
-    { title: 'Medical Facility', slug: 'medical', icon: <Stethoscope />, desc: '24/7 on-campus infirmary with ambulance support.', img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80' },
-    { title: 'Sports & Gym', slug: 'gym', icon: <Dumbbell />, desc: 'Pro-grade fitness equipment and multiple sports arenas.', img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80' },
+    { 
+      title: 'Central Library', 
+      slug: 'library', 
+      icon: <Library />, 
+      desc: 'Fully automated knowledge hub with 50,000+ volumes and digital journals.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767689980/download_4_gfxni9.png' 
+    },
+    { 
+      title: 'Computer Labs', 
+      slug: 'computer-labs', 
+      icon: <Monitor />, 
+      desc: 'High-performance computing center with industry-standard software and gigabit connectivity.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690271/download_11_mu2xxp.png' 
+    },
+    { 
+      title: 'Science & Tech Labs', 
+      slug: 'science-labs', 
+      icon: <Microscope />, 
+      desc: 'Advanced research environment for hands-on experimental learning and innovation.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690161/download_9_kbciqq.png' 
+    },
+    { 
+      title: 'Smart Classrooms', 
+      slug: 'smart-classrooms', 
+      icon: <GraduationCap />, 
+      desc: 'Digitally enabled lecture halls with interactive 4K smart boards and optimized acoustics.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png' 
+    },
+    { 
+      title: 'Hostel Facility', 
+      slug: 'hostel', 
+      icon: <Building2 />, 
+      desc: 'Safe, secure, and comfortable residential blocks for boys and girls.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767693347/download_13_pobgl1.png' 
+    },
+    { 
+      title: 'Transport System', 
+      slug: 'transport', 
+      icon: <Bus />, 
+      desc: 'Fleet of GPS-tracked buses connecting major residential areas to the campus.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690082/download_6_ealo4h.png' 
+    },
+    { 
+      title: 'Auditorium', 
+      slug: 'auditorium', 
+      icon: <Music />, 
+      desc: 'Modern multi-purpose hall for cultural events, seminars, and academic fests.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690014/download_5_v1xovv.png' 
+    },
+    { 
+      title: 'Administrative Block', 
+      slug: 'admin', 
+      icon: <Stethoscope />, 
+      desc: 'Centralized administrative hub for student services and campus governance.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690216/download_10_vssrg5.png' 
+    },
+    { 
+      title: 'Sports & Cultural Hub', 
+      slug: 'gym', 
+      icon: <Dumbbell />, 
+      desc: 'Comprehensive facilities for athletic training and holistic student development.', 
+      img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690221/download_10_yezsn9.png' 
+    },
   ];
 
   return (
@@ -27,12 +81,12 @@ const Infrastructure: React.FC = () => {
       <section className="bg-primary text-white py-24">
         <div className="container mx-auto px-6 text-center animate-fade-up">
           <nav className="flex items-center justify-center gap-2 text-white/50 text-xs mb-8 uppercase font-black tracking-widest">
-            <Link to="/" className="hover:text-secondary">Home</Link> 
+            <Link to="/" className="hover:text-secondary transition-colors">Home</Link> 
             <ChevronRight size={14} /> 
             <span className="text-white opacity-100">Infrastructure</span>
           </nav>
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">World-Class <br/> Campus</h1>
-          <p className="text-xl opacity-70 max-w-2xl mx-auto">Modern facilities designed to foster an immersive and technologically advanced learning experience for every student.</p>
+          <p className="text-xl opacity-70 max-w-2xl mx-auto leading-relaxed">Experience the best infrastructure in Bangalore, designed to foster innovation, comfort, and academic excellence.</p>
         </div>
       </section>
 
@@ -76,8 +130,8 @@ const Infrastructure: React.FC = () => {
           </div>
           <div className="lg:w-1/2 relative z-10">
              <div className="grid grid-cols-2 gap-4">
-               <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80" className="rounded-3xl shadow-lg" alt="Tech Hub" />
-               <img src="https://images.unsplash.com/photo-1581092921461-7d15cb89053e?auto=format&fit=crop&q=80" className="rounded-3xl shadow-lg translate-y-8" alt="Computing Lab" />
+               <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690271/download_11_mu2xxp.png" className="rounded-3xl shadow-lg aspect-square object-cover" alt="Tech Hub" />
+               <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690161/download_9_kbciqq.png" className="rounded-3xl shadow-lg translate-y-8 aspect-square object-cover" alt="Computing Lab" />
              </div>
           </div>
         </div>

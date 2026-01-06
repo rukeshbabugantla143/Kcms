@@ -9,7 +9,7 @@ const FacilityPage: React.FC = () => {
   const page = PAGE_DATA[slug || ''] || {
     title: slug?.replace('-', ' ').toUpperCase() || 'Facility Not Found',
     subtitle: 'KCMS World-Class Infrastructure',
-    heroImage: 'https://images.unsplash.com/photo-1541339907198-e08756defe73?auto=format&fit=crop&q=80',
+    heroImage: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png',
     sections: [
       {
         type: 'text',
@@ -126,7 +126,7 @@ const FacilityPage: React.FC = () => {
           {/* Sidebar */}
           <div className="lg:w-1/3">
             <div className="sticky top-32 space-y-8 animate-zoom-in">
-              <div className="bg-primary p-12 rounded-[3.5rem] text-white shadow-2xl relative overflow-hidden group">
+              <div className="bg-primary p-12 rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform"></div>
                 <h4 className="text-2xl font-black mb-6 flex items-center gap-3">
                   <ShieldCheck className="text-secondary" /> Institutional Support
@@ -143,7 +143,7 @@ const FacilityPage: React.FC = () => {
               </div>
 
               {/* Facility Navigator */}
-              <div className="bg-gray-50 p-12 rounded-[3.5rem] border border-gray-100">
+              <div className="bg-gray-50 p-12 rounded-[3rem] border border-gray-100">
                 <h4 className="text-xl font-black text-primary mb-8">Explore Other Facilities</h4>
                 <div className="space-y-4">
                   {[

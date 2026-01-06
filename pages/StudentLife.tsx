@@ -18,7 +18,7 @@ const StudentLife: React.FC = () => {
       {/* Hero */}
       <section className="relative h-[500px] flex items-center overflow-hidden bg-primary">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1541339907198-e08756defe73?auto=format&fit=crop&q=80" className="w-full h-full object-cover opacity-30" />
+          <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 animate-fade-up">

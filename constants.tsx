@@ -99,7 +99,7 @@ export const PAGE_DATA: Record<string, any> = {
   'library': {
     title: 'Central Library',
     subtitle: 'Best Infrastructure in Bangalore - Knowledge Hub',
-    heroImage: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80',
+    heroImage: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767689980/download_4_gfxni9.png',
     sections: [
       { 
         type: 'text', 
@@ -118,16 +118,63 @@ export const PAGE_DATA: Record<string, any> = {
       }
     ]
   },
+  // --- 2. SMART CLASSROOMS ---
+  'smart-classrooms': {
+    title: 'Smart Classrooms',
+    subtitle: 'Digitally Enabled Learning Spaces',
+    heroImage: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png',
+    sections: [
+      { 
+        type: 'text', 
+        title: 'Modern Pedagogy', 
+        content: 'KCMS features interactive smart classrooms equipped with 4K interactive boards, high-definition audio systems, and high-speed fiber-optic internet to facilitate a seamless digital learning experience.' 
+      },
+      { 
+        type: 'list', 
+        title: 'Key Features', 
+        items: [
+          'Interactive 4K Smart Boards',
+          'Acoustically Designed Lecture Halls',
+          'Digital Projection Systems',
+          'High-Speed Wi-Fi Connectivity',
+          'Ergonomic Seating Arrangements'
+        ]
+      }
+    ]
+  },
+  // --- 3. HOSTEL FACILITY ---
+  'hostel': {
+    title: 'Hostel Facility',
+    subtitle: 'Safe and Comfortable Living on Campus',
+    heroImage: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767693347/download_13_pobgl1.png',
+    sections: [
+      { 
+        type: 'text', 
+        title: 'A Home Away from Home', 
+        content: 'KCMS offers separate residential facilities for boys and girls, ensuring a secure environment with modern amenities, nutritious food, and round-the-clock supervision.' 
+      },
+      { 
+        type: 'grid', 
+        title: 'Hostel Amenities', 
+        items: [
+          { title: 'Security', desc: '24/7 CCTV surveillance and security staff.', icon: <Shield /> },
+          { title: 'Dining', desc: 'Hygienic multi-cuisine mess facilities.', icon: <Coffee /> },
+          { title: 'Wi-Fi', desc: 'High-speed internet for research and leisure.', icon: <Globe /> },
+          { title: 'Health', desc: 'On-campus medical assistance and emergency support.', icon: <Activity /> }
+        ]
+      }
+    ]
+  }
 };
 
 export const COURSES_DATA: Record<string, any> = {
   bca: {
     id: 'bca',
-    name: 'Best BCA College in Bangalore - Dept. of Computer Applications',
+    name: 'Bachelor of Computer Applications (BCA)',
     category: 'Undergraduate',
     duration: '3 Years',
-    shortDesc: 'Top BCA colleges in Bangalore with placements. Join KCMS for industry-aligned tech education.',
-    fullDesc: 'The BCA department at KCMS is recognized as one of the best BCA colleges in Bangalore. We offer high-tech labs and a modern curriculum focusing on software engineering, AI, and cybersecurity.',
+    shortDesc: 'Top BCA college in Bangalore with placements. Join KCMS for industry-aligned tech education and career growth.',
+    fullDesc: 'The BCA department at KCMS is recognized as one of the premier technical hubs in Bangalore. We offer high-tech labs and a modern curriculum focusing on software engineering, Artificial Intelligence, Cloud Computing, and Cybersecurity.',
     objectives: [
       'Master core programming paradigms (Java, Python, C++).',
       'Understand advanced cloud infrastructure.',
@@ -152,11 +199,11 @@ export const COURSES_DATA: Record<string, any> = {
   },
   mba: {
     id: 'mba',
-    name: 'Best MBA College in Bangalore - Dept. of Business Studies',
+    name: 'Master of Business Administration (MBA)',
     category: 'Postgraduate',
     duration: '2 Years',
-    shortDesc: 'Top colleges in Bangalore with placements. Dual specialization in Fintech and Analytics.',
-    fullDesc: 'KCMS is among the top MBA colleges in Bangalore with placements. Our program focuses on strategic leadership and data-driven decision making, making us an affordable MBA college in Bangalore.',
+    shortDesc: 'Premier MBA program in Bangalore with 95% placement support. Dual specialization in Fintech, HR, and Analytics.',
+    fullDesc: 'KCMS is among the top MBA colleges in Bangalore. Our program focuses on strategic leadership, corporate ethics, and data-driven decision making, making us the preferred choice for aspiring managers.',
     objectives: [
       'Develop strategic leadership skills.',
       'Enhance data-driven decision making.',
@@ -176,16 +223,16 @@ export const COURSES_DATA: Record<string, any> = {
     opportunities: ['Brand Manager', 'Investment Banker', 'Management Consultant', 'Supply Chain Head'],
     achievements: [
       'Best B-School Award 2024 for Industry Engagement.',
-      'Top-ranked college in Bangalore.'
+      'Top-ranked management college in Bangalore.'
     ]
   },
   bba: {
     id: 'bba',
-    name: 'Best BBA College in Bangalore - Dept. of Business Administration',
+    name: 'Bachelor of Business Administration (BBA)',
     category: 'Undergraduate',
     duration: '3 Years',
-    shortDesc: 'Top BBA colleges in Bangalore with placements. Foundation of modern management.',
-    fullDesc: 'Recognized as the best BBA college in Bangalore, KCMS prepares students for global leadership. We are the preferred choice for BBA admission in Bangalore.',
+    shortDesc: 'Foundation of modern management. Top-ranked BBA college with internship support in Bangalore.',
+    fullDesc: 'Recognized for academic excellence, the BBA program at KCMS prepares students for global leadership roles. We provide a blend of classroom theory and practical corporate exposure.',
     objectives: [
       'Principles of management.',
       'Professional soft skills.',
@@ -210,11 +257,11 @@ export const COURSES_DATA: Record<string, any> = {
   },
   bcom: {
     id: 'bcom',
-    name: 'Best B.Com College in Bangalore - Dept. of Commerce',
+    name: 'Bachelor of Commerce (B.Com)',
     category: 'Undergraduate',
     duration: '3 Years',
-    shortDesc: 'Best B.Com college in Bangalore with placement. Professional excellence in accounting.',
-    fullDesc: 'KCMS is the best commerce college in Bangalore for CA and ACCA aspirants. We rank among the top B.Com colleges in Bangalore with excellent industry tie-ups.',
+    shortDesc: 'Excellence in Commerce and Accounting. Best B.Com college for CA and ACCA aspirants.',
+    fullDesc: 'KCMS offers a robust B.Com program designed for those seeking careers in Finance, Audit, and Taxation. We provide additional training for professional certifications alongside the university degree.',
     objectives: [
       'Mastery over financial accounting.',
       'B.Com admission in Bangalore 2026.',
@@ -239,11 +286,11 @@ export const COURSES_DATA: Record<string, any> = {
   },
   mttm: {
     id: 'mttm',
-    name: 'Best BTTM & MTTM College in Bangalore - Tourism Dept.',
+    name: 'Bachelor & Master of Tourism and Travel Management',
     category: 'UG / PG',
     duration: '3Y / 2Y',
-    shortDesc: 'Tourism and travel management colleges in Bangalore. Best BTTM college for global hospitality careers.',
-    fullDesc: 'Join the best BTTM college in Bangalore for a career in global hospitality and tourism. KCMS offers the most comprehensive tourism and travel management courses in Bangalore.',
+    shortDesc: 'Comprehensive Tourism and Travel management courses. Best BTTM/MTTM college in Bangalore.',
+    fullDesc: 'Join the industry-leading Tourism department at KCMS. We offer global hospitality training and travel management certifications that prepare you for the worldwide tourism industry.',
     objectives: [
       'Master airline operations.',
       'Sustainable tourism management.',

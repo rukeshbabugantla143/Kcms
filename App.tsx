@@ -124,7 +124,7 @@ const App: React.FC = () => {
         {/* Floating WhatsApp Action Button */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
           <a 
-            href="https://wa.me/919876543210" 
+            href="https://wa.me/919606994048" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"

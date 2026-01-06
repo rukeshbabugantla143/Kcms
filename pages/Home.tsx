@@ -18,6 +18,23 @@ const Home: React.FC = () => {
     { name: 'TCS', url: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg' },
     { name: 'Capgemini', url: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Capgemini_2017_logo.svg' },
     { name: 'Oracle', url: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg' },
+    { name: 'Deloitte', url: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg' },
+    { name: 'HP', url: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg' },
+    { name: 'Dell', url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg' },
+    { name: 'Cognizant', url: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg' },
+    { name: 'EY', url: 'https://upload.wikimedia.org/wikipedia/commons/3/34/EY_logo_2019.svg' },
+    { name: 'KPMG', url: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/KPMG_logo.svg' },
+  ];
+
+  const galleryImages = [
+    'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png',
+    'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690271/download_11_mu2xxp.png',
+    'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690161/download_9_kbciqq.png',
+    'https://res.cloudinary.com/dejcpd56d/image/upload/v1767689980/download_4_gfxni9.png',
+    'https://res.cloudinary.com/dejcpd56d/image/upload/v1767693347/download_13_pobgl1.png',
+    'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690216/download_10_vssrg5.png',
+    'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690014/download_5_v1xovv.png',
+    'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690324/download_12_pvx4jx.png',
   ];
 
   useEffect(() => {
@@ -52,7 +69,6 @@ const Home: React.FC = () => {
           </video>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-20 text-white animate-fade-in flex flex-col items-center text-center">
-          {/* Text and buttons removed from hero as per user request */}
         </div>
       </section>
 
@@ -163,9 +179,9 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { title: 'Modern Digital Library', img: 'https://picsum.photos/600/400?random=11', icon: <Library /> },
-              { title: 'High-Tech IT Labs', img: 'https://picsum.photos/600/400?random=12', icon: <Monitor /> },
-              { title: 'Smart Classrooms', img: 'https://picsum.photos/600/400?random=13', icon: <GraduationCap /> }
+              { title: 'Modern Digital Library', img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767689980/download_4_gfxni9.png', icon: <Library /> },
+              { title: 'High-Tech IT Labs', img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690271/download_11_mu2xxp.png', icon: <Monitor /> },
+              { title: 'Smart Classrooms', img: 'https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png', icon: <GraduationCap /> }
             ].map((facility, i) => (
               <div key={i} className="group relative h-[350px] md:h-[450px] rounded-2xl md:rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all">
                 <img src={facility.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={facility.title} />
@@ -199,7 +215,7 @@ const Home: React.FC = () => {
                   <div className="text-[10px] md:text-xs font-bold text-neutralText/40 uppercase tracking-widest">Highest Package</div>
                 </div>
               </div>
-              <Link to="/placements" className="w-full md:w-auto inline-flex justify-center bg-primary text-white px-8 md:px-10 py-4 rounded-full font-bold hover:bg-secondary transition-all shadow-xl">
+              <Link to="/placements" className="w-full md:w-auto inline-flex justify-center bg-primary text-white px-8 md:px-10 py-4 rounded-full font-black hover:bg-secondary transition-all shadow-xl">
                 View Placement Statistics
               </Link>
             </div>
@@ -233,9 +249,9 @@ const Home: React.FC = () => {
             <p className="text-neutralText/60 text-sm md:text-base">Glimpses of the best college in Bangalore</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+            {galleryImages.map((url, i) => (
               <div key={i} className="relative group aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
-                <img src={`https://picsum.photos/500/500?random=${i+20}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="KCMS Gallery" />
+                <img src={url} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={`KCMS Gallery ${i + 1}`} />
                 <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                    <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-primary"><ArrowRight size={20} /></div>
                 </div>
@@ -257,7 +273,7 @@ const Home: React.FC = () => {
             {[
               { title: 'Apply Online', desc: 'Fill the enquiry form for 2026 batch.', icon: '01' },
               { title: 'Counseling', desc: 'Expert career guidance sessions.', icon: '02' },
-              { title: 'Verification', desc: 'Document review for eligibility.', icon: '03' },
+              { title: 'Verification', desc: 'Original document review by our registrar office.', icon: '03' },
               { title: 'Confirmation', desc: 'Secure your future at KCMS.', icon: '04' }
             ].map((step, i) => (
               <div key={i} className="relative text-center group">

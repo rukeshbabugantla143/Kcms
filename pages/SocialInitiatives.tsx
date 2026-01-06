@@ -6,6 +6,13 @@ import { ChevronRight, Heart, Globe, Users, History, ArrowRight, ShieldCheck, La
 const SocialInitiatives: React.FC = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
+  const collaboratorLogos = [
+    { name: 'Red Cross', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Red_Cross_icon.svg/1024px-Red_Cross_icon.svg.png' },
+    { name: 'WHO', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/WHO_logo.svg/1024px-WHO_logo.svg.png' },
+    { name: 'NSS India', url: 'https://upload.wikimedia.org/wikipedia/en/1/1a/NSS-symbol.png' },
+    { name: 'UNESCO', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/UNESCO_logo.svg/1024px-UNESCO_logo.svg.png' }
+  ];
+
   return (
     <div className="pt-24 min-h-screen bg-white">
       {/* Hero */}
@@ -73,7 +80,6 @@ const SocialInitiatives: React.FC = () => {
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 p-12 rounded-[3.5rem] border border-white/10 text-center hover:bg-white hover:text-primary transition-all group">
                    <div className="w-16 h-16 bg-secondary text-white rounded-2xl flex items-center justify-center mx-auto mb-10 group-hover:scale-110 transition-transform shadow-xl">
-                      {/* Fixed TypeScript error by adding <any> to React.ReactElement cast */}
                       {React.cloneElement(item.icon as React.ReactElement<any>, { size: 30 })}
                    </div>
                    <h4 className="text-2xl font-black mb-4">{item.title}</h4>
@@ -84,15 +90,17 @@ const SocialInitiatives: React.FC = () => {
         </div>
       </section>
 
-      {/* Partnerships */}
+      {/* Partnerships - REPLACED TEXT WITH REAL LOGOS */}
       <section className="py-32 container mx-auto px-6 text-center">
          <h2 className="text-primary text-xs font-black uppercase tracking-widest mb-4">Our Collaborators</h2>
          <h3 className="text-4xl font-black text-primary mb-20">Together for Change</h3>
-         <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-30 grayscale grayscale-0 hover:grayscale-0 transition-all">
-            <div className="font-black text-3xl">Red Cross</div>
-            <div className="font-black text-3xl">WHO</div>
-            <div className="font-black text-3xl">NSS</div>
-            <div className="font-black text-3xl">NGO-BHARAT</div>
+         <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all">
+            {collaboratorLogos.map((logo) => (
+              <div key={logo.name} className="h-20 w-auto flex flex-col items-center gap-3">
+                 <img src={logo.url} alt={logo.name} className="max-h-full w-auto object-contain" />
+                 <span className="text-[10px] font-black uppercase tracking-widest text-neutralText/40">{logo.name}</span>
+              </div>
+            ))}
          </div>
       </section>
 

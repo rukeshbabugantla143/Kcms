@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, FileText, GraduationCap, PhoneCall, ChevronRight, 
   ArrowRight, Download, ShieldCheck, HelpCircle, Calendar, 
-  Award, BookOpen, Clock, Users, ChevronDown, CheckCircle, Mail
+  Award, BookOpen, Clock, Users, ChevronDown, CheckCircle, Mail, Plus, Minus
 } from 'lucide-react';
 
 const Admissions: React.FC = () => {
@@ -44,11 +44,17 @@ const Admissions: React.FC = () => {
   ];
 
   const faqs = [
-    { q: "Is there an entrance exam for PG courses?", a: "Yes, for MBA and MTTM, students must have a valid score in PGCET, KMAT, or CMAT as per university regulations." },
-    { q: "Do you provide hostel facilities?", a: "Yes, we have separate, high-security hostels for boys and girls with multi-cuisine mess facilities." },
-    { q: "Is the fee payable in installments?", a: "KCMS provides flexible installment plans to ease the financial burden on parents. Contact the accounts office for details." },
-    { q: "What is the medium of instruction?", a: "The primary medium of instruction for all professional courses is English." }
+    { q: "Is there an entrance exam for PG courses?", a: "Yes, for MBA and MTTM, students must have a valid score in PGCET, KMAT, or CMAT as per university regulations. We also conduct institutional aptitude tests for certain categories." },
+    { q: "Do you provide hostel facilities?", a: "Yes, we have separate, high-security hostels for boys and girls. Each hostel features multi-cuisine mess facilities, 24/7 Wi-Fi, and laundry services to ensure a comfortable stay." },
+    { q: "Is the fee payable in installments?", a: "KCMS provides flexible installment plans to ease the financial burden on parents. Students can pay their semester fees in two or three installments upon approval from the finance department." },
+    { q: "What is the medium of instruction?", a: "The primary medium of instruction for all professional UG and PG courses is English to ensure students are globally competitive." },
+    { q: "What are the documents required for admission?", a: "Essential documents include 10th and 12th/PUC marks cards, Transfer Certificate (TC), Migration Certificate (for non-Karnataka students), 6 passport-size photos, and Aadhar card copy." },
+    { q: "Does the college provide campus placements?", a: "Absolutely. Our dedicated placement cell ensures 95% placement success with average packages ranging from 6.5 LPA and the highest going up to 12 LPA at companies like Google, Amazon, and Deloitte." }
   ];
+
+  const toggleFaq = (index: number) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
 
   return (
     <div className="pt-24 min-h-screen bg-white">
@@ -184,8 +190,38 @@ const Admissions: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. Documents & 7. Scholarships */}
-      <section className="py-24 container mx-auto px-6">
+      {/* 6. FAQ Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-primary text-xs font-black uppercase tracking-widest mb-4">Common Enquiries</h2>
+            <h3 className="text-4xl font-black text-primary">Frequently Asked Questions</h3>
+          </div>
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <button 
+                  onClick={() => toggleFaq(i)}
+                  className="w-full flex items-center justify-between p-8 bg-gray-50/50 hover:bg-gray-50 transition-colors text-left"
+                >
+                  <span className="text-lg font-bold text-primary">{faq.q}</span>
+                  <div className={`shrink-0 ml-4 transition-transform duration-300 ${activeFaq === i ? 'rotate-180' : ''}`}>
+                    {activeFaq === i ? <Minus size={24} className="text-secondary" /> : <Plus size={24} className="text-primary" />}
+                  </div>
+                </button>
+                {activeFaq === i && (
+                  <div className="p-8 bg-white text-neutralText leading-relaxed animate-fade-in border-t border-gray-100">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Documents & 8. Scholarships */}
+      <section className="py-24 bg-gray-50 container mx-auto px-6">
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
                <h3 className="text-3xl font-black text-primary mb-10 flex items-center gap-4">
@@ -195,7 +231,7 @@ const Admissions: React.FC = () => {
                   {[
                     '10th Marks Card', '12th / PUC Marks Card', 'Graduation Degree (For PG)', 'Transfer Certificate', 'Conduct Certificate', 'Migration Certificate', 'ID Proof (Aadhar)', 'Passport Photos'
                   ].map((doc, i) => (
-                    <div key={i} className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl font-bold text-sm text-primary border border-gray-100">
+                    <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-2xl font-bold text-sm text-primary border border-gray-100">
                        <CheckCircle size={16} className="text-green-500" /> {doc}
                     </div>
                   ))}

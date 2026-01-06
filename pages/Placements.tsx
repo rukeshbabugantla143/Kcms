@@ -46,6 +46,11 @@ const Placements: React.FC = () => {
     { name: 'Capgemini', url: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Capgemini_2017_logo.svg' },
     { name: 'Oracle', url: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg' },
     { name: 'Deloitte', url: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg' },
+    { name: 'HP', url: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg' },
+    { name: 'Dell', url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg' },
+    { name: 'Cognizant', url: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg' },
+    { name: 'EY', url: 'https://upload.wikimedia.org/wikipedia/commons/3/34/EY_logo_2019.svg' },
+    { name: 'KPMG', url: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/KPMG_logo.svg' },
     { name: 'HDFC Bank', url: 'https://upload.wikimedia.org/wikipedia/commons/3/30/HDFC_Bank_logo.svg' },
     { name: 'Marriott', url: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Marriott_International.svg' }
   ];
@@ -56,28 +61,28 @@ const Placements: React.FC = () => {
       dept: "BCA Graduate",
       company: "Google",
       text: "KCMS transformed my approach to technical problem-solving. The placement cell mock interviews were so rigorous that the actual Google interview felt easy!",
-      image: "https://i.pravatar.cc/150?u=a"
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&fit=crop"
     },
     {
       name: "Sneha Patil",
       dept: "MBA Graduate",
       company: "Amazon",
       text: "The mentorship at KCMS is world-class. The industry connections helped me land an internship which eventually turned into a PPO at Amazon.",
-      image: "https://i.pravatar.cc/150?u=b"
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&fit=crop"
     },
     {
       name: "Vikram Singh",
       dept: "B.Com Graduate",
       company: "Deloitte",
       text: "Integrating Tally and SAP into the B.Com curriculum gave me a huge advantage. I was corporate-ready from Day 1 thanks to the skill development cell.",
-      image: "https://i.pravatar.cc/150?u=c"
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&fit=crop"
     },
     {
       name: "Priya Nair",
       dept: "MTTM Graduate",
       company: "Emirates",
       text: "The hands-on training on GDS systems and the global tours provided by the Tourism department were instrumental in my placement at Emirates.",
-      image: "https://i.pravatar.cc/150?u=d"
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&fit=crop"
     }
   ];
 
@@ -115,8 +120,8 @@ const Placements: React.FC = () => {
             </div>
           </div>
           <div className="relative group">
-            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80" className="rounded-[4rem] shadow-2xl relative z-10" alt="Placement Discussion" />
-            <div className="absolute -bottom-10 -left-10 bg-secondary p-12 rounded-[3rem] text-white shadow-2xl hidden md:block">
+            <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690216/download_10_vssrg5.png" className="rounded-[4rem] shadow-2xl relative z-10 w-full object-cover aspect-video lg:aspect-square" alt="KCMS Administrative Block" />
+            <div className="absolute -bottom-10 -left-10 bg-secondary p-12 rounded-[3rem] text-white shadow-2xl hidden md:block z-20">
               <Handshake size={48} />
               <div className="text-3xl font-black mt-4">500+</div>
               <div className="text-xs uppercase font-bold opacity-60">Offers Last Year</div>
@@ -236,12 +241,12 @@ const Placements: React.FC = () => {
              </div>
           </div>
           <div className="lg:w-1/3">
-             <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80" className="rounded-[3rem] shadow-xl" alt="Internship" />
+             <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690271/download_11_mu2xxp.png" className="rounded-[3rem] shadow-xl aspect-square object-cover" alt="Real KCMS Lab Environment" />
           </div>
         </div>
       </section>
 
-      {/* 8. Student Success Stories - UPDATED WITH MORE TESTIMONIES */}
+      {/* 8. Student Success Stories - UPDATED WITH REALISTIC PERSONAS */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
            <div className="text-center mb-20">
@@ -253,7 +258,7 @@ const Placements: React.FC = () => {
                 <div key={i} className="bg-gray-50 p-10 md:p-12 rounded-[3rem] border border-gray-100 relative shadow-xl group hover:bg-white hover:border-secondary/20 transition-all">
                    <Quote size={60} className="text-primary/5 absolute top-8 left-8" />
                    <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
-                      <img src={story.image} className="w-24 h-24 rounded-full border-4 border-white shadow-lg shrink-0" alt={story.name} />
+                      <img src={story.image} className="w-24 h-24 rounded-full border-4 border-white shadow-lg shrink-0 object-cover" alt={story.name} />
                       <div className="text-center md:text-left">
                          <p className="text-base text-neutralText leading-relaxed mb-6 italic">"{story.text}"</p>
                          <div className="font-black text-primary text-xl">{story.name}</div>
