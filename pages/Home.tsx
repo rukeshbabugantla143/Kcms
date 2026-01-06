@@ -37,7 +37,7 @@ const Home: React.FC = () => {
       {/* 1️⃣ Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/20 z-10" />
+          <div className="absolute inset-0 bg-black/40 z-10" />
           <video
             autoPlay
             muted
@@ -51,6 +51,9 @@ const Home: React.FC = () => {
             />
           </video>
         </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-20 text-white animate-fade-in flex flex-col items-center text-center">
+          {/* Text and buttons removed from hero as per user request */}
+        </div>
       </section>
 
       {/* 2️⃣ Split About Section */}
@@ -59,17 +62,19 @@ const Home: React.FC = () => {
           <div className="flex flex-col-reverse lg:flex-row items-center gap-10 md:gap-16">
             <div className="lg:w-1/2 animate-fade-up">
               <div className="inline-block bg-primary/5 text-primary px-4 py-2 rounded-full font-bold text-xs md:text-sm mb-4 md:mb-6 uppercase tracking-widest">
-                Established 2010
+                Best College in Bangalore
               </div>
-              <h2 className="text-primary text-2xl md:text-5xl font-black mb-4 md:mb-8 leading-tight">About KCMS</h2>
+              <h2 className="text-primary text-2xl md:text-5xl font-black mb-4 md:mb-8 leading-tight">
+                Welcome to KCMS – Top College in Bangalore
+              </h2>
               <p className="text-neutralText leading-relaxed text-base md:text-lg mb-6 md:mb-10">
-                The Karnataka College of Management & Science was established in the year 2010 under the aegis of Karnataka Education Trust which was founded by an educationist Prof. Basavaraj Ramanal in the year 2003. It is one of the colleges run by Karnataka Education Trust for promoting education to all sections of society with the motto <span className="text-secondary font-bold">“Higher Education to All”</span>.
+                Karnataka College (KCMS Bangalore) was established in 2010 to provide <strong>Higher Education to All</strong>. As a leading college in Bangalore South, we offer industry-aligned curriculum in BCA, BBA, B.Com, and MBA, making us the top choice for students seeking excellence and career growth.
               </p>
               <Link 
                 to="/about" 
                 className="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-primary text-white px-8 md:px-10 py-4 rounded-full font-bold hover:bg-secondary transition-all shadow-xl"
               >
-                Read More About KCMS <ArrowRight size={20} />
+                Learn More About Us <ArrowRight size={20} />
               </Link>
             </div>
             <div className="lg:w-1/2 w-full animate-zoom-in">
@@ -96,27 +101,27 @@ const Home: React.FC = () => {
       <section className="py-12 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-20">
-            <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">Our Departments</h2>
-            <p className="text-neutralText/60 font-medium text-sm md:text-base">Explore our specialized centers of learning</p>
+            <h2 className="text-primary text-3xl md:text-5xl font-black mb-4 uppercase">Popular Programs</h2>
+            <p className="text-neutralText/60 font-medium text-sm md:text-base">Top-rated courses at the best college in Bangalore</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
-              { name: 'MTTM', label: 'Department of MTTM', icon: <Plane className="text-secondary" />, link: '/course/mttm', color: 'bg-blue-50' },
-              { name: 'BBA', label: 'Department of BBA', icon: <Users className="text-secondary" />, link: '/course/bba', color: 'bg-green-50' },
-              { name: 'B.COM', label: 'Department of B.COM', icon: <Landmark className="text-secondary" />, link: '/course/bcom', color: 'bg-amber-50' },
-              { name: 'BCA', label: 'Department of BCA', icon: <Laptop className="text-secondary" />, link: '/course/bca', color: 'bg-purple-50' },
+              { name: 'MTTM', label: 'Tourism & Travel Mgmt', icon: <Plane className="text-secondary" />, link: '/course/mttm', color: 'bg-blue-50' },
+              { name: 'BBA', label: 'Business Administration', icon: <Users className="text-secondary" />, link: '/course/bba', color: 'bg-green-50' },
+              { name: 'B.COM', label: 'Commerce & Accounting', icon: <Landmark className="text-secondary" />, link: '/course/bcom', color: 'bg-amber-50' },
+              { name: 'BCA', label: 'Computer Applications', icon: <Laptop className="text-secondary" />, link: '/course/bca', color: 'bg-purple-50' },
             ].map((dept, i) => (
               <div key={i} className="bg-white rounded-2xl md:rounded-[2.5rem] p-6 md:p-10 border border-gray-100 hover:border-primary/20 hover:shadow-2xl transition-all group flex flex-col items-center text-center">
                 <div className={`w-14 h-14 md:w-20 md:h-20 ${dept.color} rounded-2xl md:rounded-3xl flex items-center justify-center mb-4 md:mb-8 group-hover:scale-110 transition-transform`}>
                   {React.cloneElement(dept.icon as React.ReactElement<any>, { size: 30 })}
                 </div>
-                <h3 className="text-xl md:text-2xl font-black text-primary mb-1">{dept.name}</h3>
+                <h3 className="text-xl md:text-2xl font-black text-primary mb-1">{dept.name} Admission</h3>
                 <p className="text-neutralText/50 font-bold text-[10px] md:text-sm mb-6 md:mb-8 uppercase tracking-widest">{dept.label}</p>
                 <Link 
                   to={dept.link} 
                   className="mt-auto w-full py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-primary/10 text-primary font-bold hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group/btn"
                 >
-                  Know More <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                  View Course Details <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
             ))}
@@ -131,8 +136,8 @@ const Home: React.FC = () => {
             {[
               { value: counters.years, suffix: '+', label: 'Years of Excellence', icon: <Trophy /> },
               { value: counters.placement, suffix: '%', label: 'Placement Record', icon: <Award /> },
-              { value: counters.courses, suffix: '+', label: 'Courses Offered', icon: <BookOpen /> },
-              { value: counters.students, suffix: '+', label: 'Total Students', icon: <Users2 /> }
+              { value: counters.courses, suffix: '+', label: 'Professional Courses', icon: <BookOpen /> },
+              { value: counters.students, suffix: '+', label: 'Alumni Network', icon: <Users2 /> }
             ].map((item, i) => (
               <div key={i} className="space-y-2 md:space-y-4 animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
                 <div className="text-secondary mb-2 md:mb-6 flex justify-center">{React.cloneElement(item.icon as React.ReactElement<any>, { size: 32 })}</div>
@@ -149,17 +154,17 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-10 md:mb-16 gap-6 text-center md:text-left">
             <div className="max-w-2xl">
-              <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">World Class Facilities</h2>
-              <p className="text-neutralText/60 text-base md:text-lg">Infrastructure designed to facilitate an immersive learning environment.</p>
+              <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">Best Infrastructure in Bangalore</h2>
+              <p className="text-neutralText/60 text-base md:text-lg">KCMS provides modern campuses with smart classrooms and high-tech labs for an immersive learning experience.</p>
             </div>
             <Link to="/p/infrastructure" className="text-primary font-bold flex items-center gap-2 border-b-2 border-secondary pb-1 hover:gap-4 transition-all">
-              View All Facilities <ArrowRight size={20} />
+              Explore Our Campus <ArrowRight size={20} />
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { title: 'Modern Library', img: 'https://picsum.photos/600/400?random=11', icon: <Library /> },
-              { title: 'Computer Labs', img: 'https://picsum.photos/600/400?random=12', icon: <Monitor /> },
+              { title: 'Modern Digital Library', img: 'https://picsum.photos/600/400?random=11', icon: <Library /> },
+              { title: 'High-Tech IT Labs', img: 'https://picsum.photos/600/400?random=12', icon: <Monitor /> },
               { title: 'Smart Classrooms', img: 'https://picsum.photos/600/400?random=13', icon: <GraduationCap /> }
             ].map((facility, i) => (
               <div key={i} className="group relative h-[350px] md:h-[450px] rounded-2xl md:rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all">
@@ -175,19 +180,19 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 6️⃣ Placements Section - Fixed Marquee Scroll */}
+      {/* 6️⃣ Placements Section */}
       <section className="py-12 md:py-24 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-20 mb-10 md:mb-16">
             <div className="lg:w-1/2 text-center lg:text-left">
-              <h2 className="text-primary text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight">Your Career is Our Top Priority</h2>
+              <h2 className="text-primary text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight">Colleges in Bangalore with Best Placements</h2>
               <p className="text-neutralText text-base md:text-lg mb-8 md:mb-10 leading-relaxed">
-                Our specialized placement cell works round the clock with top global firms and Fortune 500 companies to ensure every student starts their career with excellence.
+                As a top-ranked college with placement support, KCMS ensures students are career-ready through internship opportunities and training with Fortune 500 companies.
               </p>
               <div className="grid grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                 <div className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm">
                   <div className="text-2xl md:text-3xl font-black text-primary mb-1">500+</div>
-                  <div className="text-[10px] md:text-xs font-bold text-neutralText/40 uppercase tracking-widest">Recruiters</div>
+                  <div className="text-[10px] md:text-xs font-bold text-neutralText/40 uppercase tracking-widest">Hiring Partners</div>
                 </div>
                 <div className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm">
                   <div className="text-2xl md:text-3xl font-black text-primary mb-1">12 LPA</div>
@@ -195,13 +200,12 @@ const Home: React.FC = () => {
                 </div>
               </div>
               <Link to="/placements" className="w-full md:w-auto inline-flex justify-center bg-primary text-white px-8 md:px-10 py-4 rounded-full font-bold hover:bg-secondary transition-all shadow-xl">
-                Explore Placement Stats
+                View Placement Statistics
               </Link>
             </div>
 
             <div className="lg:w-1/2 w-full">
               <div className="relative overflow-hidden py-6 md:py-10">
-                {/* Use the fixed animate-marquee-scroll class */}
                 <div className="animate-marquee-scroll gap-6 md:gap-12 items-center">
                   {[...companyLogos, ...companyLogos, ...companyLogos].map((logo, i) => (
                     <div key={i} className="min-w-[120px] md:min-w-[180px] h-20 md:h-28 bg-white p-4 md:p-8 rounded-xl md:rounded-2xl flex items-center justify-center shadow-md border border-gray-100 transition-all hover:scale-105 shrink-0">
@@ -224,14 +228,14 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-primary text-3xl md:text-4xl font-black mb-2 flex items-center justify-center gap-3">
-              <ImageIcon className="text-secondary" /> Campus Life
+              <ImageIcon className="text-secondary" /> Vibrant Campus Life
             </h2>
-            <p className="text-neutralText/60 text-sm md:text-base">Glimpses of the vibrant life at Karnataka College</p>
+            <p className="text-neutralText/60 text-sm md:text-base">Glimpses of the best college in Bangalore</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
               <div key={i} className="relative group aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
-                <img src={`https://picsum.photos/500/500?random=${i+20}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Gallery" />
+                <img src={`https://picsum.photos/500/500?random=${i+20}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="KCMS Gallery" />
                 <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                    <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-primary"><ArrowRight size={20} /></div>
                 </div>
@@ -245,16 +249,16 @@ const Home: React.FC = () => {
       <section className="py-12 md:py-24 bg-primary text-white relative">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-black mb-4">How to Join KCMS</h2>
-            <p className="text-white/60 text-sm md:text-base">A simple 4-step process to kickstart your future</p>
+            <h2 className="text-3xl md:text-5xl font-black mb-4">Admission 2026 Bangalore</h2>
+            <p className="text-white/60 text-sm md:text-base">Join the best college for career growth in Bangalore South</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative">
             <div className="hidden md:block absolute top-10 left-0 right-0 h-1 bg-white/10 -z-1" />
             {[
-              { title: 'Apply Online', desc: 'Fill the inquiry form or visit our portal.', icon: '01' },
-              { title: 'Counseling', desc: 'Meet our career experts for guidance.', icon: '02' },
-              { title: 'Verification', desc: 'Submit your documents for review.', icon: '03' },
-              { title: 'Confirmation', desc: 'Pay fees and secure your seat.', icon: '04' }
+              { title: 'Apply Online', desc: 'Fill the enquiry form for 2026 batch.', icon: '01' },
+              { title: 'Counseling', desc: 'Expert career guidance sessions.', icon: '02' },
+              { title: 'Verification', desc: 'Document review for eligibility.', icon: '03' },
+              { title: 'Confirmation', desc: 'Secure your future at KCMS.', icon: '04' }
             ].map((step, i) => (
               <div key={i} className="relative text-center group">
                 <div className="w-14 h-14 md:w-20 md:h-20 bg-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 font-black text-xl md:text-2xl border-4 md:border-8 border-primary relative z-10 group-hover:scale-110 transition-transform">
@@ -270,7 +274,7 @@ const Home: React.FC = () => {
               onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
               className="w-full md:w-auto bg-white text-primary px-8 md:px-12 py-4 md:py-5 rounded-full font-black text-base md:text-lg hover:bg-secondary hover:text-white transition-all shadow-2xl"
             >
-              Start Admission Process
+              Start Your Application
             </button>
           </div>
         </div>
@@ -280,8 +284,8 @@ const Home: React.FC = () => {
       <section className="py-12 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">Student Voices</h2>
-            <p className="text-neutralText/60 text-sm md:text-base">Success stories from our alumni around the globe.</p>
+            <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">What Our Students Say</h2>
+            <p className="text-neutralText/60 text-sm md:text-base">Success stories from the best college in Bangalore.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {TESTIMONIALS.map((t, i) => (
@@ -306,12 +310,12 @@ const Home: React.FC = () => {
       {/* Quick CTA Bottom */}
       <section className="py-10 md:py-16 bg-secondary mb-16 lg:mb-0">
         <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 text-white">
-          <h2 className="text-xl md:text-3xl font-black text-center md:text-left">Take the first step towards a global career</h2>
+          <h2 className="text-xl md:text-3xl font-black text-center md:text-left">Apply for College Admissions Bangalore 2026</h2>
           <button 
             onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
             className="w-full md:w-auto bg-primary text-white px-8 md:px-10 py-4 rounded-full font-black text-base md:text-lg hover:bg-white hover:text-primary transition-all shadow-2xl flex items-center justify-center gap-3"
           >
-            Apply Online Now <ArrowRight />
+            Apply Online <ArrowRight />
           </button>
         </div>
       </section>

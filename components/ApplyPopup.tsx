@@ -84,7 +84,7 @@ const ApplyPopup: React.FC = () => {
 
         <div className="bg-primary p-10 text-white text-center">
           <h2 className="text-3xl font-black mb-2">Join KCMS Today</h2>
-          <p className="text-white/60 text-sm">Admission process for 2025-26 is now live.</p>
+          <p className="text-white/60 text-sm">Admission process for 2026-27 is now live.</p>
         </div>
 
         {status === 'success' ? (

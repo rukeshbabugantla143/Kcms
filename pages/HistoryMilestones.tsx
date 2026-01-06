@@ -16,7 +16,7 @@ const HistoryMilestones: React.FC = () => {
     {
       year: '2010',
       title: 'Foundation of KCMS',
-      desc: 'Karnataka College of Management & Science was established in Bangalore, launching with undergraduate programs in BCA, BBA, and B.Com.',
+      desc: 'Karnataka College was established in Bangalore, launching with undergraduate programs in BCA, BBA, and B.Com.',
       icon: <History className="text-secondary" />
     },
     {
@@ -28,7 +28,7 @@ const HistoryMilestones: React.FC = () => {
     {
       year: '2018',
       title: 'Post-Graduate Expansion',
-      desc: 'Launched the MBA and MTTM departments, introducing advanced management research and global tourism studies to our curriculum.',
+      desc: 'Launched the MBA and MTTM departments, introducing advanced research and global tourism studies to our curriculum.',
       icon: <Rocket className="text-secondary" />
     },
     {
@@ -169,13 +169,13 @@ const HistoryMilestones: React.FC = () => {
       <section className="py-32 text-center container mx-auto px-6">
          <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8">Write the Next Chapter with Us</h2>
-            <p className="text-xl text-neutralText mb-12">Our history is solid, but our future is even brighter. Be part of the legacy at Karnataka College of Management & Science.</p>
+            <p className="text-xl text-neutralText mb-12">Our history is solid, but our future is even brighter. Be part of the legacy at Karnataka College.</p>
             <div className="flex flex-col md:flex-row justify-center gap-6">
                <button 
                 onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
                 className="bg-primary text-white px-12 py-5 rounded-full font-black text-lg hover:bg-secondary transition-all shadow-2xl flex items-center justify-center gap-3"
                >
-                 Join the 2025 Batch <ArrowRight />
+                 Join the 2026 Batch <ArrowRight />
                </button>
                <Link to="/contact" className="bg-secondary text-white px-12 py-5 rounded-full font-black text-lg hover:bg-primary transition-all shadow-2xl">
                  Contact Admission Hub

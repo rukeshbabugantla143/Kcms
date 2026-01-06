@@ -201,7 +201,7 @@ const CourseDetail: React.FC = () => {
             <div className="bg-primary p-12 rounded-[3.5rem] text-white shadow-2xl relative overflow-hidden">
                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                <h3 className="text-2xl font-black mb-2">Apply to {id?.toUpperCase()}</h3>
-               <p className="text-white/50 text-xs mb-10 font-bold uppercase tracking-widest">Admissions for 2025 Now Open</p>
+               <p className="text-white/50 text-xs mb-10 font-bold uppercase tracking-widest">Admissions for 2026 Now Open</p>
                
                {status === 'success' ? (
                  <div className="bg-white/10 p-8 rounded-3xl text-center border border-white/20 animate-fade-in">

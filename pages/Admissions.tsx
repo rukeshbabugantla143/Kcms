@@ -36,10 +36,10 @@ const Admissions: React.FC = () => {
   ];
 
   const steps = [
-    { title: 'Apply Online', desc: 'Fill out the digital inquiry form to start your journey.', icon: <FileText /> },
-    { title: 'Counseling', desc: 'One-on-one session with our academic experts.', icon: <Users /> },
+    { title: 'Apply Online', desc: 'Fill out the digital inquiry form for admission 2026 Bangalore.', icon: <FileText /> },
+    { title: 'Counseling', desc: 'Meet academic experts at the best college in Bangalore.', icon: <Users /> },
     { title: 'Verification', desc: 'Original document review by our registrar office.', icon: <ShieldCheck /> },
-    { title: 'Fee Payment', desc: 'Confirm your seat via online or bank transfer.', icon: <Award /> },
+    { title: 'Fee Payment', desc: 'Confirm your seat at an affordable MBA college in Bangalore.', icon: <Award /> },
     { title: 'Confirmation', desc: 'Welcome to the KCMS family!', icon: <CheckCircle /> }
   ];
 
@@ -59,10 +59,10 @@ const Admissions: React.FC = () => {
           <nav className="flex items-center gap-2 text-white/50 text-xs mb-8 uppercase font-black tracking-widest">
             <Link to="/" className="hover:text-secondary">Home</Link> 
             <ChevronRight size={14} /> 
-            <span className="text-white opacity-100">Admissions</span>
+            <span className="text-white opacity-100">Admissions 2026</span>
           </nav>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">Start Your <br/><span className="text-secondary">Global Journey</span></h1>
-          <p className="text-xl text-white/70 max-w-2xl leading-relaxed">Join a legacy of excellence. Admission process for the academic year 2025-26 is now officially open.</p>
+          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">College Admissions <br/><span className="text-secondary">Open Bangalore 2026</span></h1>
+          <p className="text-xl text-white/70 max-w-2xl leading-relaxed">Secure your future at the best college in Bangalore. Apply for UG and PG admissions now.</p>
         </div>
       </section>
 
@@ -70,32 +70,32 @@ const Admissions: React.FC = () => {
       <section className="py-24 container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="animate-fade-up">
-            <h2 className="text-primary text-xs font-black uppercase tracking-widest mb-6">Welcome Aspirants</h2>
-            <h3 className="text-4xl font-black text-primary mb-8 leading-tight">Building the Next Generation of Leaders</h3>
+            <h2 className="text-primary text-xs font-black uppercase tracking-widest mb-6">Apply for College in Bangalore</h2>
+            <h3 className="text-4xl font-black text-primary mb-8 leading-tight">Join the Best College in Bangalore</h3>
             <p className="text-lg text-neutralText leading-relaxed mb-10 text-justify">
-              Admissions at KCMS are designed to identify potential, not just grades. We look for students who are curious, driven, and ready to make a difference in the world. Whether you are aiming for a career in tech or management, our doors are open to merit and ambition.
+              Admissions at KCMS Bangalore are designed to identify potential and ambition. As the top college in Bangalore South, we offer a seamless application process for the 2026-27 academic session. Whether you seek a BCA, BBA, or B.Com, our doors are open to merit.
             </p>
             <div className="flex gap-6">
-               <button onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))} className="bg-primary text-white px-10 py-4 rounded-full font-black hover:bg-secondary transition-all shadow-xl">Apply Online</button>
-               <Link to="/contact" className="bg-gray-100 text-primary px-10 py-4 rounded-full font-black hover:bg-gray-200 transition-all">Visit Campus</Link>
+               <button onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))} className="bg-primary text-white px-10 py-4 rounded-full font-black hover:bg-secondary transition-all shadow-xl">Start Online Admission</button>
+               <Link to="/contact" className="bg-gray-100 text-primary px-10 py-4 rounded-full font-black hover:bg-gray-200 transition-all">Visit Campus Near Me</Link>
             </div>
           </div>
           <div className="relative group">
-             <img src="https://images.unsplash.com/photo-1523050335102-c6744729ea24?auto=format&fit=crop&q=80" className="rounded-[4rem] shadow-2xl transition-transform duration-700 group-hover:scale-105" alt="KCMS Campus" />
+             <img src="https://images.unsplash.com/photo-1523050335102-c6744729ea24?auto=format&fit=crop&q=80" className="rounded-[4rem] shadow-2xl transition-transform duration-700 group-hover:scale-105" alt="Admission 2026 Bangalore" />
              <div className="absolute -bottom-10 -left-10 bg-secondary p-10 rounded-[3rem] text-white shadow-2xl hidden md:block">
                 <div className="text-4xl font-black mb-1">95%</div>
-                <div className="text-xs font-bold uppercase tracking-widest">Satisfaction Rate</div>
+                <div className="text-xs font-bold uppercase tracking-widest">Placement Rate</div>
              </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Courses Offered - UPDATED WITH LINKS */}
+      {/* 3. Courses Offered */}
       <section className="py-24 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-primary text-xs font-black uppercase tracking-widest mb-4">Academic Programs</h2>
-            <h3 className="text-4xl font-black text-primary">Admission Open for 2025</h3>
+            <h2 className="text-primary text-xs font-black uppercase tracking-widest mb-4">UG & PG Admission Bangalore</h2>
+            <h3 className="text-4xl font-black text-primary">Explore Programs at Top Colleges in Bangalore</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {programs.map((prog, i) => (
@@ -111,7 +111,7 @@ const Admissions: React.FC = () => {
                        to={`/course/${item.id}`} 
                        className="bg-white p-6 rounded-3xl flex items-center justify-between group hover:bg-primary hover:text-white transition-all shadow-sm"
                      >
-                        <span className="font-black">{item.label}</span>
+                        <span className="font-black">{item.label} Admission</span>
                         <ArrowRight size={18} className="text-secondary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                      </Link>
                    ))}
@@ -126,48 +126,47 @@ const Admissions: React.FC = () => {
       {/* 4. Eligibility Criteria */}
       <section className="py-24 container mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-primary text-xs font-black uppercase tracking-widest mb-4">Are you eligible?</h2>
-          <h3 className="text-4xl font-black text-primary">Qualification Guidelines</h3>
+          <h2 className="text-primary text-xs font-black uppercase tracking-widest mb-4">KCMS Eligibility Guidelines</h2>
+          <h3 className="text-4xl font-black text-primary">Admission Requirements for Best Colleges</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
            <div className="bg-white p-12 rounded-[3.5rem] border border-gray-100 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 left-0 w-2 h-full bg-secondary"></div>
-              <h4 className="text-2xl font-black text-primary mb-8">UG Eligibility</h4>
+              <h4 className="text-2xl font-black text-primary mb-8">UG Course Eligibility</h4>
               <ul className="space-y-6">
                  <li className="flex gap-4 items-start">
                     <CheckCircle2 className="text-secondary shrink-0" />
-                    <p className="text-neutralText">Successful completion of <strong>10+2 / PUC / XII Std</strong> from any recognized board (CBSE/ICSE/State).</p>
+                    <p className="text-neutralText">Completion of <strong>10+2 / PUC / XII Std</strong> for BCA, BBA, and B.Com admission.</p>
                  </li>
                  <li className="flex gap-4 items-start">
                     <CheckCircle2 className="text-secondary shrink-0" />
-                    <p className="text-neutralText">Minimum aggregate marks as specified by the respective university (UOM/VTU).</p>
+                    <p className="text-neutralText">Minimum aggregate marks as per University of Mysore / Bangalore University standards.</p>
                  </li>
               </ul>
            </div>
            <div className="bg-white p-12 rounded-[3.5rem] border border-gray-100 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 left-0 w-2 h-full bg-primary"></div>
-              <h4 className="text-2xl font-black text-primary mb-8">PG Eligibility</h4>
+              <h4 className="text-2xl font-black text-primary mb-8">PG Course Eligibility</h4>
               <ul className="space-y-6">
                  <li className="flex gap-4 items-start">
                     <CheckCircle2 className="text-primary shrink-0" />
-                    <p className="text-neutralText">A bachelor’s degree in any discipline from a recognized university with minimum required aggregate.</p>
+                    <p className="text-neutralText">Bachelor’s degree from a recognized university for MBA and MTTM admission Bangalore.</p>
                  </li>
                  <li className="flex gap-4 items-start">
                     <CheckCircle2 className="text-primary shrink-0" />
-                    <p className="text-neutralText">Score card of state-level or national-level entrance exams (PGCET/KMAT/CMAT).</p>
+                    <p className="text-neutralText">Valid scorecard in state-level entrance exams like PGCET or KMAT.</p>
                  </li>
               </ul>
            </div>
         </div>
-        <p className="text-center text-sm text-neutralText/40 mt-12 italic">*Final admission is subject to university approval and document verification.</p>
       </section>
 
       {/* 5. Admission Process */}
       <section className="py-24 bg-primary text-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-24">
-            <h2 className="text-secondary text-xs font-black uppercase tracking-widest mb-4">Step-by-Step</h2>
-            <h3 className="text-4xl font-black">How to Secure Your Seat</h3>
+            <h2 className="text-secondary text-xs font-black uppercase tracking-widest mb-4">5-Step Process</h2>
+            <h3 className="text-4xl font-black">How to Apply for College in Bangalore</h3>
           </div>
           <div className="relative flex flex-col md:flex-row justify-between gap-12">
             <div className="absolute top-10 left-0 right-0 h-0.5 bg-white/10 hidden md:block" />
@@ -190,11 +189,11 @@ const Admissions: React.FC = () => {
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
                <h3 className="text-3xl font-black text-primary mb-10 flex items-center gap-4">
-                  <Download className="text-secondary" /> Documents Checklist
+                  <Download className="text-secondary" /> Documentation Checklist
                </h3>
                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    '10th Marks Card', '12th / PUC Marks Card', 'Graduation Degree (For PG)', 'Transfer Certificate', 'Conduct Certificate', 'Migration Certificate (Non-Kar)', 'ID Proof (Aadhar/Voter)', 'Passport Photos (6 Nos)'
+                    '10th Marks Card', '12th / PUC Marks Card', 'Graduation Degree (For PG)', 'Transfer Certificate', 'Conduct Certificate', 'Migration Certificate', 'ID Proof (Aadhar)', 'Passport Photos'
                   ].map((doc, i) => (
                     <div key={i} className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl font-bold text-sm text-primary border border-gray-100">
                        <CheckCircle size={16} className="text-green-500" /> {doc}
@@ -204,124 +203,40 @@ const Admissions: React.FC = () => {
             </div>
             <div className="bg-secondary/5 p-12 rounded-[4rem] border border-secondary/10">
                <h3 className="text-3xl font-black text-primary mb-8 flex items-center gap-4">
-                  <Award className="text-secondary" /> Financial Support
+                  <Award className="text-secondary" /> Scholarship Opportunities
                </h3>
-               <p className="text-neutralText leading-relaxed mb-8">KCMS offers a range of scholarships based on academic merit, sports achievement, and socio-economic status.</p>
+               <p className="text-neutralText leading-relaxed mb-8">KCMS offers academic merit scholarships for students enrolling in the 2026 batch. As an affordable MBA college in Bangalore, we support every bright mind.</p>
                <div className="space-y-4 mb-10">
                   <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                     <h5 className="font-black text-primary">Merit Scholarship</h5>
-                     <p className="text-sm text-neutralText/60">Awarded to students with 90%+ in qualifying exams.</p>
+                     <h5 className="font-black text-primary">Merit-Based Support</h5>
+                     <p className="text-sm text-neutralText/60">Special fee waivers for 90%+ scorers in PUC/12th.</p>
                   </div>
                   <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                     <h5 className="font-black text-primary">Government Support</h5>
-                     <p className="text-sm text-neutralText/60">Assistance in applying for Post-Matric and State Scholarships.</p>
+                     <h5 className="font-black text-primary">State Government Schemes</h5>
+                     <p className="text-sm text-neutralText/60">Guidance for Post-Matric and Minority Scholarships.</p>
                   </div>
                </div>
-               <button className="w-full bg-secondary text-white py-4 rounded-2xl font-black shadow-xl hover:bg-primary transition-all">View Scholarship Portal</button>
+               <button className="w-full bg-secondary text-white py-4 rounded-2xl font-black shadow-xl hover:bg-primary transition-all">Check Scholarship Eligibility</button>
             </div>
          </div>
       </section>
 
-      {/* 8. Important Dates & 9. Why Choose */}
-      <section className="py-24 bg-gray-50">
-         <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-               <div className="bg-white p-16 rounded-[4rem] shadow-xl border border-gray-100">
-                  <div className="flex items-center gap-4 mb-8">
-                     <Calendar className="text-secondary" />
-                     <h3 className="text-2xl font-black text-primary uppercase tracking-tighter">Academic Intake 2025</h3>
-                  </div>
-                  <div className="space-y-6">
-                     <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <span className="font-bold text-neutralText">Phase 1 Admissions</span>
-                        <span className="bg-green-100 text-green-700 px-4 py-1 rounded-full text-xs font-black">ACTIVE</span>
-                     </div>
-                     <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <span className="font-bold text-neutralText">Application Deadline</span>
-                        <span className="font-black text-primary">July 15, 2025</span>
-                     </div>
-                     <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                        <span className="font-bold text-neutralText">Orientation Batch 1</span>
-                        <span className="font-black text-primary">August 10, 2025</span>
-                     </div>
-                  </div>
-                  <p className="mt-8 text-xs font-bold text-[#B91C1C] uppercase tracking-widest flex items-center gap-2">
-                     <Clock size={14} /> Limited Seats Available in BCA & MBA
-                  </p>
-               </div>
-               <div className="space-y-8">
-                  <h3 className="text-4xl font-black text-primary leading-tight italic">Why KCMS is the Right Choice for You?</h3>
-                  <div className="grid grid-cols-1 gap-4">
-                     {[
-                       { title: 'Industry-Integrated Curriculum', desc: 'Syllabus mapped with Google, IBM, and SAP standards.' },
-                       { title: 'Placement Guarantee Support', desc: 'Dedicated training from Semester 1 until you are hired.' },
-                       { title: 'Global Immersion', desc: 'Optional international tours and student exchange programs.' }
-                     ].map((item, i) => (
-                        <div key={i} className="flex gap-6 items-start">
-                           <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center shrink-0 text-primary">
-                              <ShieldCheck size={20} />
-                           </div>
-                           <div>
-                              <h5 className="font-black text-primary mb-1">{item.title}</h5>
-                              <p className="text-sm text-neutralText/60">{item.desc}</p>
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      {/* 10. FAQs */}
-      <section className="py-24 container mx-auto px-6">
-         <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-               <HelpCircle className="text-secondary mx-auto mb-4" size={48} />
-               <h3 className="text-4xl font-black text-primary">Admission FAQs</h3>
-               <p className="text-neutralText/60 mt-4">Common questions from parents and students.</p>
-            </div>
-            <div className="space-y-4">
-               {faqs.map((faq, i) => (
-                 <div key={i} className="border border-gray-100 rounded-3xl overflow-hidden shadow-sm">
-                    <button 
-                      onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                      className="w-full px-8 py-6 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors"
-                    >
-                       <span className="font-black text-primary">{faq.q}</span>
-                       <ChevronDown className={`transition-transform duration-300 ${activeFaq === i ? 'rotate-180' : ''}`} />
-                    </button>
-                    {activeFaq === i && (
-                      <div className="px-8 py-6 bg-gray-50 border-t border-gray-100 animate-fade-in text-neutralText leading-relaxed">
-                         {faq.a}
-                      </div>
-                    )}
-                 </div>
-               ))}
-            </div>
-         </div>
-      </section>
-
-      {/* 11. Final CTA */}
+      {/* Final CTA */}
       <section className="py-32 bg-primary text-white text-center relative overflow-hidden">
          <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/20 rounded-full translate-y-1/2 translate-x-1/2 blur-3xl"></div>
          <div className="container mx-auto px-6 relative z-10">
-            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">Ready to Take the First Step?</h2>
+            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">Apply Now for 2026 Admissions</h2>
             <div className="flex flex-col md:flex-row justify-center gap-6">
                <button onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))} className="bg-secondary text-white px-12 py-5 rounded-full font-black text-lg hover:bg-white hover:text-primary transition-all shadow-2xl flex items-center justify-center gap-3">
-                  Start Online Enquiry <ArrowRight />
+                  Start Online Enrollment <ArrowRight />
                </button>
                <div className="flex items-center justify-center gap-4 bg-white/10 px-8 py-5 rounded-full border border-white/20">
                   <PhoneCall size={24} className="text-secondary" />
                   <div className="text-left">
-                     <div className="text-[10px] font-black opacity-40 uppercase">Talk to Counselor</div>
+                     <div className="text-[10px] font-black opacity-40 uppercase">Admissions Desk</div>
                      <div className="font-bold">+91 98765 43210</div>
                   </div>
                </div>
-            </div>
-            <div className="mt-12 flex justify-center gap-8 opacity-40">
-               <span className="flex items-center gap-2"><Mail size={14} /> admissions@kcms.edu.in</span>
-               <span className="flex items-center gap-2"><Clock size={14} /> 9:00 AM - 5:30 PM</span>
             </div>
          </div>
       </section>

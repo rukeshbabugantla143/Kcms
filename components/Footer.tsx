@@ -17,13 +17,13 @@ const Footer: React.FC = () => {
             />
           </Link>
           <p className="text-white/80 leading-relaxed mb-6">
-            Karnataka College of Management & Science is a premier institution dedicated to excellence in education, research, and holistic development.
+            Karnataka College is a premier institution dedicated to excellence in education, research, and holistic development.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-secondary transition-colors"><Facebook size={20} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61567119833724&sk=following" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-secondary transition-colors"><Facebook size={20} /></a>
             <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-secondary transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-secondary transition-colors"><Instagram size={20} /></a>
-            <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-secondary transition-colors"><Linkedin size={20} /></a>
+            <a href="https://www.instagram.com/kcmsedu/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-secondary transition-colors"><Instagram size={20} /></a>
+            <a href="https://in.linkedin.com/company/karnataka-college-of-management-science" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-secondary transition-colors"><Linkedin size={20} /></a>
           </div>
         </div>
 
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
       </div>
       
       <div className="container mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-center text-sm text-white/40">
-        <p>© {new Date().getFullYear()} Karnataka College of Management & Science. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Karnataka College. All Rights Reserved.</p>
       </div>
     </footer>
   );
