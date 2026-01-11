@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Quote, ChevronRight, Award, BookOpen, Users, Globe, ArrowRight, Heart, ShieldCheck, Zap, Star, CheckCircle } from 'lucide-react';
@@ -10,7 +9,7 @@ const PrincipalMessage: React.FC = () => {
     <div className="pt-24 min-h-screen bg-white">
       {/* 1. Hero Section */}
       <section className="bg-primary text-white py-24 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div className="absolute inset-0 opacity-10 bg-[url('https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png')] bg-cover bg-center"></div>
         <div className="container mx-auto px-6 relative z-10 animate-fade-up">
           <nav className="flex items-center gap-2 text-white/50 text-xs mb-8 uppercase font-black tracking-widest">
             <Link to="/" className="hover:text-secondary transition-colors">Home</Link> 
@@ -84,9 +83,9 @@ const PrincipalMessage: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-20">
           <div className="lg:w-1/2">
             <img 
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80" 
-              className="rounded-[4rem] shadow-2xl w-full" 
-              alt="Students Collaborating" 
+              src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690141/download_8_f7gppy.png" 
+              className="rounded-[4rem] shadow-2xl w-full aspect-video object-cover" 
+              alt="KCMS Interactive Smart Classrooms" 
             />
           </div>
           <div className="lg:w-1/2 animate-fade-up">

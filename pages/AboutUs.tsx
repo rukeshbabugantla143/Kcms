@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Target, History, Award, CheckCircle, ChevronRight, Users, Landmark, Zap, BookOpen, Plus, Minus, HelpCircle } from 'lucide-react';
@@ -84,7 +83,7 @@ const AboutUs: React.FC = () => {
           </div>
           <div className="relative animate-zoom-in">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl -z-1"></div>
-            <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690324/download_12_pvx4jx.png?auto=format&fit=crop&q=80" alt="Campus Life" className="rounded-[3rem] shadow-2xl w-full" />
+            <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690324/download_12_pvx4jx.png" alt="Campus Life" className="rounded-[3rem] shadow-2xl w-full" />
             <div className="absolute -bottom-8 -right-8 bg-primary p-10 rounded-[2.5rem] text-white shadow-xl hidden md:block">
               <div className="text-4xl font-black mb-1">15+</div>
               <div className="text-xs uppercase font-bold opacity-60">Years of Growth</div>
@@ -150,7 +149,7 @@ const AboutUs: React.FC = () => {
       <section className="py-24 bg-primary text-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">Why Choose KCMS?</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Why Choose KCMS?</h2>
             <p className="text-white/60">What sets us apart in the global educational landscape.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -209,9 +208,9 @@ const AboutUs: React.FC = () => {
       <section className="py-24 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-6 text-center">
           <h4 className="text-xs font-black text-neutralText/40 uppercase tracking-widest mb-12">Affiliations & Accreditations</h4>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 transition-all">
             {affiliations.map((aff) => (
-              <div key={aff.name} className="h-16 md:h-24 w-auto flex items-center justify-center">
+              <div key={aff.name} className="h-16 md:h-24 w-auto flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
                  <img src={aff.url} alt={aff.name} className="max-h-full w-auto object-contain" />
               </div>
             ))}

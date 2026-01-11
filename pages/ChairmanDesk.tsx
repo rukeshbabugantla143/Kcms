@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Quote, ChevronRight, History, Award, Landmark, Zap, Globe, Heart, ShieldCheck, ArrowRight } from 'lucide-react';
@@ -10,7 +9,7 @@ const ChairmanDesk: React.FC = () => {
     <div className="pt-24 min-h-screen bg-white">
       {/* 1. Personality Hero Section */}
       <section className="relative h-[600px] flex items-center bg-primary overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('https://res.cloudinary.com/dejcpd56d/image/upload/v1767690216/download_10_vssrg5.png')] bg-cover bg-center"></div>
         <div className="container mx-auto px-6 relative z-10 animate-fade-up">
           <nav className="flex items-center gap-2 text-white/50 text-xs mb-8 uppercase font-black tracking-widest">
             <Link to="/" className="hover:text-secondary">Home</Link> 
@@ -105,8 +104,8 @@ const ChairmanDesk: React.FC = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-20">
            <div className="lg:w-1/2">
               <div className="grid grid-cols-2 gap-4">
-                 <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80" className="rounded-3xl shadow-lg" />
-                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" className="rounded-3xl shadow-lg translate-y-8" />
+                 <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690324/download_12_pvx4jx.png" className="rounded-3xl shadow-lg aspect-square object-cover" alt="KCMS Student Success" />
+                 <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690014/download_5_v1xovv.png" className="rounded-3xl shadow-lg translate-y-8 aspect-square object-cover" alt="KCMS Auditorium Events" />
               </div>
            </div>
            <div className="lg:w-1/2 animate-fade-up">
