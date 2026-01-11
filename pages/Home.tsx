@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Users, Award, ShieldCheck, GraduationCap, Laptop, Landmark, Plane, Library, Monitor, Users2, Trophy, Image as ImageIcon, CheckCircle, ChevronRight, MessageSquare } from 'lucide-react';
@@ -53,9 +52,10 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
       <SEO 
-        title="KCMS Bangalore | Best College for BCA, BBA, B.Com & MBA Admissions 2026"
-        description="Join KCMS, the top-rated college in Bangalore offering UG and PG programs with 95% placement record. Apply now for BCA, BBA, B.Com, and MBA admissions 2026."
-        keywords="best college in Bangalore, top MBA college Bangalore, BCA admissions Bangalore 2026, BBA colleges with placement Bangalore, KCMS Bangalore"
+        title="KCMS | Best Management & Science College in Bangalore | Top Rankings 2026"
+        description="Karnataka College of Management & Science (KCMS) is the leading college in Bangalore for MBA, BCA, BBA, and B.Com. Ranked among the top colleges in Bangalore with 100% placement record. Apply for 2026 admissions today."
+        keywords="KCMS, Karnataka College of Management & Science, best management college in Bangalore, best science college in Bangalore, top colleges in Bangalore, management colleges in Bangalore, science colleges in Bangalore, MBA admission Bangalore 2026, BCA admission Bangalore 2026, Bangalore colleges, Karnataka colleges"
+        type="college"
       />
       {/* 1️⃣ Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
@@ -87,10 +87,10 @@ const Home: React.FC = () => {
                 Best College in Bangalore
               </div>
               <h2 className="text-primary text-2xl md:text-5xl font-black mb-4 md:mb-8 leading-tight">
-                Welcome to KCMS – Top College in Bangalore
+                Welcome to KCMS – Top Management & Science College in Bangalore
               </h2>
               <p className="text-neutralText leading-relaxed text-base md:text-lg mb-6 md:mb-10">
-                Karnataka College (KCMS Bangalore) was established in 2010 to provide <strong>Higher Education to All</strong>. As a leading college in Bangalore South, we offer industry-aligned curriculum in BCA, BBA, B.Com, and MBA, making us the top choice for students seeking excellence and career growth.
+                Karnataka College of Management & Science (KCMS Bangalore) was established in 2010 with a vision of providing <strong>Higher Education to All</strong>. As a premier management college in Bangalore, we offer industry-aligned curriculum in BCA, BBA, B.Com, and MBA, making us the top choice for students seeking excellence and high-paying career growth.
               </p>
               <Link 
                 to="/about" 
@@ -123,8 +123,8 @@ const Home: React.FC = () => {
       <section className="py-12 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-20">
-            <h2 className="text-primary text-3xl md:text-5xl font-black mb-4 uppercase">Popular Programs</h2>
-            <p className="text-neutralText/60 font-medium text-sm md:text-base">Top-rated courses at the best college in Bangalore</p>
+            <h2 className="text-primary text-3xl md:text-5xl font-black mb-4 uppercase">Popular Management & Science Programs</h2>
+            <p className="text-neutralText/60 font-medium text-sm md:text-base">Top-rated courses at the best college in Bangalore for career excellence</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
@@ -137,7 +137,7 @@ const Home: React.FC = () => {
                 <div className={`w-14 h-14 md:w-20 md:h-20 ${dept.color} rounded-2xl md:rounded-3xl flex items-center justify-center mb-4 md:mb-8 group-hover:scale-110 transition-transform`}>
                   {React.cloneElement(dept.icon as React.ReactElement<any>, { size: 30 })}
                 </div>
-                <h3 className="text-xl md:text-2xl font-black text-primary mb-1">{dept.name} Admission</h3>
+                <h3 className="text-xl md:text-2xl font-black text-primary mb-1">{dept.name} Admission Bangalore</h3>
                 <p className="text-neutralText/50 font-bold text-[10px] md:text-sm mb-6 md:mb-8 uppercase tracking-widest">{dept.label}</p>
                 <Link 
                   to={dept.link} 
@@ -176,8 +176,8 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-10 md:mb-16 gap-6 text-center md:text-left">
             <div className="max-w-2xl">
-              <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">Best Infrastructure in Bangalore</h2>
-              <p className="text-neutralText/60 text-base md:text-lg">KCMS provides modern campuses with smart classrooms and high-tech labs for an immersive learning experience.</p>
+              <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">Best College Infrastructure in Bangalore</h2>
+              <p className="text-neutralText/60 text-base md:text-lg">KCMS provides modern campuses with smart classrooms and high-tech labs, making it the best management and science college in Bangalore.</p>
             </div>
             <Link to="/p/infrastructure" className="text-primary font-bold flex items-center gap-2 border-b-2 border-secondary pb-1 hover:gap-4 transition-all">
               Explore Our Campus <ArrowRight size={20} />
@@ -207,9 +207,9 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-20 mb-10 md:mb-16">
             <div className="lg:w-1/2 text-center lg:text-left">
-              <h2 className="text-primary text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight">Colleges in Bangalore with Best Placements</h2>
+              <h2 className="text-primary text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight">Top Colleges in Bangalore with 100% Placements</h2>
               <p className="text-neutralText text-base md:text-lg mb-8 md:mb-10 leading-relaxed">
-                As a top-ranked college with placement support, KCMS ensures students are career-ready through internship opportunities and training with Fortune 500 companies.
+                As one of the best colleges in Bangalore with placement support, KCMS ensures students are career-ready through internship opportunities and training with Global Fortune 500 companies.
               </p>
               <div className="grid grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                 <div className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm">
@@ -234,7 +234,7 @@ const Home: React.FC = () => {
                       <img 
                         src={logo.url} 
                         className="max-h-10 md:max-h-14 w-auto object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all" 
-                        alt={logo.name} 
+                        alt={logo.name + ' Recruitment partner KCMS'} 
                       />
                     </div>
                   ))}
@@ -250,14 +250,14 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-primary text-3xl md:text-4xl font-black mb-2 flex items-center justify-center gap-3">
-              <ImageIcon className="text-secondary" /> Vibrant Campus Life
+              <ImageIcon className="text-secondary" /> Vibrant Campus Life at KCMS
             </h2>
-            <p className="text-neutralText/60 text-sm md:text-base">Glimpses of the best college in Bangalore</p>
+            <p className="text-neutralText/60 text-sm md:text-base">Glimpses of the best management college experience in Bangalore</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {galleryImages.map((url, i) => (
               <div key={i} className="relative group aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
-                <img src={url} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={`KCMS Gallery ${i + 1}`} />
+                <img src={url} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={`KCMS Gallery Infrastructure ${i + 1}`} />
                 <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                    <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-primary"><ArrowRight size={20} /></div>
                 </div>
@@ -271,16 +271,16 @@ const Home: React.FC = () => {
       <section className="py-12 md:py-24 bg-primary text-white relative">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-black mb-4">Admission 2026 Bangalore</h2>
-            <p className="text-white/60 text-sm md:text-base">Join the best college for career growth in Bangalore South</p>
+            <h2 className="text-3xl md:text-5xl font-black mb-4">College Admission 2026 Bangalore</h2>
+            <p className="text-white/60 text-sm md:text-base">Join KCMS – the top choice for management and science education in Bangalore</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative">
             <div className="hidden md:block absolute top-10 left-0 right-0 h-1 bg-white/10 -z-1" />
             {[
-              { title: 'Apply Online', desc: 'Fill the enquiry form for 2026 batch.', icon: '01' },
-              { title: 'Counseling', desc: 'Expert career guidance sessions.', icon: '02' },
+              { title: 'Apply Online', desc: 'Fill the enquiry form for 2026 batch at the best college in Bangalore.', icon: '01' },
+              { title: 'Counseling', desc: 'Expert career guidance sessions from top mentors.', icon: '02' },
               { title: 'Verification', desc: 'Original document review by our registrar office.', icon: '03' },
-              { title: 'Confirmation', desc: 'Secure your future at KCMS.', icon: '04' }
+              { title: 'Confirmation', desc: 'Secure your future at KCMS Bangalore.', icon: '04' }
             ].map((step, i) => (
               <div key={i} className="relative text-center group">
                 <div className="w-14 h-14 md:w-20 md:h-20 bg-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 font-black text-xl md:text-2xl border-4 md:border-8 border-primary relative z-10 group-hover:scale-110 transition-transform">
@@ -296,7 +296,7 @@ const Home: React.FC = () => {
               onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
               className="w-full md:w-auto bg-white text-primary px-8 md:px-12 py-4 md:py-5 rounded-full font-black text-base md:text-lg hover:bg-secondary hover:text-white transition-all shadow-2xl"
             >
-              Start Your Application
+              Start Your Application for KCMS
             </button>
           </div>
         </div>
@@ -306,8 +306,8 @@ const Home: React.FC = () => {
       <section className="py-12 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">What Our Students Say</h2>
-            <p className="text-neutralText/60 text-sm md:text-base">Success stories from the best college in Bangalore.</p>
+            <h2 className="text-primary text-3xl md:text-5xl font-black mb-4">Student Reviews of KCMS Bangalore</h2>
+            <p className="text-neutralText/60 text-sm md:text-base">Success stories from the best management and science college in Bangalore.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {TESTIMONIALS.map((t, i) => (
@@ -317,7 +317,7 @@ const Home: React.FC = () => {
                 </div>
                 <p className="text-sm md:text-lg italic text-neutralText mb-6 md:mb-8 relative z-10 leading-relaxed">"{t.text}"</p>
                 <div className="flex items-center gap-4 relative z-10">
-                  <img src={t.image} className="w-10 h-10 md:w-16 md:h-16 rounded-full border-2 md:border-4 border-gray-50 shadow-md" alt={t.name} />
+                  <img src={t.image} className="w-10 h-10 md:w-16 md:h-16 rounded-full border-2 md:border-4 border-gray-50 shadow-md" alt={t.name + ' KCMS Alumnus'} />
                   <div>
                     <div className="font-black text-primary text-sm md:text-base">{t.name}</div>
                     <div className="text-[10px] md:text-xs font-bold text-neutralText/40 uppercase tracking-widest">{t.role}</div>
@@ -332,12 +332,12 @@ const Home: React.FC = () => {
       {/* Quick CTA Bottom */}
       <section className="py-10 md:py-16 bg-secondary mb-16 lg:mb-0">
         <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 text-white">
-          <h2 className="text-xl md:text-3xl font-black text-center md:text-left">Apply for College Admissions Bangalore 2026</h2>
+          <h2 className="text-xl md:text-3xl font-black text-center md:text-left">Apply for Management & Science Admissions Bangalore 2026</h2>
           <button 
             onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
             className="w-full md:w-auto bg-primary text-white px-8 md:px-10 py-4 rounded-full font-black text-base md:text-lg hover:bg-white hover:text-primary transition-all shadow-2xl flex items-center justify-center gap-3"
           >
-            Apply Online <ArrowRight />
+            Apply Online to KCMS <ArrowRight />
           </button>
         </div>
       </section>
