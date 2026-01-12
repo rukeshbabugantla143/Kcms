@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { X, Send, Loader2 } from 'lucide-react';
 
@@ -74,29 +73,29 @@ const ApplyPopup: React.FC = () => {
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-[2rem] overflow-hidden shadow-2xl w-full max-w-lg relative animate-zoom-in">
+      <div className="bg-white rounded-2xl overflow-hidden shadow-2xl w-full max-w-md relative animate-fade-up">
         <button 
           onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 text-neutralText/40 hover:text-primary transition-colors p-2"
+          className="absolute top-3 right-3 text-neutralText/40 hover:text-primary transition-colors p-2"
         >
-          <X size={28} />
+          <X size={24} />
         </button>
 
-        <div className="bg-primary p-10 text-white text-center">
-          <h2 className="text-3xl font-black mb-2">Join KCMS Today</h2>
+        <div className="bg-primary p-8 text-white text-center">
+          <h2 className="text-2xl font-black mb-1">Join KCMS Today</h2>
           <p className="text-white/60 text-sm">Admission process for 2026-27 is now live.</p>
         </div>
 
         {status === 'success' ? (
-          <div className="p-16 text-center animate-fade-up">
-            <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
-              <Send size={40} />
+          <div className="p-10 text-center animate-fade-up">
+            <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Send size={32} />
             </div>
-            <h3 className="text-2xl font-black text-primary mb-3">Enquiry Received</h3>
-            <p className="text-neutralText/60">Our admission counselor will contact you shortly at {formData.mobile || 'your provided number'}.</p>
+            <h3 className="text-xl font-black text-primary mb-2">Enquiry Received</h3>
+            <p className="text-neutralText/60 text-sm">Our admission counselor will contact you shortly at {formData.mobile || 'your provided number'}.</p>
           </div>
         ) : (
-          <form className="p-10 space-y-5" onSubmit={handleSubmit}>
+          <form className="p-8 space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-4">
               <input 
                 name="firstName"
@@ -105,7 +104,7 @@ const ApplyPopup: React.FC = () => {
                 required 
                 value={formData.firstName}
                 onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium" 
+                className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium text-sm" 
               />
               <input 
                 name="lastName"
@@ -114,7 +113,7 @@ const ApplyPopup: React.FC = () => {
                 required 
                 value={formData.lastName}
                 onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium" 
+                className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium text-sm" 
               />
             </div>
             <input 
@@ -124,7 +123,7 @@ const ApplyPopup: React.FC = () => {
               required 
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
-              className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium" 
+              className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium text-sm" 
             />
             <input 
               name="mobile"
@@ -133,14 +132,14 @@ const ApplyPopup: React.FC = () => {
               required 
               value={formData.mobile}
               onChange={(e) => setFormData({...formData, mobile: e.target.value})}
-              className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium" 
+              className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium text-sm" 
             />
             <select 
               name="course"
               required 
               value={formData.course}
               onChange={(e) => setFormData({...formData, course: e.target.value})}
-              className="w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium appearance-none"
+              className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-100 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-medium appearance-none text-sm"
             >
               <option value="">Choose Course</option>
               <option>MBA</option>
@@ -153,12 +152,12 @@ const ApplyPopup: React.FC = () => {
             <button 
               type="submit" 
               disabled={isSubmitting}
-              className="w-full bg-secondary text-white py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 hover:bg-primary transition-all group shadow-xl hover:shadow-primary/20 disabled:opacity-50"
+              className="w-full bg-secondary text-white py-3 rounded-lg font-black text-base flex items-center justify-center gap-3 hover:bg-primary transition-all group shadow-lg hover:shadow-primary/20 disabled:opacity-50"
             >
               {isSubmitting ? (
                 <>Sending... <Loader2 className="animate-spin" /></>
               ) : (
-                <>Apply Now <Send className="group-hover:translate-x-1 transition-transform" /></>
+                <>Apply Now <Send size={18} className="group-hover:translate-x-1 transition-transform" /></>
               )}
             </button>
             <p className="text-[10px] text-center text-neutralText/30 uppercase tracking-widest">Details will be sent to Admissions Office</p>

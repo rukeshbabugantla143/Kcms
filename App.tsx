@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -36,6 +35,7 @@ import Gallery from './pages/Gallery';
 import GenericPage from './pages/GenericPage';
 import ApplyPopup from './components/ApplyPopup';
 import { MessageSquare, ChevronUp } from 'lucide-react';
+import InstallPrompt from './components/InstallPrompt';
 
 const App: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -90,84 +90,49 @@ const App: React.FC = () => {
             <Route path="/p/anti-ragging" element={<AntiRagging />} />
             <Route path="/p/womens-cell" element={<WomensCell />} />
             <Route path="/p/grievance" element={<GrievanceRedressal />} />
-            <Route path="/p/partnerships" element={<GenericPage />} />
-            <Route path="/p/location" element={<GenericPage />} />
-
-            {/* Academic & Program Hub Routes */}
+            
+            {/* Academic Support Routes */}
             <Route path="/p/teaching" element={<TeachingMethods />} />
             <Route path="/p/skills" element={<SkillDevelopment />} />
             <Route path="/p/calendar" element={<AcademicCalendar />} />
             <Route path="/p/faculty" element={<FacultyProfile />} />
             <Route path="/p/alumni" element={<AlumniNetwork />} />
-            <Route path="/p/ug-courses" element={<GenericPage />} />
-            <Route path="/p/pg-courses" element={<GenericPage />} />
-            <Route path="/p/integrated" element={<GenericPage />} />
-            <Route path="/p/certificates" element={<GenericPage />} />
-
-            {/* Admissions & Placement Support Slugs */}
-            <Route path="/p/eligibility" element={<GenericPage />} />
-            <Route path="/p/scholarships" element={<GenericPage />} />
-            <Route path="/p/placement-process" element={<GenericPage />} />
-            <Route path="/p/placement-stats" element={<GenericPage />} />
-            <Route path="/p/recruiters" element={<GenericPage />} />
-            <Route path="/p/internships" element={<GenericPage />} />
             
-            {/* Infrastructure & Facility Hubs */}
+            {/* Infrastructure Routes */}
             <Route path="/p/infrastructure" element={<Infrastructure />} />
-            <Route path="/p/library" element={<FacilityPage />} />
-            <Route path="/p/computer-labs" element={<FacilityPage />} />
-            <Route path="/p/science-labs" element={<FacilityPage />} />
-            <Route path="/p/smart-classrooms" element={<FacilityPage />} />
-            <Route path="/p/hostel" element={<FacilityPage />} />
-            <Route path="/p/transport" element={<FacilityPage />} />
-            <Route path="/p/auditorium" element={<FacilityPage />} />
-            <Route path="/p/medical" element={<FacilityPage />} />
-            <Route path="/p/gym" element={<FacilityPage />} />
-
-            {/* Main Primary Pages */}
+            <Route path="/p/:slug" element={<FacilityPage />} />
+            
             <Route path="/courses" element={<Courses />} />
             <Route path="/course/:id" element={<CourseDetail />} />
             <Route path="/admissions" element={<Admissions />} />
             <Route path="/placements" element={<Placements />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallery />} />
-            
-            {/* Catch-all for PAGE_DATA slugs */}
-            <Route path="/p/:slug" element={<FacilityPage />} />
-            
-            {/* Fallback to Home */}
-            <Route path="*" element={<Home />} />
+            <Route path="/page/:slug" element={<GenericPage />} />
           </Routes>
         </main>
-
+        
         <Footer />
         <ApplyPopup />
+        <InstallPrompt />
 
         {/* Floating Action Buttons */}
-        
-        {/* Left Side: Go To Top Button */}
-        {showScrollTop && (
-          <div className="fixed bottom-6 left-6 z-50 animate-fade-in">
+        <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
+          <button 
+            onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
+            className="w-12 h-12 bg-secondary text-white rounded-full shadow-2xl flex items-center justify-center transition-all"
+          >
+            <MessageSquare size={24} />
+          </button>
+          
+          {showScrollTop && (
             <button 
               onClick={scrollToTop}
-              className="w-14 h-14 md:w-16 md:h-16 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl hover:bg-secondary hover:scale-110 transition-all duration-300"
-              aria-label="Scroll to top"
+              className="w-12 h-12 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center animate-fade-in transition-all"
             >
-              <ChevronUp size={32} />
+              <ChevronUp size={24} />
             </button>
-          </div>
-        )}
-
-        {/* Right Side: WhatsApp Button */}
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-          <a 
-            href="https://wa.me/919606994048" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
-          >
-            <MessageSquare size={32} />
-          </a>
+          )}
         </div>
       </div>
     </Router>
