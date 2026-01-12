@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { NAVIGATION } from '../constants';
 import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, ChevronRight } from 'lucide-react';
 
@@ -7,6 +7,9 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -18,9 +21,11 @@ const Header: React.FC = () => {
     setMobileExpanded(mobileExpanded === label ? null : label);
   };
 
-  const headerBg = scrolled ? 'bg-white shadow-xl py-2' : 'bg-transparent py-3';
-  const topBarBg = scrolled ? 'bg-primary' : 'bg-black/20 backdrop-blur-sm border-b border-white/10';
-  const navTextColor = scrolled ? 'text-neutralText hover:text-primary' : 'text-white hover:text-secondary';
+  const showSolidHeader = !isHomePage || scrolled;
+
+  const headerBg = showSolidHeader ? 'bg-white shadow-xl py-2' : 'bg-transparent py-3';
+  const topBarBg = showSolidHeader ? 'bg-primary' : 'bg-black/20 backdrop-blur-sm border-b border-white/10';
+  const navTextColor = 'text-secondary hover:text-primary';
 
   return (
     <header className="fixed w-full z-50 transition-all duration-500">
@@ -28,8 +33,8 @@ const Header: React.FC = () => {
       <div className={`${topBarBg} text-white py-2 text-xs hidden lg:block transition-colors duration-500`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex gap-6">
-            <span className="flex items-center gap-2"><Phone size={14} className={scrolled ? 'text-secondary' : 'text-white'} /> +91 98765 43210</span>
-            <span className="flex items-center gap-2"><Mail size={14} className={scrolled ? 'text-secondary' : 'text-white'} /> admissions@kcms.edu.in</span>
+            <span className="flex items-center gap-2"><Phone size={14} className={showSolidHeader ? 'text-secondary' : 'text-white'} /> +91 98765 43210</span>
+            <span className="flex items-center gap-2"><Mail size={14} className={showSolidHeader ? 'text-secondary' : 'text-white'} /> admissions@kcms.edu.in</span>
           </div>
           <div className="flex gap-6">
             <Link to="/admissions" className="hover:text-secondary transition-colors font-medium">Apply Now</Link>
@@ -46,7 +51,7 @@ const Header: React.FC = () => {
             <img 
               src="https://res.cloudinary.com/dejcpd56d/image/upload/v1765439468/Logo-New-1024x222_etmqyk.webp" 
               alt="KCMS Logo" 
-              className={`h-10 lg:h-12 w-auto object-contain transition-all duration-500 ${!scrolled ? 'brightness-110' : ''}`}
+              className="h-10 lg:h-12 w-auto object-contain transition-all duration-500"
             />
           </Link>
 
@@ -78,7 +83,7 @@ const Header: React.FC = () => {
                                 <li key={link.label}>
                                   <Link 
                                     to={link.href} 
-                                    className="text-sm text-neutralText/70 hover:text-primary hover:translate-x-1 transition-all flex items-center gap-2 font-medium"
+                                    className="text-sm text-black hover:text-primary hover:translate-x-1 transition-all flex items-center gap-2 font-medium"
                                   >
                                     <ChevronRight size={12} className="text-secondary opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                                     {link.label}
@@ -111,14 +116,14 @@ const Header: React.FC = () => {
             ))}
             <button 
               onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
-              className={`ml-4 px-6 py-2 rounded-full font-bold transition-all shadow-lg flex items-center gap-2 text-sm ${scrolled ? 'bg-secondary text-white hover:bg-primary' : 'bg-white text-primary hover:bg-secondary hover:text-white'}`}
+              className={`ml-4 px-6 py-2 rounded-full font-bold transition-all shadow-lg flex items-center gap-2 text-sm ${showSolidHeader ? 'bg-secondary text-white hover:bg-primary' : 'bg-white text-primary hover:bg-secondary hover:text-white'}`}
             >
               Apply <span className="hidden xl:inline">Online</span> <ArrowRight size={16} />
             </button>
           </div>
 
           {/* Mobile Toggle */}
-          <button className={`lg:hidden p-2 transition-colors duration-500 ${scrolled ? 'text-primary' : 'text-white'}`} onClick={() => setIsOpen(!isOpen)}>
+          <button className={`lg:hidden p-2 transition-colors duration-500 ${showSolidHeader ? 'text-primary' : 'text-secondary'}`} onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

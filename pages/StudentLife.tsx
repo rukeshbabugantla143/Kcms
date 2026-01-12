@@ -34,7 +34,7 @@ const StudentLife: React.FC = () => {
         <div className="absolute inset-0">
           <img 
             src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690324/download_12_pvx4jx.png" 
-            className="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000" 
+            className="w-full h-full object-cover opacity-40 transition-all duration-1000" 
             alt="Vibrant Student Campus Life"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
@@ -133,7 +133,7 @@ const StudentLife: React.FC = () => {
           <p className="text-xl text-white/70 mb-12 max-w-2xl mx-auto relative z-10">Your seat at Bangalore's most vibrant campus is waiting. Apply for the 2026-27 session now.</p>
           <button 
             onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
-            className="bg-primary text-white px-12 py-5 rounded-full font-black text-lg inline-flex items-center gap-3 hover:scale-105 hover:bg-white hover:text-primary transition-all shadow-2xl relative z-10"
+            className="bg-primary text-white px-12 py-5 rounded-full font-black text-lg inline-flex items-center gap-3 hover:bg-white hover:text-primary transition-all shadow-2xl relative z-10"
           >
             Apply for Admission <Zap size={20} />
           </button>

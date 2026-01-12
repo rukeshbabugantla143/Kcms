@@ -81,7 +81,7 @@ const AboutUs: React.FC = () => {
               <p>With a mission to provide "Higher Education to All", we have grown from a small academic initiative into a powerhouse of technical and management excellence. Our campus serves as a melting pot of cultures, ideas, and aspirations.</p>
             </div>
           </div>
-          <div className="relative animate-zoom-in">
+          <div className="relative">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl -z-1"></div>
             <img src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767690324/download_12_pvx4jx.png" alt="Campus Life" className="rounded-[3rem] shadow-2xl w-full" />
             <div className="absolute -bottom-8 -right-8 bg-primary p-10 rounded-[2.5rem] text-white shadow-xl hidden md:block">
@@ -102,18 +102,18 @@ const AboutUs: React.FC = () => {
                 <img 
                   src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767687458/download_1_hopo91.png" 
                   alt="Prof. Basavaraj Ramanal" 
-                  className="relative z-10 rounded-[3rem] w-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="relative z-10 rounded-[3rem] w-full shadow-2xl transition-all duration-700"
                 />
               </div>
             </div>
             <div className="lg:w-2/3 animate-fade-up">
               <h4 className="text-secondary font-black uppercase tracking-widest mb-4">The Visionary</h4>
-              <h2 className="text-4xl md:text-5xl font-black text-primary mb-8">Prof. Basavaraj Ramanal</h2>
+              <h2 className="text-4xl md:text-5xl font-black text-accent2 mb-8">Prof. Basavaraj Ramanal</h2>
               <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100 relative italic text-neutralText text-xl leading-relaxed mb-8">
                 <span className="text-6xl text-primary/10 absolute -top-4 -left-4">"</span>
                 Education is not the learning of facts, but the training of the mind to think. At KCMS, we don't just teach syllabus; we build characters and ignite curiosity. Our goal is to make every student a leader in their own right.
               </div>
-              <div className="font-bold text-primary">Founder & Chairman, Karnataka Education Trust</div>
+              <div className="font-bold text-neutralText/80">Founder & Chairman, Karnataka Education Trust</div>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@ const AboutUs: React.FC = () => {
       <section className="py-24 bg-primary text-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Why Choose KCMS?</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Why Choose KCMS?</h2>
             <p className="text-white/60">What sets us apart in the global educational landscape.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

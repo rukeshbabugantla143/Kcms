@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Quote, ChevronRight, Award, BookOpen, Users, Globe, ArrowRight } from 'lucide-react';
@@ -50,11 +49,11 @@ const Leadership: React.FC = () => {
             <img 
               src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767687458/download_1_hopo91.png" 
               alt="Chairman" 
-              className="rounded-[4rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-[4/5]" 
+              className="rounded-[4rem] shadow-2xl transition-all duration-700 w-full object-cover aspect-[4/5]" 
             />
             <div className="absolute -bottom-10 -right-10 bg-white p-8 rounded-3xl shadow-xl border border-gray-100 hidden md:block">
-              <div className="text-secondary font-black text-2xl">Prof. Basavaraj Ramanal</div>
-              <div className="text-primary font-bold text-sm uppercase tracking-widest">Chairman, KET</div>
+              <div className="text-accent2 font-black text-2xl">Prof. Basavaraj Ramanal</div>
+              <div className="text-neutralText/80 font-bold text-sm uppercase tracking-widest">Chairman, KET</div>
             </div>
           </div>
           <div className="lg:w-1/2 animate-fade-up">
@@ -88,12 +87,12 @@ const Leadership: React.FC = () => {
                   <div className="absolute inset-0 bg-secondary/10 rounded-full blur-2xl group-hover:scale-125 transition-transform"></div>
                   <img 
                     src={member.img} 
-                    className="w-48 h-48 rounded-full mx-auto relative z-10 border-4 border-white shadow-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
+                    className="w-48 h-48 rounded-full mx-auto relative z-10 border-4 border-white shadow-xl object-cover transition-all duration-500" 
                     alt={member.name} 
                   />
                 </div>
                 <div className="flex-grow flex flex-col justify-center">
-                  <h4 className="text-2xl font-black text-primary mb-2 leading-tight">{member.name}</h4>
+                  <h4 className="text-2xl font-black text-accent2 mb-2 leading-tight">{member.name}</h4>
                   <div className="text-secondary font-black text-lg uppercase tracking-wider mb-2">{member.role}</div>
                   <p className="text-neutralText/60 font-bold text-sm leading-relaxed">
                     {member.tag}
@@ -126,8 +125,8 @@ const Leadership: React.FC = () => {
                 <Globe className="text-secondary" /> Global Tie-ups
               </div>
             </div>
-            <div className="font-black text-primary text-2xl">Mohammed Noor Ahmed</div>
-            <div className="text-neutralText/60 font-bold uppercase tracking-widest text-xs">Principal, KCMS</div>
+            <div className="font-black text-accent2 text-2xl">Mohammed Noor Ahmed</div>
+            <div className="text-neutralText/80 font-bold uppercase tracking-widest text-xs">Principal, KCMS</div>
           </div>
           <div className="lg:w-1/2 relative group">
             <div className="absolute inset-0 bg-primary/10 rounded-[4rem] group-hover:rotate-3 transition-transform"></div>

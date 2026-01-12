@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PAGE_DATA } from '../constants';
@@ -99,7 +98,7 @@ const FacilityPage: React.FC = () => {
       {/* 1. Hero / Banner */}
       <section className="relative h-[500px] flex items-center bg-primary overflow-hidden">
         <div 
-            className="absolute inset-0 bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700" 
+            className="absolute inset-0 bg-cover bg-center opacity-40 transition-all duration-700" 
             style={{ backgroundImage: `url(${page.heroImage})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
@@ -125,7 +124,7 @@ const FacilityPage: React.FC = () => {
 
           {/* Sidebar */}
           <div className="lg:w-1/3">
-            <div className="sticky top-32 space-y-8 animate-zoom-in">
+            <div className="sticky top-32 space-y-8">
               <div className="bg-primary p-12 rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform"></div>
                 <h4 className="text-2xl font-black mb-6 flex items-center gap-3">

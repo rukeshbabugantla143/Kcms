@@ -58,7 +58,7 @@ const Home: React.FC = () => {
         type="college"
       />
       {/* 1️⃣ Hero Section */}
-      <section className="relative h-screen flex items-center overflow-hidden">
+      <section className="relative h-[70vh] lg:h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/40 z-10" />
           <video
@@ -75,6 +75,26 @@ const Home: React.FC = () => {
           </video>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-20 text-white animate-fade-in flex flex-col items-center text-center">
+          <h1 className="text-4xl md:text-7xl font-black mb-6 leading-tight">
+            Empowering the Next Generation of Leaders
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-white/80">
+            Join Bangalore's premier institution for Management & Science. Admissions for the 2026-27 session are now open.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button 
+              onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
+              className="bg-secondary text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition-all shadow-2xl flex items-center gap-3"
+            >
+              Apply Now <ArrowRight size={20} />
+            </button>
+            <Link 
+              to="/courses" 
+              className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition-all shadow-2xl"
+            >
+              Explore Courses
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -99,7 +119,7 @@ const Home: React.FC = () => {
                 Learn More About Us <ArrowRight size={20} />
               </Link>
             </div>
-            <div className="lg:w-1/2 w-full animate-zoom-in">
+            <div className="lg:w-1/2 w-full">
               <div className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-gray-100 aspect-video group">
                 <video
                   autoPlay
@@ -287,7 +307,7 @@ const Home: React.FC = () => {
                   {step.icon}
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4">{step.title}</h3>
-                <p className="text-white/60 text-sm md:text-base leading-relaxed">{step.desc}</p>
+                <p className="text-sm md:text-base text-white/60 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>

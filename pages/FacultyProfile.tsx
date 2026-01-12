@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Microscope, Globe, Award, Mail, Linkedin, GraduationCap, Search, Star, Users } from 'lucide-react';
@@ -75,7 +74,7 @@ const FacultyProfile: React.FC = () => {
             {filteredFaculty.map((f, i) => (
               <div key={i} className="group bg-white rounded-[3.5rem] overflow-hidden border border-gray-100 shadow-xl hover:shadow-2xl transition-all animate-fade-up" style={{ animationDelay: `${i*100}ms` }}>
                  <div className="h-80 overflow-hidden relative">
-                    <img src={f.img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt={f.name} />
+                    <img src={f.img} className="w-full h-full object-cover transition-all duration-700" alt={f.name} />
                     <div className="absolute top-6 right-6 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-white text-[10px] font-black uppercase tracking-widest border border-white/20">{f.exp} EXP</div>
                     <div className="absolute bottom-6 left-6 flex gap-2">
                        <a href="#" className="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center text-white shadow-lg"><Linkedin size={18} /></a>
@@ -84,8 +83,8 @@ const FacultyProfile: React.FC = () => {
                  </div>
                  <div className="p-10">
                     <div className="text-secondary font-black uppercase text-[10px] tracking-widest mb-2">{f.dept} Department</div>
-                    <h3 className="text-2xl font-black text-primary mb-1">{f.name}</h3>
-                    <p className="text-neutralText/60 font-bold text-sm mb-6">{f.role}</p>
+                    <h3 className="text-2xl font-black text-accent2 mb-1">{f.name}</h3>
+                    <p className="text-neutralText/80 font-bold text-sm mb-6">{f.role}</p>
                     <div className="pt-6 border-t border-gray-100 italic text-neutralText text-sm leading-relaxed">
                        <span className="font-black text-primary not-italic uppercase text-[10px] block mb-2 opacity-40">Research Focus</span>
                        "{f.research}"

@@ -197,9 +197,9 @@ const PrincipalMessage: React.FC = () => {
       </section>
 
       {/* 8. Signature Closing */}
-      <section className="py-20 border-t border-gray-100 container mx-auto px-6 text-center opacity-50">
-        <div className="text-primary font-black text-xl mb-2 italic">Mohammed Noor Ahmed</div>
-        <div className="text-xs font-bold uppercase tracking-widest">Principal, Karnataka College of Management & Science</div>
+      <section className="py-20 border-t border-gray-100 container mx-auto px-6 text-center">
+        <div className="text-accent2 font-black text-xl mb-2 italic">Mohammed Noor Ahmed</div>
+        <div className="text-neutralText/60 text-xs font-bold uppercase tracking-widest">Principal, Karnataka College of Management & Science</div>
       </section>
     </div>
   );

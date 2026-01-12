@@ -26,7 +26,7 @@ const ChairmanDesk: React.FC = () => {
                   <div className="absolute inset-0 bg-secondary rounded-[3rem] rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
                   <img 
                     src="https://res.cloudinary.com/dejcpd56d/image/upload/v1767687458/download_1_hopo91.png" 
-                    className="relative z-10 rounded-[3rem] w-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700" 
+                    className="relative z-10 rounded-[3rem] w-full shadow-2xl transition-all duration-700" 
                     alt="Chairman Prof. Basavaraj Ramanal" 
                   />
                </div>
@@ -40,7 +40,7 @@ const ChairmanDesk: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="animate-fade-up">
              <div className="inline-block bg-primary/5 text-primary px-4 py-2 rounded-full font-black text-xs mb-8 uppercase tracking-widest">Founder & Visionary</div>
-             <h2 className="text-4xl md:text-5xl font-black text-primary mb-10 leading-tight">Prof. Basavaraj Ramanal</h2>
+             <h2 className="text-4xl md:text-5xl font-black text-accent2 mb-10 leading-tight">Prof. Basavaraj Ramanal</h2>
              <div className="space-y-8 text-xl text-neutralText leading-loose text-justify">
                 <p>
                   As the founder of Karnataka Education Trust, my life's mission has been to ensure that financial circumstances never dictate the quality of education a student receives. KCMS was born out of a desire to create a global standard institution right here in Bangalore.
@@ -143,11 +143,11 @@ const ChairmanDesk: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-center gap-8">
              <button 
               onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
-              className="bg-secondary text-white px-12 py-5 rounded-full font-black text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3"
+              className="bg-secondary text-white px-12 py-5 rounded-full font-black text-lg hover:bg-white hover:text-primary transition-all shadow-2xl flex items-center justify-center gap-3"
              >
                Start Your Journey <ArrowRight />
              </button>
-             <Link to="/contact" className="bg-white text-primary px-12 py-5 rounded-full font-black text-lg hover:scale-105 transition-transform shadow-2xl">
+             <Link to="/contact" className="bg-white text-primary px-12 py-5 rounded-full font-black text-lg hover:bg-primary transition-all shadow-2xl">
                Contact Chairman's Office
              </Link>
           </div>
@@ -155,9 +155,9 @@ const ChairmanDesk: React.FC = () => {
       </section>
 
       {/* 6. Professional Closing */}
-      <section className="py-20 container mx-auto px-6 text-center opacity-40">
-        <div className="text-primary font-black text-2xl mb-2">Prof. Basavaraj Ramanal</div>
-        <div className="text-xs font-bold uppercase tracking-widest">Chairman, Karnataka Education Trust (KET)</div>
+      <section className="py-20 container mx-auto px-6 text-center">
+        <div className="text-accent2 font-black text-2xl mb-2">Prof. Basavaraj Ramanal</div>
+        <div className="text-neutralText/60 text-xs font-bold uppercase tracking-widest">Chairman, Karnataka Education Trust (KET)</div>
       </section>
     </div>
   );
