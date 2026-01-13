@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Course, Testimonial } from './types';
 import { 
@@ -92,6 +91,7 @@ export const NAVIGATION: any[] = [
   { label: 'Facilities', href: '/p/infrastructure' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Contact', href: '/contact' },
+  { label: 'AICTE', href: '/aicte' },
 ];
 
 export const PAGE_DATA: Record<string, any> = {

@@ -33,6 +33,7 @@ import Placements from './pages/Placements';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import GenericPage from './pages/GenericPage';
+import AictePage from './pages/AictePage';
 import ApplyPopup from './components/ApplyPopup';
 import { MessageSquare, ChevronUp } from 'lucide-react';
 import InstallPrompt from './components/InstallPrompt';
@@ -108,6 +109,7 @@ const App: React.FC = () => {
             <Route path="/placements" element={<Placements />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/aicte" element={<AictePage />} />
             <Route path="/page/:slug" element={<GenericPage />} />
           </Routes>
         </main>
