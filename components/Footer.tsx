@@ -42,10 +42,10 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="text-base font-bold mb-6 border-b border-white/20 pb-2">Programs</h4>
           <ul className="space-y-3 text-sm text-white/80">
-            <li><Link to="/course/bca" className="hover:text-secondary transition-colors">BCA (IT)</Link></li>
-            <li><Link to="/course/mba" className="hover:text-secondary transition-colors">MBA (Management)</Link></li>
-            <li><Link to="/course/bba" className="hover:text-secondary transition-colors">BBA (Admin)</Link></li>
-            <li><Link to="/course/bcom" className="hover:text-secondary transition-colors">B.Com (Commerce)</Link></li>
+            <li><Link to="/course/bba-aviation" className="hover:text-secondary transition-colors">BBA Aviation</Link></li>
+            <li><Link to="/course/bca-ai-ml" className="hover:text-secondary transition-colors">BCA (AI & ML)</Link></li>
+            <li><Link to="/course/bsc-criminology" className="hover:text-secondary transition-colors">BSc Criminology</Link></li>
+            <li><Link to="/course/mcom" className="hover:text-secondary transition-colors">M.Com (Commerce)</Link></li>
             <li><Link to="/course/mttm" className="hover:text-secondary transition-colors">MTTM (Tourism)</Link></li>
           </ul>
         </div>

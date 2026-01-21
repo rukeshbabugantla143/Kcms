@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Users, Award, ShieldCheck, GraduationCap, Laptop, Landmark, Plane, Library, Monitor, Users2, Trophy, Image as ImageIcon, CheckCircle, ChevronRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Award, ShieldCheck, GraduationCap, Laptop, Landmark, Plane, Library, Monitor, Users2, Trophy, Image as ImageIcon, CheckCircle, ChevronRight, MessageSquare, Cpu, Microscope, Globe } from 'lucide-react';
 import { TESTIMONIALS } from '../constants';
 import SEO from '../components/SEO';
 
@@ -74,14 +74,14 @@ const Home: React.FC = () => {
             />
           </video>
         </div>
-        <div className="container mx-auto px-4 md:px-6 relative z-20 text-white animate-fade-in flex flex-col items-center text-center">
+        <div className="container mx-auto px-4 md:px-6 relative z-20 text-white animate-fade-in flex flex-col items-start text-left">
           <h1 className="text-4xl md:text-7xl font-black mb-6 leading-tight">
             Empowering the Next Generation of Leaders
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-white/80">
+          <p className="text-lg md:text-xl max-w-3xl mb-10 text-white/80">
             Join Bangalore's premier institution for Management & Science. Admissions for the 2026-27 session are now open.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 sm:justify-start">
             <button 
               onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal'))}
               className="bg-secondary text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition-all shadow-2xl flex items-center gap-3"
@@ -148,10 +148,10 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
-              { name: 'MTTM', label: 'Tourism & Travel Mgmt', icon: <Plane className="text-secondary" />, link: '/course/mttm', color: 'bg-blue-50' },
-              { name: 'BBA', label: 'Business Administration', icon: <Users className="text-secondary" />, link: '/course/bba', color: 'bg-green-50' },
-              { name: 'B.COM', label: 'Commerce & Accounting', icon: <Landmark className="text-secondary" />, link: '/course/bcom', color: 'bg-amber-50' },
-              { name: 'BCA', label: 'Computer Applications', icon: <Laptop className="text-secondary" />, link: '/course/bca', color: 'bg-purple-50' },
+              { name: 'BBA Aviation', label: 'Aviation Management', icon: <Plane className="text-secondary" />, link: '/course/bba-aviation', color: 'bg-blue-50' },
+              { name: 'BCA AI & ML', label: 'Artificial Intelligence', icon: <Cpu className="text-secondary" />, link: '/course/bca-ai-ml', color: 'bg-purple-50' },
+              { name: 'BSc Criminology', label: 'Forensic Science', icon: <Microscope className="text-secondary" />, link: '/course/bsc-criminology', color: 'bg-red-50' },
+              { name: 'MTTM', label: 'Travel & Tourism', icon: <Globe className="text-secondary" />, link: '/course/mttm', color: 'bg-amber-50' },
             ].map((dept, i) => (
               <div key={i} className="bg-white rounded-2xl md:rounded-[2.5rem] p-6 md:p-10 border border-gray-100 hover:border-primary/20 hover:shadow-2xl transition-all group flex flex-col items-center text-center">
                 <div className={`w-14 h-14 md:w-20 md:h-20 ${dept.color} rounded-2xl md:rounded-3xl flex items-center justify-center mb-4 md:mb-8 group-hover:scale-110 transition-transform`}>
@@ -272,7 +272,7 @@ const Home: React.FC = () => {
             <h2 className="text-primary text-3xl md:text-4xl font-black mb-2 flex items-center justify-center gap-3">
               <ImageIcon className="text-secondary" /> Vibrant Campus Life at KCMS
             </h2>
-            <p className="text-neutralText/60 text-sm md:text-base">Glimpses of the best management college experience in Bangalore</p>
+            <p className="text-neutralText/60 text-sm md:text-base">Glimpses of the best management college experience in Bangalore.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {galleryImages.map((url, i) => (

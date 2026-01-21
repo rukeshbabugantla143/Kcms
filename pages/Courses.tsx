@@ -1,7 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { COURSES_DATA } from '../constants';
-import { ArrowRight, Laptop, Users, Landmark, Plane } from 'lucide-react';
+import { ArrowRight, Laptop } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Courses: React.FC = () => {
@@ -21,7 +20,7 @@ const Courses: React.FC = () => {
           {Object.values(COURSES_DATA).map((course, i) => (
             <div key={course.id} className="bg-white rounded-[2.5rem] p-10 border border-gray-100 hover:shadow-2xl transition-all group flex flex-col animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
               <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                 <Laptop className="text-primary" size={32} />
+                 {course.icon ? React.cloneElement(course.icon, { className: "text-primary", size: 32 }) : <Laptop className="text-primary" size={32} />}
               </div>
               <span className="text-xs font-black text-secondary uppercase tracking-widest mb-4">{course.category} Program</span>
               <h3 className="text-2xl font-black text-primary mb-4 leading-tight">{course.name}</h3>

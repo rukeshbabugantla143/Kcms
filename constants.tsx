@@ -56,24 +56,20 @@ export const NAVIGATION: any[] = [
     mega: true,
     columns: [
       {
-        title: 'Programs Hub',
+        title: 'Undergraduate Programs',
         links: [
-          { label: 'BCA Department', href: '/course/bca' },
-          { label: 'BBA Department', href: '/course/bba' },
-          { label: 'B.Com Department', href: '/course/bcom' },
-          { label: 'MBA Department', href: '/course/mba' },
-          { label: 'Tourism Dept (BTTM/MTTM)', href: '/course/mttm' },
-          { label: 'Integrated Programs', href: '/p/integrated' },
+          { label: 'BBA Aviation Management', href: '/course/bba-aviation' },
+          { label: 'BCA (General)', href: '/course/bca' },
+          { label: 'BCA (AI & ML)', href: '/course/bca-ai-ml' },
+          { label: 'BSc Criminology & Forensic Science', href: '/course/bsc-criminology' },
+          { label: 'BTTM', href: '/course/bttm' },
         ]
       },
       {
-        title: 'Academic Support',
+        title: 'Postgraduate Programs',
         links: [
-          { label: 'Teaching Methods', href: '/p/teaching' },
-          { label: 'Skill Development', href: '/p/skills' },
-          { label: 'Academic Calendar', href: '/p/calendar' },
-          { label: 'Faculty Profile', href: '/p/faculty' },
-          { label: 'Alumni Network', href: '/p/alumni' },
+          { label: 'M.Com', href: '/course/mcom' },
+          { label: 'MTTM', href: '/course/mttm' },
         ]
       },
       {
@@ -168,152 +164,218 @@ export const PAGE_DATA: Record<string, any> = {
 };
 
 export const COURSES_DATA: Record<string, any> = {
+  'bba-aviation': {
+    id: 'bba-aviation',
+    name: 'BBA in Aviation Management',
+    category: 'Undergraduate',
+    icon: <PlaneTakeoff />,
+    duration: '3 Years',
+    shortDesc: 'Soar to new heights with a specialized BBA in Aviation. The premier course in Bangalore for airline and airport management careers.',
+    fullDesc: 'The BBA in Aviation Management at KCMS is a comprehensive program designed to prepare students for the dynamic aviation industry. It covers airport operations, airline management, aviation safety, and air traffic control fundamentals.',
+    objectives: [
+      'Master airport and airline operations.',
+      'Understand global aviation regulations (IATA/ICAO).',
+      'Develop skills in air cargo management and logistics.',
+      'Prepare for leadership roles in the aviation sector.'
+    ],
+    curriculum: [
+      { sem: 'Sem 1-2', focus: 'Aviation Principles, Business Communication, Airport Functions.' },
+      { sem: 'Sem 3-4', focus: 'Airline Operations, Aviation Law, Cargo Management, Safety protocols.' },
+      { sem: 'Sem 5-6', focus: 'Strategic Airline Management, Airport Planning, Internship.' }
+    ],
+    facultyStats: { phd: '30%', experience: '15+ Years Avg.', industry: 'Ex-Airline Managers' },
+    labInfo: [
+      { icon: <PlaneTakeoff />, title: 'Aviation Simulation Lab', desc: 'Real-time flight and airport operations simulation.' },
+      { icon: <Globe />, title: 'Global Distribution System', desc: 'Hands-on training with Amadeus/Galileo booking systems.' }
+    ],
+    opportunities: ['Airport Manager', 'Airline Operations Manager', 'Aviation Safety Officer', 'Cargo Manager', 'Ground Staff Manager'],
+    achievements: [
+      'MOU with leading international airlines for internships.',
+      'Ranked as the best emerging aviation college in South India.'
+    ]
+  },
   bca: {
     id: 'bca',
     name: 'Bachelor of Computer Applications (BCA)',
     category: 'Undergraduate',
+    icon: <Code />,
     duration: '3 Years',
-    shortDesc: 'Top BCA college in Bangalore with placements. Join KCMS for industry-aligned tech education and career growth.',
-    fullDesc: 'The BCA department at KCMS is recognized as one of the premier technical hubs in Bangalore. We offer high-tech labs and a modern curriculum focusing on software engineering, Artificial Intelligence, Cloud Computing, and Cybersecurity.',
+    shortDesc: 'Top BCA college in Bangalore with placements. Join KCMS for a strong foundation in computer science and software development.',
+    fullDesc: 'The BCA program at KCMS offers a robust curriculum covering programming languages, database management, networking, and web development. It is the perfect launchpad for a career in the IT industry.',
     objectives: [
       'Master core programming paradigms (Java, Python, C++).',
-      'Understand advanced cloud infrastructure.',
-      'Develop agile software mindset.',
-      'BCA admission Bangalore available for 2026 batch.'
+      'Build a strong foundation in data structures and algorithms.',
+      'Develop dynamic web applications using MERN stack.',
+      'Prepare for roles in top tech companies with 100% placement support.'
     ],
     curriculum: [
       { sem: 'Sem 1-2', focus: 'Programming Fundamentals, Math, Digital Logic.' },
       { sem: 'Sem 3-4', focus: 'Data Structures, OS, DBMS, Web Technologies.' },
-      { sem: 'Sem 5-6', focus: 'AI & ML, Cloud Computing, Mobile Apps, Final Project.' }
+      { sem: 'Sem 5-6', focus: 'Advanced Java, Python Programming, Final Project.' }
     ],
     facultyStats: { phd: '45%', experience: '12+ Years Avg.', publications: '150+' },
     labInfo: [
-      { icon: <Code />, title: 'Full Stack Lab', desc: 'Equipped with MERN stack tools.' },
-      { icon: <Cpu />, title: 'Hardware & IoT Lab', desc: 'Experimental learning kits.' }
+      { icon: <Code />, title: 'Full Stack Lab', desc: 'Equipped with MERN stack tools and IDEs.' },
+      { icon: <Cpu />, title: 'Hardware & Networking Lab', desc: 'Hands-on with networking devices and system hardware.' }
     ],
-    opportunities: ['Software Engineer', 'Full Stack Developer', 'Cyber Security Analyst', 'System Administrator'],
+    opportunities: ['Software Developer', 'Web Developer', 'System Analyst', 'Database Administrator'],
     achievements: [
       '100% placement record in tier-1 tech companies.',
       'Consistent ranking among top BCA colleges in Bangalore.'
     ]
   },
-  mba: {
-    id: 'mba',
-    name: 'Master of Business Administration (MBA)',
+  'bca-ai-ml': {
+    id: 'bca-ai-ml',
+    name: 'BCA (Artificial Intelligence & Machine Learning)',
+    category: 'Undergraduate',
+    icon: <Cpu />,
+    duration: '3 Years',
+    shortDesc: 'Specialize in the future of tech with our BCA in AI & ML. The leading program in Bangalore for careers in intelligent systems.',
+    fullDesc: 'This specialized BCA program focuses on the cutting-edge fields of Artificial Intelligence and Machine Learning. Students delve into neural networks, natural language processing, computer vision, and data science, preparing them to build the intelligent applications of tomorrow.',
+    objectives: [
+      'Understand the fundamentals of AI and ML algorithms.',
+      'Develop and train machine learning models for real-world problems.',
+      'Work with popular AI frameworks like TensorFlow and PyTorch.',
+      'Gain expertise in data analysis and visualization.'
+    ],
+    curriculum: [
+      { sem: 'Sem 1-2', focus: 'Python for AI, Linear Algebra, Probability & Statistics.' },
+      { sem: 'Sem 3-4', focus: 'Machine Learning Algorithms, Data Science, NLP Basics.' },
+      { sem: 'Sem 5-6', focus: 'Deep Learning, Computer Vision, AI Capstone Project.' }
+    ],
+    facultyStats: { phd: '55%', experience: '14+ Years Avg.', research: 'Active AI Researchers' },
+    labInfo: [
+      { icon: <CpuIcon />, title: 'AI & Deep Learning Lab', desc: 'High-performance GPU workstations for model training.' },
+      { icon: <PieChart />, title: 'Data Science Hub', desc: 'Equipped with Anaconda, Tableau, and PowerBI.' }
+    ],
+    opportunities: ['Machine Learning Engineer', 'AI Developer', 'Data Scientist', 'NLP Engineer', 'Computer Vision Specialist'],
+    achievements: [
+      'Collaboration with top AI firms for live projects.',
+      'Winners of National AI Hackathon 2024.'
+    ]
+  },
+  'bsc-criminology': {
+    id: 'bsc-criminology',
+    name: 'BSc in Criminology and Forensic Science',
+    category: 'Undergraduate',
+    icon: <Microscope />,
+    duration: '3 Years',
+    shortDesc: 'Explore the science of crime-solving. A unique BSc program in Bangalore that blends criminology theory with forensic investigation techniques.',
+    fullDesc: 'The BSc in Criminology and Forensic Science is an interdisciplinary program that provides a scientific approach to crime and the justice system. It covers criminal psychology, forensic pathology, crime scene investigation, and cyber forensics.',
+    objectives: [
+      'Understand criminal behavior and theories of criminology.',
+      'Learn scientific techniques for crime scene investigation.',
+      'Analyze physical and digital forensic evidence in a lab setting.',
+      'Explore the legal and ethical aspects of forensic science.'
+    ],
+    curriculum: [
+      { sem: 'Sem 1-2', focus: 'Intro to Criminology, Forensic Psychology, Criminal Law.' },
+      { sem: 'Sem 3-4', focus: 'Crime Scene Management, Forensic Chemistry, Fingerprinting.' },
+      { sem: 'Sem 5-6', focus: 'Cyber Forensics, Forensic Ballistics, Moot Court & Internship.' }
+    ],
+    facultyStats: { phd: '40%', experience: '16+ Years Avg.', professional: 'Ex-Police/Forensic Experts' },
+    labInfo: [
+      { icon: <Microscope />, title: 'Forensic Lab', desc: 'Equipped for fingerprinting, DNA analysis, and chemical testing.' },
+      { icon: <ShieldCheck />, title: 'Cyber Forensics Unit', desc: 'Tools for digital evidence recovery and analysis.' }
+    ],
+    opportunities: ['Forensic Scientist', 'Crime Scene Investigator', 'Criminologist', 'Private Detective', 'Cyber Forensics Expert'],
+    achievements: [
+      'Tie-ups with state police departments for practical training.',
+      'First college in Bangalore with a dedicated Cyber Forensics lab.'
+    ]
+  },
+  bttm: {
+    id: 'bttm',
+    name: 'Bachelor of Travel and Tourism Management (BTTM)',
+    category: 'Undergraduate',
+    icon: <Globe />,
+    duration: '3 Years',
+    shortDesc: 'Launch your career in the global travel industry. Best BTTM college in Bangalore for tourism operations and hospitality management.',
+    fullDesc: 'The BTTM program at KCMS offers comprehensive training in travel and tourism management. The curriculum covers everything from tour operations and destination marketing to airline ticketing and hospitality services, preparing students for a vibrant global career.',
+    objectives: [
+      'Master tour packaging and itinerary planning.',
+      'Learn global distribution systems (GDS) for ticketing.',
+      'Understand sustainable tourism practices and policies.',
+      'Develop skills for hospitality and event management.'
+    ],
+    curriculum: [
+      { sem: 'Core', focus: 'Travel Geography, IATA Regulations, Ticketing, Hospitality Basics.' },
+      { sem: 'Advanced', focus: 'Event Planning, Hotel Operations, Destination Marketing.' },
+      { sem: 'Applied', focus: 'Tour Guiding, Global Distribution Systems, Internship.' }
+    ],
+    facultyStats: { phd: '25%', industry: 'IATA Certified', experience: '18+ Years' },
+    labInfo: [
+      { icon: <PlaneTakeoff />, title: 'GDS Terminal', desc: 'Hands-on training on Amadeus & Galileo.' },
+      { icon: <Globe />, title: 'Cultural Studio', desc: 'Global itinerary planning and destination research.' }
+    ],
+    opportunities: ['Tour Manager', 'Travel Consultant', 'Event Manager', 'Airline Ground Staff', 'Hotel Operations'],
+    achievements: [
+      'Top-rated hospitality and tourism college in Bangalore.',
+      'Partnerships with global travel agencies for placements.'
+    ]
+  },
+  mcom: {
+    id: 'mcom',
+    name: 'Master of Commerce (M.Com)',
     category: 'Postgraduate',
+    icon: <Scale />,
     duration: '2 Years',
-    shortDesc: 'Premier MBA program in Bangalore with 95% placement support. Dual specialization in Fintech, HR, and Analytics.',
-    fullDesc: 'KCMS is among the top MBA colleges in Bangalore. Our program focuses on strategic leadership, corporate ethics, and data-driven decision making, making us the preferred choice for aspiring managers.',
+    shortDesc: 'Achieve mastery in commerce and finance. A leading M.Com program in Bangalore with specializations in finance and accounting.',
+    fullDesc: "The M.Com program at KCMS is designed for students seeking advanced knowledge in commerce, finance, and taxation. It provides an in-depth understanding of financial markets, corporate accounting, and business research, preparing graduates for high-level roles in academia and industry.",
     objectives: [
-      'Develop strategic leadership skills.',
-      'Enhance data-driven decision making.',
-      'MBA admission Bangalore 2026 now open.',
-      'Build entrepreneurial mindset.'
+      'Gain expertise in advanced financial accounting and IFRS.',
+      'Understand the complexities of corporate law and GST.',
+      'Conduct independent research and publish papers.',
+      'Prepare for professional certifications like CA and CMA.'
     ],
     curriculum: [
-      { sem: 'Sem 1', focus: 'Org Behavior, Econ, Accounting, Marketing Management.' },
-      { sem: 'Sem 2-3', focus: 'Financial Management, HR, Operations, Analytics Electives.' },
-      { sem: 'Sem 4', focus: 'Strategic Management, Ethics, Capstone Project.' }
+      { sem: 'Sem 1', focus: 'Advanced Corporate Accounting, Financial Management.' },
+      { sem: 'Sem 2-3', focus: 'Security Analysis, Portfolio Management, International Finance, Research Methodology.' },
+      { sem: 'Sem 4', focus: 'Strategic Cost Management, Advanced Taxation, Dissertation.' }
     ],
-    facultyStats: { phd: '60%', experience: '15+ Years Avg.', industry: 'Ex-CXO Mentors' },
+    facultyStats: { phd: '65%', professional: 'CA/CMA Mentors', experience: '18+ Years' },
     labInfo: [
-      { icon: <PieChart />, title: 'Financial Terminal', desc: 'Real-time stock market tracking.' },
-      { icon: <TrendingUp />, title: 'Business Analytics Lab', desc: 'Advanced licenses for Tableau and PowerBI.' }
+      { icon: <Scale />, title: 'Advanced Accounting Lab', desc: 'Training on Tally Prime, SAP FICO module.' },
+      { icon: <BarChart />, title: 'Financial Analytics Hub', desc: 'Using R and Python for financial modeling.' }
     ],
-    opportunities: ['Brand Manager', 'Investment Banker', 'Management Consultant', 'Supply Chain Head'],
+    opportunities: ['Financial Controller', 'Senior Accountant', 'Academic Lecturer', 'Taxation Specialist', 'Investment Analyst'],
     achievements: [
-      'Best B-School Award 2024 for Industry Engagement.',
-      'Top-ranked management college in Bangalore.'
-    ]
-  },
-  bba: {
-    id: 'bba',
-    name: 'Bachelor of Business Administration (BBA)',
-    category: 'Undergraduate',
-    duration: '3 Years',
-    shortDesc: 'Foundation of modern management. Top-ranked BBA college with internship support in Bangalore.',
-    fullDesc: 'Recognized for academic excellence, the BBA program at KCMS prepares students for global leadership roles. We provide a blend of classroom theory and practical corporate exposure.',
-    objectives: [
-      'Principles of management.',
-      'Professional soft skills.',
-      'BBA admission in Bangalore 2026.',
-      'Practical business simulations.'
-    ],
-    curriculum: [
-      { sem: 'Sem 1-2', focus: 'Management Basics, Business Law, Communication.' },
-      { sem: 'Sem 3-4', focus: 'Finance, HR, Marketing, Entrepreneurship.' },
-      { sem: 'Sem 5-6', focus: 'Strategic Management, Internships, Specializations.' }
-    ],
-    facultyStats: { phd: '30%', experience: '10+ Years Avg.', industry: '80% Industry Linkage' },
-    labInfo: [
-      { icon: <Users />, title: 'Soft Skills Lab', desc: 'Presentation recording facility.' },
-      { icon: <Monitor />, title: 'IT for Leaders', desc: 'ERP training center.' }
-    ],
-    opportunities: ['HR Associate', 'Sales Executive', 'Retail Manager', 'Administrative Officer'],
-    achievements: [
-      'Top-ranked BBA college with placement support in Bangalore.',
-      'Winner of National Level Management Fest.'
-    ]
-  },
-  bcom: {
-    id: 'bcom',
-    name: 'Bachelor of Commerce (B.Com)',
-    category: 'Undergraduate',
-    duration: '3 Years',
-    shortDesc: 'Excellence in Commerce and Accounting. Best B.Com college for CA and ACCA aspirants.',
-    fullDesc: 'KCMS offers a robust B.Com program designed for those seeking careers in Finance, Audit, and Taxation. We provide additional training for professional certifications alongside the university degree.',
-    objectives: [
-      'Mastery over financial accounting.',
-      'B.Com admission in Bangalore 2026.',
-      'Global banking operations.',
-      'Digital bookkeeping with Tally.'
-    ],
-    curriculum: [
-      { sem: 'Sem 1-2', focus: 'Financial Accounting, Law, Business Stats.' },
-      { sem: 'Sem 3-4', focus: 'Corporate Accounting, Income Tax, Audit.' },
-      { sem: 'Sem 5-6', focus: 'GST, Financial Management, Costing.' }
-    ],
-    facultyStats: { phd: '35%', professional: 'CA/CMA Mentors', experience: '14+ Years' },
-    labInfo: [
-      { icon: <CheckCircle />, title: 'Accounting Lab', desc: 'Training for Tally Prime.' },
-      { icon: <Landmark />, title: 'Fin-Hub', desc: 'Banking exam resource center.' }
-    ],
-    opportunities: ['Accountant', 'Tax Consultant', 'Auditor', 'Financial Analyst'],
-    achievements: [
-      'Highest number of students clearing CA Foundation.',
-      'Best commerce college in Bangalore with placement.'
+      'Highest number of M.Com students qualifying for UGC-NET.',
+      'Best commerce department in Bangalore for research output.'
     ]
   },
   mttm: {
     id: 'mttm',
-    name: 'Bachelor & Master of Tourism and Travel Management',
-    category: 'UG / PG',
-    duration: '3Y / 2Y',
-    shortDesc: 'Comprehensive Tourism and Travel management courses. Best BTTM/MTTM college in Bangalore.',
-    fullDesc: 'Join the industry-leading Tourism department at KCMS. We offer global hospitality training and travel management certifications that prepare you for the worldwide tourism industry.',
+    name: 'Master of Travel and Tourism Management (MTTM)',
+    category: 'Postgraduate',
+    icon: <PlaneTakeoff />,
+    duration: '2 Years',
+    shortDesc: 'Lead the global tourism industry with an advanced MTTM degree. Top-ranked program in Bangalore for strategic tourism management.',
+    fullDesc: 'The MTTM program is a postgraduate course that prepares students for senior management roles in the tourism and hospitality sector. It focuses on strategic planning, destination development, tourism policy, and international hospitality management.',
     objectives: [
-      'Master airline operations.',
-      'Sustainable tourism management.',
-      'MTTM college in Bangalore 2026 intake.',
-      'Global destination marketing.'
+      'Develop strategic leadership skills for the tourism industry.',
+      'Master sustainable tourism planning and policy-making.',
+      'Analyze global tourism trends and markets using data analytics.',
+      'Manage large-scale hospitality and event operations.'
     ],
     curriculum: [
-      { sem: 'Core', focus: 'Travel Geography, IATA Regulations, Ticketing.' },
-      { sem: 'Advanced', focus: 'Cruise Management, Event Planning, Hotel Ops.' },
-      { sem: 'Applied', focus: 'Tour Guiding, Global Distribution Systems.' }
+      { sem: 'Sem 1', focus: 'Tourism Principles, Hospitality Management, Research Methods.' },
+      { sem: 'Sem 2-3', focus: 'Strategic Management, E-Tourism, Financial Management in Tourism, Electives.' },
+      { sem: 'Sem 4', focus: 'Tourism Policy & Planning, Dissertation, International Internship.' }
     ],
-    facultyStats: { phd: '25%', industry: 'IATA Certified', experience: '18+ Years' },
+    facultyStats: { phd: '50%', industry: 'IATA/UFTAA Certified', experience: '20+ Years' },
     labInfo: [
-      { icon: <PlaneTakeoff />, title: 'GDS Terminal', desc: 'Hands-on training on Amadeus.' },
-      { icon: <Globe />, title: 'Cultural Studio', desc: 'Global itinerary planning.' }
+      { icon: <PlaneTakeoff />, title: 'Advanced GDS & Analytics', desc: 'Training on Amadeus, Sabre, and tourism data analytics tools.' },
+      { icon: <Globe2 />, title: 'Global Destination Lab', desc: 'Case studies and virtual tours of international tourism hubs.' }
     ],
-    opportunities: ['Airline Manager', 'Cruise Consultant', 'Tour Operator', 'Hotel Manager'],
+    opportunities: ['Tourism Director', 'Destination Manager', 'Hospitality Consultant', 'Airline Revenue Manager', 'Policy Advisor'],
     achievements: [
-      'Top-rated hospitality and tourism college in Bangalore.',
-      'Partnerships with global airlines.'
+      'Ranked among the top 5 MTTM programs in India.',
+      'Collaboration with Ministry of Tourism for research projects.'
     ]
   }
 };
+
 
 export const TESTIMONIALS: Testimonial[] = [
   { name: "Rahul Sharma", role: "MBA 2022 Graduate", text: "KCMS provided me with the perfect blend of academic rigor and practical exposure. The placements here are outstanding and the faculty mentorship is life-changing!", image: "https://i.pravatar.cc/150?u=1" },

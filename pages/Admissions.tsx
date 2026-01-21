@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -17,10 +16,11 @@ const Admissions: React.FC = () => {
     { 
       name: 'UG Programs', 
       items: [
-        { label: 'BBA', id: 'bba' },
+        { label: 'BBA Aviation Management', id: 'bba-aviation' },
         { label: 'BCA', id: 'bca' },
-        { label: 'B.Com', id: 'bcom' },
-        { label: 'BTTM', id: 'mttm' }
+        { label: 'BCA (AI & ML)', id: 'bca-ai-ml' },
+        { label: 'BSc Criminology', id: 'bsc-criminology' },
+        { label: 'BTTM', id: 'bttm' }
       ], 
       duration: '3 Years', 
       color: 'bg-blue-50' 
@@ -28,7 +28,7 @@ const Admissions: React.FC = () => {
     { 
       name: 'PG Programs', 
       items: [
-        { label: 'MBA', id: 'mba' },
+        { label: 'M.Com', id: 'mcom' },
         { label: 'MTTM', id: 'mttm' }
       ], 
       duration: '2 Years', 

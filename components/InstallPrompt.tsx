@@ -30,7 +30,7 @@ const InstallPrompt: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-24 left-4 right-4 z-[55] md:left-auto md:right-8 md:bottom-20 md:w-96">
+    <div className="fixed bottom-0 left-0 right-0 z-[55] hidden md:block md:left-auto md:right-8 md:w-96">
       <div className="bg-[#1a1a1a] text-white rounded-2xl shadow-2xl p-5 flex flex-col gap-4 animate-fade-up border border-white/10">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-4">

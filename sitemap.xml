@@ -37,19 +37,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kcms.edu.in/#/course/bba-aviation</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kcms.edu.in/#/course/bca</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kcms.edu.in/#/course/mba</loc>
+    <loc>https://kcms.edu.in/#/course/bca-ai-ml</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kcms.edu.in/#/course/bba</loc>
+    <loc>https://kcms.edu.in/#/course/bsc-criminology</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kcms.edu.in/#/course/bcom</loc>
+    <loc>https://kcms.edu.in/#/course/bttm</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kcms.edu.in/#/course/mcom</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kcms.edu.in/#/course/mttm</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
